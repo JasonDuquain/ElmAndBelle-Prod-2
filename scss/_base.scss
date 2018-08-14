@@ -1,0 +1,92 @@
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 1em;
+    scroll-behavior: smooth;
+    
+    @include breakpoint(max-width $large) {
+        font-size: .9em;
+    }
+    
+    @include breakpoint(max-width $medium) {
+        font-size: .8em;
+    }
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Raleway', serif;
+    color: #333;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section {
+    padding: 6em;
+}
+
+.sect-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.7em;
+    
+    &::before, &::after {
+        content: ""; 
+        width: 1em;
+        height: 3px;
+        background-image: linear-gradient(to right, $gold, darken($gold, 30%));
+        margin: 0 1rem;
+    }
+    
+    &::after {
+        background-image: linear-gradient(to left, $gold, darken($gold, 30%));
+    }
+}
+
+@keyframes target {
+    0% {
+        background-color: $gold;
+        letter-spacing: 6px;
+    }
+    
+    100% {
+        
+    }
+}
+
+#services:target h2 {
+    animation: target 2000ms ease-out;
+}
+
+#gallery:target h2 {
+    animation: target 2000ms ease-out 500ms;
+}
+
+#testimonials:target h2 {
+    animation: target 2000ms ease-out 2400ms;
+}
+
+
+
+
+
+
+
+

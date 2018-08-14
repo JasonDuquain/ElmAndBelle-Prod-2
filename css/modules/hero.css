@@ -1,0 +1,31 @@
+.large-hero {
+  height: 95vh;
+  background-image: url("../img/hair-salon-hero.jpg");
+  background-size: cover;
+  background-position: right top;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.large-hero__wrap {
+  max-width: 80%;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.large-hero__main-heading {
+  font-family: Tangerine, sans-serif;
+  font-weight: 700;
+  font-size: 9rem;
+  color: #fff;
+}
+
+.large-hero__sub-heading {
+  font-size: 2rem;
+  color: #000;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhlcm8uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLG9EQUFvRDtFQUNwRCx1QkFBdUI7RUFDdkIsK0JBQStCO0VBQy9CLG1CQUFtQjtFQUNuQiw2QkFBNkI7Q0FDOUI7O0FBRUQ7RUFDRSxlQUFlO0VBQ2YsbUJBQW1CO0VBQ25CLFNBQVM7RUFDVCxVQUFVO0VBQ1YseUNBQWlDO1VBQWpDLGlDQUFpQztDQUNsQzs7QUFFRDtFQUNFLG1DQUFtQztFQUNuQyxpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLFlBQVk7Q0FDYjs7QUFFRDtFQUNFLGdCQUFnQjtFQUNoQixZQUFZO0NBQ2IiLCJmaWxlIjoibW9kdWxlcy9oZXJvLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sYXJnZS1oZXJvIHtcbiAgaGVpZ2h0OiA5NXZoO1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9pbWcvaGFpci1zYWxvbi1oZXJvLmpwZ1wiKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogcmlnaHQgdG9wO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGJhY2tncm91bmQtYXR0YWNobWVudDogZml4ZWQ7XG59XG5cbi5sYXJnZS1oZXJvX193cmFwIHtcbiAgbWF4LXdpZHRoOiA4MCU7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA0MCU7XG4gIGxlZnQ6IDMwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG59XG5cbi5sYXJnZS1oZXJvX19tYWluLWhlYWRpbmcge1xuICBmb250LWZhbWlseTogVGFuZ2VyaW5lLCBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogNzAwO1xuICBmb250LXNpemU6IDlyZW07XG4gIGNvbG9yOiAjZmZmO1xufVxuXG4ubGFyZ2UtaGVyb19fc3ViLWhlYWRpbmcge1xuICBmb250LXNpemU6IDJyZW07XG4gIGNvbG9yOiAjMDAwO1xufVxuIl19 */
