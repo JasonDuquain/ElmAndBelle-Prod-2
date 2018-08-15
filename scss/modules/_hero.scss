@@ -1,0 +1,70 @@
+
+
+.large-hero {
+    height: 45vw;
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,
+    .2)), url('../img/hero.jpg');
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    border-bottom: .3em solid $gold;
+    
+    &__main-heading {
+        font-family: 'Tangerine';
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.2;
+        color: #fff;
+        margin: 0;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        transform: translateX(-50%, -50%);
+        width: 45%;
+        
+        & [class^=test] {
+           opacity: 0;
+            animation: fade-in 800ms 700ms ease-in both; 
+        }
+        
+        & .testtwo {
+            animation-delay: 2000ms;
+        }
+        
+        & .testthree {
+            animation-delay: 3600ms;
+        }
+        
+        & .testfour {
+            font-style: normal;
+            color: $gold;
+            animation-delay: 4700ms;
+            display: block;
+            text-align: right;
+        }
+        
+    }
+    
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(3.8);
+    }  
+    
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+    }
+}
+

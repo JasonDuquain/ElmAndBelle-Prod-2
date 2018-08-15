@@ -1,6 +1,5 @@
 
 * {
-    box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
     margin: 0;
@@ -10,6 +9,7 @@
 :root {
     font-size: 1em;
     scroll-behavior: smooth;
+    box-sizing: border-box;
     
     @include breakpoint(max-width $large) {
         font-size: .9em;
@@ -19,6 +19,11 @@
         font-size: .8em;
     }
 }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 
 body {
     font-size: 100%;

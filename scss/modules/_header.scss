@@ -1,0 +1,108 @@
+
+.site-header {
+    transition: all 400ms ease-out;
+    padding: 1em 1.5em;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $grey-light-2;
+    
+    @include breakpoint(1200px) {
+        padding: 0 calc(50% - 600px);
+    }
+    
+    &__social {
+        width: 33.333%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover &-link:not(:hover) {
+            opacity: .85;
+        }
+    }
+    
+    &__social-link {
+        transition: transform 300ms ease-in;
+        &:hover {
+            transform: scale(1.3);
+        }
+        
+    }
+        
+    .fa {
+        font-size: 1.4em;
+        display: inline-block;
+        color: $gold-dark;
+        
+    }
+    
+    .fa-facebook-square {
+        //color: rgb(59, 89, 152);
+    }
+
+    .fa-pinterest-square {
+        //color: rgb(203,32,39);
+    }
+
+    .fa-instagram {
+        //color: rgb(195,42,163);
+    }
+
+    a:not(:first-of-type) {
+        margin-left: .7em;
+    }
+
+    &__logo-link {
+        width: 33.333%;
+        text-align: center;
+    }
+    
+    &__logo {
+        width: 8em;
+        height: auto;
+    }
+    
+    &__button-container {
+        width: 33.333%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    &__button:link, &__button:visited {
+        font-size: .75em;
+        transition: background-color 300ms ease-out;
+        padding: .7em 1.4em;
+        color: #fff;
+        background-color: $gold-dark;
+        border: 1px solid $gold-dark;
+        display: inline-block;
+        border-radius: 99em;
+    }
+    
+    &__button:link:hover, &__button:visited:hover {
+        background-color: darken($gold, 10%);
+        border: 1px solid darken($gold, 10%);
+    }
+    
+     &__button-1 {
+        
+    }
+    
+     &__button-2:link, &__button-2:visited {
+         background-color: transparent;
+         border: 1px solid $gold-dark;
+         color: $gold-dark;
+    }
+
+    
+    &__button-2:link:hover, &__button-2:visited:hover {
+         background-color: $gold-dark;
+         color: #fff;
+    }
+    
+    
+}
+
