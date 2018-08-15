@@ -1,5 +1,44 @@
+/* SIGN UP BUTTON IS AN ANCHOR..NOT A INPUT TYPE=SUBMIT */
 
+.btn-standard {
+    position: relative;
+    color: #fff;
+    background-color: $gold-dark;
+    width: 60%;
+    display: inline-block;
+    padding: .6em 1.2em;
+    text-align: center;
+    
+    &::before, &::after {
+        content: "";
+        transition: all 250ms;
+        position: absolute;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0;  
+        height: 1.0909em; /* was 24px */
+        width: 1.0909em; /* was 24px */
+    }
+            
+            &::before {
+                border-top-width: .090em; /* was 2px */
+                border-color: $gold-dark;
+                top: -.227em; /* was 5px */    
+                left: 0;   
+            }
 
+            &::after {
+                border-bottom-width: .090em; /* was 2px */
+                border-color: $gold-dark;
+                bottom: -.227em; /* was 5px */
+                right: 0px;
+            }
+
+            &:hover::before,
+            &:hover::after {
+                width: 100%;
+            }
+}
 
 
 

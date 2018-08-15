@@ -1,0 +1,144 @@
+
+
+
+section.testimonials {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../img/items.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+div.gridFour {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.5em;
+    margin-top: 7.5em; /* was 120px*/
+    align-items: center;
+    
+    @include breakpoint(max-width $medium) {
+        display: block;
+    }
+}
+
+@include breakpoint(max-width $medium) {
+    div.customer:not(.customer--one) {
+        margin-top: 6.6em;
+    }
+}
+
+div.customer--one {
+    //opacity: 0;
+    //visibility: hidden;
+    //transform: translateX(-100%);
+    //transition: all 1100ms ease-out;
+    
+    &.animateScroll {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    
+}
+
+div.customer--two {
+    //opacity: 0;
+    //visibility: hidden;
+    //transform: translateY(100%);
+    //transition: all 1100ms ease-out;
+    
+    &.animateScroll {
+       opacity: 1;
+        visibility: visible;
+        transform: translateY(0); 
+    }
+}
+
+div.customer--three {
+    //opacity: 0;
+    //visibility: hidden;
+    //transform: translateX(100%);
+    //transition: all 1100ms ease-out;
+    
+    &.animateScroll {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    
+}
+
+div.customer--content {
+    background-color: rgba(255,255,255,.4);
+    padding: 1.5em;
+    padding-top: 0;
+    border: .3125em solid #fff;
+    border-radius: .25em;
+}
+
+div.userWrap {
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+div.userPic {
+    border-radius: 50%;
+    border: .3125em solid #fff;
+    width: 6em;
+    height: 6em;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+h2.user--name {
+    margin-top: -1em;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: .2em;
+    
+    @include breakpoint(max-width $medium) {
+        margin-top: .4em;
+    }
+}
+
+p.user--visits {
+    text-align: center;
+    margin-bottom: .75em;
+}
+
+div.quoteWrap {
+    padding: 2em;
+    background-color: darken($pink-light, 10%);
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    clip-path: polygon(0 1em, 100% 0, 100% calc(100% - 1em), 0 100%);
+    color: #fff;
+}
+
+blockquote {
+    margin-bottom: 1em; 
+    line-height: 1.4;
+    font-weight: 300;
+    position: relative;
+}
+
+blockquote::before {
+    content: "\201C";
+    color: rgba(255,255,255,.3);
+    font-size: 11em;
+    line-height: .5;
+    display: block;
+    position: absolute;
+    top: .05em;
+    left: -.22em;
+    font-family: sans-serif;
+}
+
+cite {
+    display: block;
+    font-style: italic;
+    text-align: right;
+    font-weight: 300;
+}
+
+

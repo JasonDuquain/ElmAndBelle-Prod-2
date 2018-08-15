@@ -1,4 +1,88 @@
 
+.services {
+    background-color: #fbfbfb;
+    margin: 0 auto;
+    
+    &__grid {
+        display: grid;
+        margin-bottom: 8em;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        justify-items: center;
+        grid-gap: 1em;
+    }
+    
+    &__figure {
+        width: min-content;
+        border-radius: 100% 100% 0 0;
+        overflow: hidden;
+    }
+    
+    &__image {
+        width: 395px;
+        height: 285px;
+        object-fit: cover;
+        display: block;
+        border-radius: 100% 100% 0 0;
+    }
+    
+    &__figcaption {
+        padding: 1.5em;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    
+    &__heading {
+        margin-bottom: 1em;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    
+    
+    &__table {
+        width: 70%;
+        margin: 0 auto 3em auto;
+        border-collapse: collapse;
+        
+        caption {
+            text-align: left;
+            font-size: 1.2em;
+            padding-bottom: .3em;
+            font-weight: 700;
+        }
+      
+        tr:nth-of-type(odd){
+          background-color: lighten($pink-light, 15%);
+        }
+        
+        td, th {
+            font-size: 1em;
+            border: 1px solid $pink-light;
+            padding: 3px 7px 2px 7px;
+            text-transform: uppercase;
+        }
+        
+        th {
+          text-align: center;
+          padding-top: 5px;
+          padding-bottom: 4px;
+          background: rgb(229,76,16);
+          background: linear-gradient(to bottom, $pink-light, darken($pink-light, 10%));
+          color: white;
+        }
+    }  
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 

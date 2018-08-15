@@ -31,12 +31,6 @@ body {
     color: #333;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 section {
     padding: 6em;
 }
@@ -45,7 +39,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-weight: 300;
     text-align: center;
     text-transform: uppercase;
