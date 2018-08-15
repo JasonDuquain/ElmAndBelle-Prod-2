@@ -17,8 +17,8 @@
     <header class="site-header">
         <div class="site-header__social">
             <a class="site-header__social-link" href="https://www.facebook.com/elmandbelle" target="_blank" title="elmandbelle facebook page"><i class="fa fa-facebook-square"></i></a>
-            <a class="site-header__social-link" href="https://pin.it/klzznjnsjlfnpn" title="elmandbelle pinterest page"><i class="fa fa-pinterest-square"></i></a>
-            <a class="site-header__social-link" href="https://www.instagram.com/jenniferduquain/" title="elmandbelle instagram page"><i class="fa fa-instagram"></i></a>
+            <a class="site-header__social-link" href="https://pin.it/klzznjnsjlfnpn" target="_blank" title="elmandbelle pinterest page"><i class="fa fa-pinterest-square"></i></a>
+            <a class="site-header__social-link" href="https://www.instagram.com/jenniferduquain/" target="_blank" title="elmandbelle instagram page"><i class="fa fa-instagram"></i></a>
         </div>
         <a href="index.html" class="site-header__logo-link">
            <img src="img/logo/ShearsAndName/shears_eb.png" alt="" class="site-header__logo">
@@ -1622,7 +1622,7 @@
     <section class="gallery" id="gallery">
         <h2 class="intro__heading sect-heading">Elm &amp; Belle Lookbook</h2>
         
-        <!--<div class="gallery__main">  
+        <div class="gallery__main">  
             <div class="demo">              
                 <a href="img/gal-1.jpg" data-caption="Caption 1">
                     <figure>
@@ -1687,7 +1687,7 @@
 
             </div> 
             
-       </div> -->
+       </div>
     </section>
     
     <section class="subscribe">
@@ -1695,16 +1695,28 @@
         <p class="subscribe__paragraph">Sign up with your email address to receive news and updates.</p>
         <form action="#" class="subscribe__form">
            <p class="subscribe__input-wrap">
-               <label for="firstname" class="subscribe__label">First Name</label>
-               <input type="text" class="subscribe__input" id="firstname">
+                <label for="firstname" class="subscribe__label">First Name</label>
+                <span class="subscribe__field-prefixed">
+                    <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-user"></i></span>
+                    <input type="text" class="subscribe__input" id="firstname">    
+                </span>
+               
            </p>
            <p class="subscribe__input-wrap">
-               <label for="lastname" class="subscribe__label">Last Name</label>
-               <input type="text" class="subscribe__input" id="lastname">
+                <label for="lastname" class="subscribe__label">Last Name</label>
+                <span class="subscribe__field-prefixed">
+                    <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-user"></i></span>
+                    <input type="text" class="subscribe__input" id="lastname">    
+                </span>
+               
            </p>
            <p class="subscribe__input-wrap">
-               <label for="email" class="subscribe__label">Email Address</label>
-               <input type="email" class="subscribe__email" id="email">
+                <label for="email" class="subscribe__label">Email Address</label>
+                <span class="subscribe__field-prefixed">
+                    <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-envelope"></i></span>
+                    <input type="email" class="subscribe__email" id="email">    
+                </span>
+               
            </p>
            <p class="subscribe__input-wrap">
                <a href="#" class="subscribe__submit btn btn-standard" id="submit">Sign Up</a>   
@@ -1721,7 +1733,7 @@
            <div class="customer--one customer">
               <div class="customer--content">
                  <div class="userWrap">
-                     <div class="userPic"></div>
+                     <div class="userPic"><i class="fa fa-cut"></i></div>
                 </div> 
                     <h2 class="user--name">Judy</h2>
                     <p class="user--visits">Hairstyle</p>
@@ -1729,14 +1741,23 @@
                         <blockquote>
                             Jenn has been doing my hair for years and I'm so excited she finally has her own salon! She is always up on the latest techniques and trends in hair and always comes with great suggestions on style and color. You won't be disappointed! 
                         </blockquote>
-                        <cite>--December 03 2017</cite>
+                        <div class="star-date-wrap">
+                            <ul class="stars">
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                            </ul>
+                            <cite>-December 03 2017</cite>    
+                        </div>
                     </div>
               </div> 
            </div>        
            <div class="customer--two customer">
               <div class="customer--content">
                  <div class="userWrap">
-                     <div class="userPic"></div>
+                     <div class="userPic"><i class="fa fa-cut"></i></div>
                 </div> 
                     <h2 class="user--name">Sammy</h2>
                     <p class="user--visits">Haircut</p>
@@ -1744,14 +1765,23 @@
                         <blockquote>
                             I highly recommend Jen to be your hair colorist and stylist. She is amazingly talented at cuts and color that will match and flatter your skin tone and your eyes. Being her neighbor it is beyond convenient to be able to go to her salon in her home on early evenings during the work week. I am thrilled with my cut and color. She offers everything and her pricing is more competitive than what you will pay at salons in the area. Book your appointment with Jen!!!
                         </blockquote>
-                        <cite>--December 03 2017</cite>
+                        <div class="star-date-wrap">
+                            <ul class="stars">
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                            </ul>
+                            <cite>-December 03 2017</cite>    
+                        </div>
                     </div>
               </div>  
            </div>        
            <div class="customer--three customer">
                <div class="customer--content">
                  <div class="userWrap">
-                     <div class="userPic"></div>
+                     <div class="userPic"><i class="fa fa-cut"></i></div>
                 </div> 
                     <h2 class="user--name">Judy</h2>
                     <p class="user--visits">Hairstyle</p>
@@ -1759,13 +1789,48 @@
                         <blockquote>
                             It's been a long time since I've walked out of a salon with a cut and color that I loved. Jenn did an amazing job and really took the time to understand what I was looking for. I'm so happy with my new cut and color! I loved the individualized attention she gave me and her flexibility with scheduling. Looking forward to going back. 
                         </blockquote>
-                        <cite>--December 03 2017</cite>
+                        <div class="star-date-wrap">
+                            <ul class="stars">
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                                <a class="stars__link"><i class="stars__icon fa fa-star"></i></a>
+                            </ul>
+                            <cite>-December 03 2017</cite>    
+                        </div>
                     </div>
               </div>
            </div>        
        </div>  
     </section>
 
+    <section class="appointments" id="appointments">
+        <h2 class="appointments__heading sect-heading">Book Your Appointment</h2>
+        <p>link to app here***********</p>
+    </section>
+    
+    <footer>
+         <div class="logo-container">
+             <img src="img/logo/Shears/shears.svg" alt="logo in footer">
+         </div>
+           <div class="footerNavWrapper">
+                <div class="footer--navs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                </div>
+                <div class="footer--icons">
+                      <a href="https://www.facebook.com/elmandbelle" target="_blank" title="elmandbelle facebook page"><i class="fa fa-facebook"></i></a>
+                      <a href="https://pin.it/klzznjnsjlfnpn" target="_blank" title="elmandbelle pinterest page"><i class="fa fa-pinterest"></i></a>
+                      <a href="https://www.instagram.com/jenniferduquain/" target="_blank" title="elmandbelle instagram page"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+            <p class="footer--main">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium fuga accusamus rem, cumque molestias numquam commodi hic cupiditate ipsam aperiam obcaecati corporis id voluptate nesciunt sunt nulla laudantium minima a.</p>
+            <div class="footer--copyright">JsonD &copy; <span class="year">2016</span></div> 
+   </footer>
 
     <a href="#" class="js-btt-btn" title="scroll back to top">
         <i class="js-btt-btn-icon fa fa-chevron-up"></i>

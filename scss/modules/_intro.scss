@@ -1,11 +1,13 @@
 
 .intro {
+    @include breakpoint(1200px) {
+        padding: 6em calc(50% - 600px);
+    }
     
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 1.5em;
-        margin-bottom: 4.5em;
         align-items: center;
     }
     
@@ -66,24 +68,25 @@
     /*****BRAND LOGOS*****/
     &__brands {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 1em;
+        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+        grid-column-gap: 1.5em;
         width: 80%;
-        margin: 0 auto;
         justify-items: center;
         align-items: center;
+        margin: 0 auto;
     }
     
     &__brands__heading {
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: 1fr auto 1fr;
-        grid-gap: 1em;
+        grid-gap: .75em;
         align-items: center;
         color: darken($pink, 10%);
         font-size: 1.3em;
-        font-weight: 300;
+        font-weight: 500;
         line-height: 1;
+        margin-top: 2em;
         
         &::before, &::after {
             content: "";

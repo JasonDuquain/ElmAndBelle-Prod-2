@@ -18,10 +18,27 @@ bttBtn.addEventListener('click', (e) => {
 });
 
 
+/***  SUBSCRIBE INPUTS CHANGE ICON COLOR ON FOCUS  ****/
+let inputs = document.querySelectorAll('form input');
+
+inputs.forEach((el) => el.addEventListener('focus', changeFocus));
+inputs.forEach((el) => el.addEventListener('blur', changeBlur));
+
+function changeFocus(e) {
+    let prevSib = e.target.previousElementSibling;
+    prevSib.classList.add('input-color');
+}
+
+function changeBlur(e) {
+    let prevSib = e.target.previousElementSibling;
+    prevSib.classList.remove('input-color');
+}
 
 
-
-
+/********  COPYRIGHT DATE *******/
+let year = document.querySelector('.year');
+year.textContent = new Date().getFullYear();
+console.log(year);
 
 
 

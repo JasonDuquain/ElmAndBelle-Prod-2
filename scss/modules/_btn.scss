@@ -4,7 +4,6 @@
     position: relative;
     color: #fff;
     background-color: $gold-dark;
-    width: 60%;
     display: inline-block;
     padding: .6em 1.2em;
     text-align: center;
@@ -40,8 +39,6 @@
             }
 }
 
-
-
 .js-btt-btn {
     position: fixed;
     bottom: 1em;
@@ -64,7 +61,7 @@
     }
     
     &:hover {
-        box-shadow: 2px 2px 1px #333;
+        color: forestgreen;
     }
     
 }

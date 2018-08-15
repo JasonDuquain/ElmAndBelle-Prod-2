@@ -7,6 +7,10 @@ section.testimonials {
     background-position: center bottom;
     background-attachment: fixed;
     color: #fff;
+    
+    @include breakpoint(1200px) {
+        padding: 6em calc(50% - 600px);
+    }
 }
 
 div.gridFour {
@@ -88,7 +92,17 @@ div.userPic {
     height: 6em;
     background-color: #fff;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    & .fa {
+        color: $pink-light;
+        font-size: 4em;
+        transform: translateX(3px) rotate(90deg);
+    }
 }
+
 
 h2.user--name {
     margin-top: -1em;
@@ -116,7 +130,7 @@ div.quoteWrap {
 }
 
 blockquote {
-    margin-bottom: 1em; 
+    margin-bottom: 1.3em; 
     line-height: 1.4;
     font-weight: 300;
     position: relative;
@@ -134,10 +148,25 @@ blockquote::before {
     font-family: sans-serif;
 }
 
+.star-date-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stars__link {
+    display: inline-block;
+    
+}
+
+.stars__icon {
+    color: gold;
+    display: inline-block;
+    font-size: 1.3em !important;
+}
+
 cite {
-    display: block;
     font-style: italic;
-    text-align: right;
     font-weight: 300;
 }
 
