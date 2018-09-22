@@ -1,3 +1,24 @@
+/**** REMOVE HERO TEXT ANIMATION AFTER ONE TIME*****/
+
+let tests = document.querySelectorAll('[class^=test]');
+
+console.log(tests);
+
+tests.forEach((el) => {
+    el.addEventListener('animationend', function(e) {
+        window.sessionStorage.setItem('test', 'testValue');
+    });
+});
+
+
+tests.forEach((el) => {
+    if (window.sessionStorage.getItem('test')) {
+        el.style.animation = 'none';
+        el.style.opacity = '1';
+    }
+});
+
+
 
 /****** BACK TO TOP BTN*******/
 let docElement = document.documentElement;
@@ -38,7 +59,25 @@ function changeBlur(e) {
 /********  COPYRIGHT DATE *******/
 let year = document.querySelector('.year');
 year.textContent = new Date().getFullYear();
-console.log(year);
+
+
+/*
+let svcButtons = document.querySelectorAll('.services .btn-standard');
+
+svcButtons.forEach((el) => {
+   el.addEventListener('click', function(e) {
+       document.body.classList.add('blur');
+   }) 
+});
+
+*/
+
+
+
+
+
+
+
 
 
 

@@ -49,11 +49,16 @@
     }
 
     
-    
+    /*********** TABLE STYLES **************/
     &__table {
         width: 70%;
         margin: 0 auto 3em auto;
         border-collapse: collapse;
+        
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transition: 400ms ease-out;
         
         caption {
             text-align: left;
@@ -64,6 +69,10 @@
       
         tr:nth-of-type(odd){
           background-color: lighten($pink-light, 15%);
+        }
+        
+        tr:nth-of-type(even){
+          background-color: darken($pink-light, 15%);
         }
         
         td, th {
@@ -85,11 +94,57 @@
     
 }
 
+/********  TABLE WRAPPER/MODAL STYLES  **********/
+.cut-and-design_wrap, .color_wrap, .additional_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 600ms ease-out;
+    
+    &:target {
+        opacity: 1;
+        visibility: visible;
+         
+    }
+    
+    &:target .services__table-cut, 
+    &:target .services__table-color,
+    &:target .services__table-additional {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
 
+}
 
+.close_modal {
+    position: absolute;
+    display: block;
+    font-size: 3em;
+    top: 3em;
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    line-height: .9em;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
 
-
-
+.close_modal:hover {
+    color: green;
+}
 
 
 
