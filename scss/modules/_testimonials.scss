@@ -76,7 +76,7 @@
         background-color: #fff;
         
         &.active {
-            background-color: green; 
+            background-color: $gold; 
             pointer-events: none;
         }
         

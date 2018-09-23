@@ -68,16 +68,16 @@
         }
       
         tr:nth-of-type(odd){
-          background-color: lighten($pink-light, 15%);
+          background-color: lighten($gold, 15%);
         }
         
         tr:nth-of-type(even){
-          background-color: darken($pink-light, 15%);
+          background-color: darken($gold, 15%);
         }
         
         td, th {
             font-size: 1em;
-            border: 1px solid $pink-light;
+            border: 1px solid $gold;
             padding: 3px 7px 2px 7px;
             text-transform: uppercase;
         }
@@ -87,7 +87,7 @@
           padding-top: 5px;
           padding-bottom: 4px;
           background: rgb(229,76,16);
-          background: linear-gradient(to bottom, $pink-light, darken($pink-light, 10%));
+          background: linear-gradient(to bottom, $gold, darken($gold, 10%));
           color: white;
         }
     }  
