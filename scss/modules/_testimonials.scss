@@ -6,7 +6,7 @@
     background-position: center bottom;
     background-attachment: fixed;
     color: #fff;
-    padding: 2em 2em;
+    padding: 6em 2em 2em 2em;
     
     /*@include breakpoint(1200px) {
         padding: 6em calc(50% - 600px);
@@ -76,11 +76,12 @@
         background-color: #fff;
         
         &.active {
-            background-color: green;
+            background-color: green; 
+            pointer-events: none;
         }
         
         &.grey {
-            background-color: gray;
+            background-color: gray;           
         }
     }
      
@@ -103,7 +104,19 @@ div.customer--content {
     padding-top: 0;
     border: .3125em solid #fff;
     border-radius: .25em;
+    
+    /*&.active {
+        border-color: green;
+    }
+    
+    &.grey {
+        border-color: gray;
+    }*/
+    
+    
 }
+
+
 
 div.userWrap {
     text-align: center;
@@ -128,28 +141,12 @@ div.userPic {
     }
 }
 
-
-h2.user--name {
-    margin-top: -1em;
-    text-align: center;
-    font-weight: 400;
-    margin-bottom: .2em;
-    
-    @include breakpoint(max-width $medium) {
-        margin-top: .4em;
-    }
-}
-
-p.user--visits {
-    text-align: center;
-    margin-bottom: .75em;
-}
-
 div.quoteWrap {
     padding: 2em;
     background-color: darken($pink-light, 10%);
     margin-left: -1.5em;
     margin-right: -1.5em;
+    margin-top: -2em;
     clip-path: polygon(0 1em, 100% 0, 100% calc(100% - 1em), 0 100%);
     color: #fff;
 }
@@ -192,7 +189,7 @@ blockquote::before {
 
 cite {
     font-style: italic;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 

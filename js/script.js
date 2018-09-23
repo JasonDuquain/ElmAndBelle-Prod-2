@@ -1,5 +1,4 @@
 /**** REMOVE HERO TEXT ANIMATION AFTER ONE TIME*****/
-
 let tests = document.querySelectorAll('[class^=test]');
 
 tests.forEach((el) => {
@@ -17,8 +16,7 @@ tests.forEach((el) => {
 });
 
 
-
-/****** BACK TO TOP BTN*******/
+/******   BACK TO TOP BTN    *******/
 let docElement = document.documentElement;
 let docBody = document.body;
 let bttBtn = document.querySelector('.js-btt-btn');
@@ -37,7 +35,7 @@ bttBtn.addEventListener('click', (e) => {
 });
 
 
-/***  SUBSCRIBE INPUTS CHANGE ICON COLOR ON FOCUS  ****/
+/*****  SUBSCRIBE INPUTS CHANGE ICON COLOR ON FOCUS  ******/
 let inputs = document.querySelectorAll('form input');
 
 inputs.forEach((el) => el.addEventListener('focus', changeFocus));
@@ -59,9 +57,9 @@ let year = document.querySelector('.year');
 year.textContent = new Date().getFullYear();
 
 
-/********   TESTIMONIAL SLIDER   *******/
+/***********  TESTIMONIAL SLIDER   *********/
 let testimonialFlex = document.querySelector('.testimonials__flex');
-let customers = document.querySelectorAll('.customer');
+let customers = Array.from(document.querySelectorAll('.customer'));
 let prev = document.querySelector('.testimonials__prev');
 let next = document.querySelector('.testimonials__next');
 let dotContainer = document.querySelector('.testimonials__dot-container');
@@ -81,6 +79,8 @@ dotArr[0].classList.add('grey');
 dotArr[1].classList.add('active');
 dotArr[2].classList.add('grey');
 
+//customers[1].children[0].classList.add('active');
+
 dotArr.forEach((el, idx) => {
     let customerWidth = customers[0].scrollWidth;
     let customerMarginRight = parseInt(getComputedStyle(customers[0]).marginRight);
@@ -96,6 +96,7 @@ function resetDotActive(e) {
         dotArr[i].classList.remove('active');
         dotArr[i].classList.remove('grey');
         e.target.classList.add('active');
+        
         if (e.target.previousElementSibling) {
             e.target.previousElementSibling.classList.add('grey');
         }
