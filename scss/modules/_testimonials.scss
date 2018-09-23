@@ -1,75 +1,101 @@
 
 
-section.testimonials {
+.testimonials {
     background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../img/items.jpg);
     background-size: cover;
     background-position: center bottom;
     background-attachment: fixed;
     color: #fff;
+    padding: 2em 2em;
     
-    @include breakpoint(1200px) {
+    /*@include breakpoint(1200px) {
         padding: 6em calc(50% - 600px);
-    }
-}
-
-div.gridFour {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2.5em;
-    margin-top: 7.5em; /* was 120px*/
-    align-items: center;
+    }*/
     
-    @include breakpoint(max-width $medium) {
-        display: block;
+    &__wrap {
+        position: relative;
+        height: 100vh;
+        max-width: 100%;
+        overflow: hidden;
     }
+    
+    &__flex {
+        display: flex;
+        align-items: center;
+        //position: absolute;
+        max-width: 100%;
+        transition: all 400ms ease-out;
+        
+        /*@include breakpoint(max-width $medium) {
+            display: block;
+        }*/
+    }
+    
+    &__prev, &__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        line-height: 3em;
+        text-align: center;
+        background-color: rgba(255,255,255,.7);
+        color: #000;
+        z-index: 500;
+        cursor: pointer;
+        font-weight: 700;
+        transition: all 300ms ease-out;
+    }
+    
+    &__prev:hover, &__next:hover {
+        background-color: rgba(255,255,255,.9);
+    }
+    
+    &__next {
+        right: 0;
+        left: auto;
+    }
+    
+    &__dot-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    &__dot {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 2em;
+        margin: 0 .25em;
+        cursor: pointer;
+        background-color: #fff;
+        
+        &.active {
+            background-color: green;
+        }
+        
+        &.grey {
+            background-color: gray;
+        }
+    }
+     
 }
 
-@include breakpoint(max-width $medium) {
+.customer {
+    flex: 0 0 31%;
+    margin: 0 .75em;
+}
+
+/*@include breakpoint(max-width $medium) {
     div.customer:not(.customer--one) {
         margin-top: 6.6em;
     }
-}
-
-div.customer--one {
-    //opacity: 0;
-    //visibility: hidden;
-    //transform: translateX(-100%);
-    //transition: all 1100ms ease-out;
-    
-    &.animateScroll {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
-    }
-    
-}
-
-div.customer--two {
-    //opacity: 0;
-    //visibility: hidden;
-    //transform: translateY(100%);
-    //transition: all 1100ms ease-out;
-    
-    &.animateScroll {
-       opacity: 1;
-        visibility: visible;
-        transform: translateY(0); 
-    }
-}
-
-div.customer--three {
-    //opacity: 0;
-    //visibility: hidden;
-    //transform: translateX(100%);
-    //transition: all 1100ms ease-out;
-    
-    &.animateScroll {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
-    }
-    
-}
+}*/
 
 div.customer--content {
     background-color: rgba(255,255,255,.4);
