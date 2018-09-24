@@ -28,14 +28,12 @@
         &:hover {
             transform: scale(1.3);
         }
-        
     }
         
     .fa {
         font-size: 1.4em;
         display: inline-block;
         color: $gold-dark;
-        
     }
 
     a:not(:first-of-type) {

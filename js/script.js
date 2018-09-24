@@ -143,6 +143,40 @@ next.addEventListener('click', (e) => {
 });
 
 
+/****************  STICKY HEADER   ****************/
+let header = document.querySelector('.site-header');
+let nav = document.querySelector('.navigation');
+let hero = document.querySelector('.large-hero');
+
+document.addEventListener('scroll', (e) => {
+    if (hero.getBoundingClientRect().top <= 0) {
+        document.body.style.paddingTop = nav.getBoundingClientRect().height + 'px';
+        nav.classList.add('fixed');
+    } else {
+        document.body.style.paddingTop = 0;
+        nav.classList.remove('fixed');
+    }
+})
+
+
+/****************  HIGHTLIGHT NAV ITEMS ON SCROLL   ****************/
+let navs = document.querySelectorAll('.navigation__link:not(.navigation__link-home)');
+let sects = document.querySelectorAll('section:not(:first-of-type):not(:last-of-type)');
+
+document.addEventListener('scroll', (e) => {
+    
+    navs.forEach((el, idx) => {
+        let sect = sects[idx].getBoundingClientRect();
+        if (sect.top <= 5 && sect.bottom >= 5) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    })
+})
+
+
+
 /*
 let svcButtons = document.querySelectorAll('.services .btn-standard');
 
