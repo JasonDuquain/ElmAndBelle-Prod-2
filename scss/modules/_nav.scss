@@ -21,7 +21,7 @@
     }
     
     &__link:link:hover, &__link:visited:hover {
-        color: $gold;
+        color: $gold-dark;
     }
 
     &__link:link::after, &__link:visited::after {
@@ -32,7 +32,7 @@
         right: 50%;
         bottom: 0;
         height: 2px;
-        background-color: $gold;
+        background-color: $gold-dark;
     }
     
     &__link:hover::after {

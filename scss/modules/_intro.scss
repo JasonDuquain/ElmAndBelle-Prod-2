@@ -22,10 +22,12 @@
     &__img {
         width: 110%;
         border-radius: 2px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         transition: transform 300ms ease-out;
         
         &:hover {
             transform: scale(1.1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
             z-index: 60;
         }
         
@@ -38,6 +40,7 @@
         &-2 {
             grid-column: 5 / 9;
             grid-row: 5 / 9;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
         
         &-3 {

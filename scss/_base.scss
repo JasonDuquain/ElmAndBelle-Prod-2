@@ -1,5 +1,6 @@
 
-* {
+*, *:before, *:after {
+    box-sizing: inherit;
     text-decoration: none;
     list-style-type: none;
     margin: 0;
@@ -20,23 +21,14 @@
     }
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-
 body {
     font-size: 100%;
     font-family: 'Raleway', serif;
     color: #333;
 }
 
-/*body.blur {
-    filter: blur(3px);
-}*/
-
 section {
-    padding: 6em;
+    padding: 6em 2em;
 }
 
 .pre-heading {

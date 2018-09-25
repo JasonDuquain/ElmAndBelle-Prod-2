@@ -8,9 +8,9 @@
     color: #fff;
     padding: 6em 2em 2em 2em;
     
-    /*@include breakpoint(1200px) {
+    @include breakpoint(1200px) {
         padding: 6em calc(50% - 600px);
-    }*/
+    }
     
     &__wrap {
         position: relative;
