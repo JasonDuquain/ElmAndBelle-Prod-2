@@ -1,12 +1,21 @@
 
 .navigation {
     padding: 1em 1.5em;
+    transition: background-color 350ms ease-in;
     
     &__list {
         width: 70%;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
+    }
+    
+    &__item--hide {
+        display: none;
+        
+        & .navigation__link:link::after, & .navigation__link:visited::after {
+            display: none;
+        }
     }
 
     &__link:link, &__link:visited {
@@ -48,6 +57,30 @@
         right: 0;
         background-color: rgba(0,0,0,.7);
         box-shadow: 0 3px 3px rgba(0,0,0,.3);
+        padding-top: 0;
+        padding-bottom: 0;
+        
+        & .navigation__list {
+            //margin: 0;
+            width: 90%;
+            align-items: center;
+        }
+        
+        & .navigation__item--hide {
+            display: block;
+            margin-right: auto;
+            margin-bottom: -8px;
+        }
+        
+        & .navigation__item--hide svg {
+            fill: #fff;
+            width: 250px;
+            height: 60px;
+        }
+        
+        & .navigation__item {
+            margin-left: 2em;
+        }
         
         & .navigation__link:link, & .navigation__link:visited {
             color: #fff;
@@ -58,6 +91,7 @@
         }
         
         & .navigation__link.active:link::after, & .navigation__link.active:visited::after {
+            color: $gold;
             left: 0;
             right: 0;
             transition-delay: 300ms; /* added to try to keep other links from starting to animate this on the way down/up to the target link */

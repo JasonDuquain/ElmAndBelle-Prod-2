@@ -51,20 +51,30 @@
     
     /*********** TABLE STYLES **************/
     &__table {
-        width: 70%;
-        margin: 0 auto 3em auto;
+        width: 60%;
         border-collapse: collapse;
+        border-radius: 20px;
         
         opacity: 0;
         visibility: hidden;
         transform: scale(0);
         transition: 400ms ease-out;
         
-        caption {
-            text-align: left;
+        &-caption {
+            padding: .5em 0 .5em 0;
+            text-align: center;
+            font-size: 3.4em;
+            color: #333;
+            background-color: lighten($gold, 15%);
+        }
+        
+        &-caption-span {
+            font-family: 'Rochester', cursive;
+            line-height: .7;
+            text-align: center;
+            display: block;
             font-size: 1.2em;
-            padding-bottom: .3em;
-            font-weight: 700;
+            color: $gold-dark;
         }
       
         tr:nth-of-type(odd){
@@ -72,23 +82,20 @@
         }
         
         tr:nth-of-type(even){
-          background-color: darken($gold, 15%);
-        }
-        
-        td, th {
-            font-size: 1em;
-            border: 1px solid $gold;
-            padding: 3px 7px 2px 7px;
-            text-transform: uppercase;
+          background-color: $gold;
         }
         
         th {
-          text-align: center;
-          padding-top: 5px;
-          padding-bottom: 4px;
-          background: rgb(229,76,16);
-          background: linear-gradient(to bottom, $gold, darken($gold, 10%));
-          color: white;
+            text-align: center;
+            padding: 0 1em;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: 700;
+        }
+        
+        td {
+            padding: 1em 1em 1em 2em;
+            font-weight: 500;
         }
     }  
     

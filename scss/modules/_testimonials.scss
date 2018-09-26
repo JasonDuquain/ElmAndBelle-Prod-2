@@ -14,7 +14,6 @@
     
     &__wrap {
         position: relative;
-        height: 100vh;
         max-width: 100%;
         overflow: hidden;
     }
@@ -22,13 +21,8 @@
     &__flex {
         display: flex;
         align-items: center;
-        //position: absolute;
         max-width: 100%;
         transition: all 400ms ease-out;
-        
-        /*@include breakpoint(max-width $medium) {
-            display: block;
-        }*/
     }
     
     &__prev, &__next {
@@ -100,8 +94,7 @@
 
 div.customer--content {
     background-color: rgba(255,255,255,.4);
-    padding: 1.5em;
-    padding-top: 0;
+    padding: 5em 1.5em;
     border: .3125em solid #fff;
     border-radius: .25em;
     
@@ -118,7 +111,7 @@ div.customer--content {
 
 
 
-div.userWrap {
+/*div.userWrap {
     text-align: center;
     transform: translateY(-50%);
 }
@@ -139,20 +132,19 @@ div.userPic {
         font-size: 4em;
         transform: translateX(3px) rotate(90deg);
     }
-}
+}*/
 
 div.quoteWrap {
     padding: 2em;
     background-color: darken($pink-light, 10%);
     margin-left: -1.5em;
     margin-right: -1.5em;
-    margin-top: -2em;
     clip-path: polygon(0 1em, 100% 0, 100% calc(100% - 1em), 0 100%);
     color: #fff;
 }
 
 blockquote {
-    margin-bottom: 1.3em; 
+    margin-bottom: 1em; 
     line-height: 1.4;
     font-weight: 300;
     position: relative;
@@ -170,26 +162,12 @@ blockquote::before {
     font-family: sans-serif;
 }
 
-.star-date-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.stars__link {
-    display: inline-block;
-    
-}
-
-.stars__icon {
-    color: gold;
-    display: inline-block;
-    font-size: 1.3em !important;
-}
 
 cite {
     font-style: italic;
     font-weight: 700;
+    text-align: right;
+    display: block;
 }
 
 
