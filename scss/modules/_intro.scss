@@ -13,7 +13,7 @@
     
     /*****OVERLAP GALLERY******/
     &__gallery {
-        margin: 0 3em;
+        margin: 0 3em 6em 0;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         grid-template-rows: repeat(9, 1fr);
@@ -98,11 +98,17 @@
         font-weight: 500;
         line-height: 1;
         margin: 2em 0;
+        text-transform: uppercase;
         
         &::before, &::after {
             content: "";
-            height: 1px;
-            background-color: currentColor;
+            height: 5px;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, $gold, transparent);
+        }
+        
+        &::before {
+            background-image: linear-gradient(to left, $gold, transparent);
         }
     }
     

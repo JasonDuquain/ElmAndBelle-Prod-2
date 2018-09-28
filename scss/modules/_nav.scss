@@ -11,7 +11,11 @@
     }
     
     &__item--hide {
-        display: none;
+        //display: none;
+        margin-left: 2em;
+        transform: scale(2.2);
+        opacity: 0;
+        transition: transform 1800ms ease-out, opacity 1500ms;
         
         & .navigation__link:link::after, & .navigation__link:visited::after {
             display: none;
@@ -59,17 +63,19 @@
         box-shadow: 0 3px 3px rgba(0,0,0,.3);
         padding-top: 0;
         padding-bottom: 0;
+        overflow: hidden; /*added to keep the sticky nav from expanding when logo animation happens */
         
         & .navigation__list {
-            //margin: 0;
             width: 90%;
             align-items: center;
         }
         
         & .navigation__item--hide {
-            display: block;
+            //display: block;
             margin-right: auto;
             margin-bottom: -8px;
+            opacity: 1;
+            transform: scale(1);
         }
         
         & .navigation__item--hide svg {
@@ -87,7 +93,7 @@
         }
         
         & .navigation__link.active:link, & .navigation__link.active:visited {
-            color: $gold;
+            color: $gold-dark;
         }
         
         & .navigation__link.active:link::after, & .navigation__link.active:visited::after {
