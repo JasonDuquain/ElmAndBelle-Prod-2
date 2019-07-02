@@ -6,7 +6,7 @@
     background-color: $gold-dark;
     display: inline-block;
     padding: .6em 1.2em;
-    text-align: center;
+    
     
     &::before, &::after {
         content: "";
@@ -37,6 +37,10 @@
             &:hover::after {
                 width: 100%;
             }
+}
+
+.btn-flex {
+    align-self: center;
 }
 
 .js-btt-btn {

@@ -1,55 +1,103 @@
 
 .services {
-    background-color: #fbfbfb;
-    margin: 0 auto;
-    
-    @include breakpoint(1200px) {
-        padding: 6em calc(50% - 600px);
-    }
     
     &__grid {
         display: grid;
-        margin-bottom: 5em;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        justify-items: center;
-        grid-gap: 3em 2em;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 2em;
+        max-width: 1280px;
+        margin: 0 auto;
+        align-items: center;
     }
     
-    &__figure {
-        transition: all 200ms ease-out;
-        width: min-content;
-        border-radius: 100% 100% 0 0;
-        overflow: hidden;
+    &__wrap { 
+        
     }
     
-    &__figure:hover {
-        box-shadow: 0 0 5px #333;
-        transform: translateY(-2px)
+    &__main {
+        width: 400px;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba($grey-light-2,.3);
+        transition: transform 300ms ease-in;
+    }
+    
+    &__image-wrap {
+        position: relative;
+    }
+    
+    &__image-wrap::after {
+        position: absolute;
+        content: "";
+        background-image: url('../img/blog-entry-overlay.svg');
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 52px; /*will not fit perfectly when width changes - update this soon*/
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
     
     &__image {
-        width: 365px;
-        height: 235px;
-        object-fit: cover;
         display: block;
-        border-radius: 100% 100% 0 0;
     }
     
-    &__figcaption {
-        padding: 1.5em;
-        text-align: center;
-        background-color: #000;
-        color: #fff;
-    }
-    
-    &__heading {
-        margin-bottom: 1em;
-        text-transform: uppercase;
-        font-weight: 500;
+    &__description {
+        padding: 2em;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
     }
 
+    &__description-heading {
+        font-size: 1.2em;
+         margin: 1em 0 .5em 0;
+        text-transform: capitalize;
+         font-family: 'Quicksand', sans-serif;
+         $grey-dark-2: #777;
+         transition: transform 300ms ease-out;
+    }
+
+    &__summary {
+        color: $grey-light-2;
+        margin-bottom: 2em;
+        hyphens: auto;
+        
+    }
     
-    /*********** TABLE STYLES **************/
+    &__link {
+        color: $grey-dark-2;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        position: relative;
+        padding-bottom: .3em;
+    }
+    
+    &__link:hover {
+        color: $grey-dark-1;
+        transition: color 300ms ease-in;
+    }
+    
+    &__link::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        content: "";
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: left center;
+        z-index: 88;
+        background-color: currentColor;
+        transition: transform 350ms ease-out;
+    }
+    
+    &__link:hover::after {
+        transform: scaleX(1);
+    }
+    
+    /**********   SERVICES TABLE LIST   **********/
     &__table {
         width: 60%;
         border-collapse: collapse;
@@ -152,12 +200,4 @@
 .close_modal:hover {
     color: green;
 }
-
-
-
-
-
-
-
-
 

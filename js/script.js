@@ -1,3 +1,16 @@
+/***********  SLIDER  ***********/
+
+$(document).ready(function(){
+  $('.testimonials__flex').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  adaptiveHeight: true
+  });
+});
+
+
 /**** REMOVE HERO TEXT ANIMATION AFTER ONE TIME*****/
 let tests = document.querySelectorAll('[class^=test]');
 
@@ -63,84 +76,8 @@ let customers = Array.from(document.querySelectorAll('.customer'));
 let prev = document.querySelector('.testimonials__prev');
 let next = document.querySelector('.testimonials__next');
 let dotContainer = document.querySelector('.testimonials__dot-container');
-let dotArr = [];
-let customerWidth = customers[0].scrollWidth;
-let index = 0;
 
 
-for (let i = 0; i < customers.length; i++) {
-    let dot = document.createElement('span');
-    dot.classList.add('testimonials__dot');
-    dotContainer.append(dot);
-    dotArr.push(dot);
-}
-
-dotArr[0].classList.add('grey');
-dotArr[1].classList.add('active');
-dotArr[2].classList.add('grey');
-
-//customers[1].children[0].classList.add('active');
-
-dotArr.forEach((el, idx) => {
-    let customerWidth = customers[0].scrollWidth;
-    let customerMarginRight = parseInt(getComputedStyle(customers[0]).marginRight);
-    let totalWidth = customerWidth + (customerMarginRight * 2);
-    el.addEventListener('click', (e) => {
-        testimonialFlex.style.transform = `translateX(${(-totalWidth * (idx - 1))}px)`;
-        resetDotActive(e);
-    })
-});
-  
-function resetDotActive(e) {
-    for (let i = 0; i < dotArr.length; i++) {
-        dotArr[i].classList.remove('active');
-        dotArr[i].classList.remove('grey');
-        e.target.classList.add('active');
-        
-        if (e.target.previousElementSibling) {
-            e.target.previousElementSibling.classList.add('grey');
-        }
-        if (e.target.nextElementSibling) {
-            e.target.nextElementSibling.classList.add('grey');
-        }
-    }
-}
-
-prev.addEventListener('click', (e) => {
-    console.log(`1st line of prev, index is ${index} and transform is ${testimonialFlex.style.transform}`);
-    let customerWidth = customers[0].scrollWidth;
-    let customerMarginRight = parseInt(getComputedStyle(customers[0]).marginRight);
-    let totalWidth = customerWidth + (customerMarginRight * 2);
-    index--;
-    if (index == -customers.length) {
-        index = 0;
-        testimonialFlex.style.transform = `translateX(${customerWidth * index}px)`;
-    } else {
-        testimonialFlex.style.transform = `translateX(${(totalWidth * index)}px)`;   
-    }
-    console.log(`last line of prev, index is ${index} and transform is ${testimonialFlex.style.transform}`);
-});
-
-next.addEventListener('click', (e) => {
-    console.log(`1st line of next, index is ${index} and transform is ${testimonialFlex.style.transform}`);
-    let customerWidth = customers[0].scrollWidth;
-    let customerMarginRight = parseInt(getComputedStyle(customers[0]).marginRight);
-    let totalWidth = customerWidth + (customerMarginRight * 2);
-    index++;
-    if (index >= customers.length) {
-        index = 0;
-        testimonialFlex.style.transform = `translateX(${-customerWidth * index}px)`;
-    } else {
-        
-        //let transform = testimonialFlex.style.transform;
-        //const translateX = transform.replace(/[^\d.]/g, ''); //it is a string
-              
-        testimonialFlex.style.transform = `translateX(${-(totalWidth * index)}px)`;
-        
-        
-    }
-    console.log(`last line of next, index is ${index} and transform is ${testimonialFlex.style.transform}`);
-});
 
 
 /****************  STICKY HEADER   ****************/
@@ -163,6 +100,8 @@ document.addEventListener('scroll', (e) => {
 let navs = document.querySelectorAll('.navigation__link:not(.navigation__link-home)');
 let sects = document.querySelectorAll('section:not(:first-of-type):not(:last-of-type)');
 
+console.log(sects);
+
 document.addEventListener('scroll', (e) => {
     
     navs.forEach((el, idx) => {
@@ -175,7 +114,46 @@ document.addEventListener('scroll', (e) => {
     })
 })
 
+/******  STATS numbers increasing fast  *******/
+let statOne = document.querySelector('.stats__number--one');
+let numOne = 1; 
+let clearOne = setInterval(() => { 
+    numOne++;
+    statOne.textContent = numOne;
+    if (numOne === 35) {
+        clearInterval(clearOne);
+    } 
+}, 40);
+    
+let statTwo = document.querySelector('.stats__number--two');
+let numTwo = 1; 
+let clearTwo = setInterval(() => { 
+    numTwo++;
+    statTwo.textContent = numTwo;
+    if (numTwo === 12) {
+        clearInterval(clearTwo);
+    } 
+}, 120);
+    
+let statThree = document.querySelector('.stats__number--three');
+let numThree = 1; 
+let clearThree = setInterval(() => { 
+    numThree++;
+    statThree.textContent = numThree;
+    if (numThree === 100) {
+        clearInterval(clearThree);
+    } 
+}, 15);
 
+let statFour = document.querySelector('.stats__number--four');
+let numFour = 1; 
+let clearFour = setInterval(() => { 
+    numFour++;
+    statFour.textContent = numFour;
+    if (numFour === 140) {
+        clearInterval(clearFour);
+    } 
+}, 10);
 
 /*
 let svcButtons = document.querySelectorAll('.services .btn-standard');

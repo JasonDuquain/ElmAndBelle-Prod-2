@@ -36,10 +36,6 @@ section {
     text-align: center;
     color: $grey-dark-3;
     margin-bottom: .3em;
-    
-    .testimonials & {
-        color: #fff;
-    }
 }
 
 .sect-heading {
@@ -50,11 +46,6 @@ section {
     letter-spacing: 2px;
     margin-bottom: .2em;
     color: rgb(51, 51, 51);
-    
-    .testimonials & {
-        color: #fff;
-    }
-
 }
 
 .sect-heading-img {
@@ -63,12 +54,6 @@ section {
     background-image: url('../img/heading-img.svg');
     margin: 0 auto 3em auto;
     opacity: .5;
-    
-    .testimonials & {
-        opacity: 1;
-        background-image: url('../img/heading-img-white.svg');
-    }
-
 }
 
 /*svg#test {

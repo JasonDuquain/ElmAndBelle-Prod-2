@@ -1,138 +1,69 @@
 
-
-.testimonials {
-    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../img/bg-intro1.jpg);
+.testimonial {
+    background-image: linear-gradient(105deg, #fff, #fff, 50%, transparent 50%), url(../img/bg-testimonial.jpg);
     background-size: cover;
-    background-position: center bottom;
-    background-attachment: fixed;
-    color: #fff;
     padding: 6em 2em 2em 2em;
     
     @include breakpoint(1200px) {
         padding: 6em calc(50% - 600px);
     }
     
-    &__wrap {
-        position: relative;
-        max-width: 100%;
-        overflow: hidden;
+    /* new styles */
+    &__cell {
+        box-shadow: 2px 2px 3px 3px rgba($grey-dark-2, .3);
+        background-color: #fff;
+        border-radius: 3px;
+        margin: 1em;
     }
     
-    &__flex {
+    &__wrap {
         display: flex;
         align-items: center;
-        max-width: 100%;
-        transition: all 400ms ease-out;
+        border-bottom: 1px solid $grey-light-2;
+        padding: 2rem;
     }
     
-    &__prev, &__next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        width: 3em;
-        height: 3em;
+    &__image {
+        width: 8em;
+        height: 8em;
         border-radius: 50%;
-        line-height: 3em;
-        text-align: center;
-        background-color: rgba(255,255,255,.7);
-        color: #000;
-        z-index: 500;
-        cursor: pointer;
+        margin-right: 2em;
+    }
+    
+    &__wrap-contact {
+        
+    }
+    
+    &__name {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.7em;
         font-weight: 700;
-        transition: all 300ms ease-out;
+        color: $grey-dark-2;
     }
     
-    &__prev:hover, &__next:hover {
-        background-color: rgba(255,255,255,.9);
+    &__address {
+        color: $grey-light-2;
     }
     
-    &__next {
-        right: 0;
-        left: auto;
+    &__review {
+        font-size: 1.1em;
+        line-height: 1.6;
+        font-family: 'Quicksand', sans-serif;
+        color: $grey-light-2;
+        padding: 2rem 2rem 4rem 2rem;
     }
     
-    &__dot-container {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    
-    &__dot {
-        width: 1.5em;
-        height: 1.5em;
-        border-radius: 2em;
-        margin: 0 .25em;
-        cursor: pointer;
-        background-color: #fff;
-        
-        &.active {
-            background-color: $gold; 
-            pointer-events: none;
-        }
-        
-        &.grey {
-            background-color: gray;           
-        }
-    }
-     
 }
 
-.customer {
-    flex: 0 0 31%;
-    margin: 0 .75em;
-}
 
-/*@include breakpoint(max-width $medium) {
-    div.customer:not(.customer--one) {
-        margin-top: 6.6em;
-    }
-}*/
+/* OLD STYLES WITH SLANT AND QUOTE  */
 
 div.customer--content {
     background-color: rgba(255,255,255,.4);
     padding: 5em 1.5em;
     border: .3125em solid #fff;
     border-radius: .25em;
-    
-    /*&.active {
-        border-color: green;
-    }
-    
-    &.grey {
-        border-color: gray;
-    }*/
-    
-    
 }
-
-
-
-/*div.userWrap {
-    text-align: center;
-    transform: translateY(-50%);
-}
-
-div.userPic {
-    border-radius: 50%;
-    border: .3125em solid #fff;
-    width: 6em;
-    height: 6em;
-    background-color: #fff;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    & .fa {
-        color: $pink-light;
-        font-size: 4em;
-        transform: translateX(3px) rotate(90deg);
-    }
-}*/
 
 div.quoteWrap {
     padding: 2em;

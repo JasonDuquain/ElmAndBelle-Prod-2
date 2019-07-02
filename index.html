@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,8 @@
     <title>Elm and Belle Salon</title>
     <link rel="stylesheet" href="css/baguetteBox.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,300,300i,400,400i,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
@@ -1604,7 +1607,7 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
                 Step into a salon where style and comfort meet to allow for the most personalized salon experience. 
                 </p>
 
-               <p>With nearly 15 years of experience, stylist Jennifer Duquain specializes in women’s color, highlighting, balayage and hair design. </p>
+               <p>With over 15 years of experience, stylist Jennifer Duquain specializes in women’s color, highlighting, balayage and hair design. </p>
 
                 <p>Jennifer has been trained by Atlanta to New York’s top stylists and product educators. She has experience with the industry’s best products from Redken to Pureology to Pravana, Wella, Moroccan Oil and more. </p>
 
@@ -1632,30 +1635,49 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
         <div class="pre-heading">Our Best</div>    
         <h2 class="intro__heading sect-heading">Services</h2>
         <div class="sect-heading-img"></div>
-        
+ 
         <div class="services__grid">
-            <figure class="services__figure" id="service--one">
-                <img src="img/ok.jpg" alt="" class="services__image">
-                <figcaption class="services__figcaption">
-                    <h3 class="services__heading">Cut &amp; Design</h3>
-                    <a href="#cut-and-design_wrap" class="btn btn-standard">View Services</a>
-                </figcaption>
-            </figure>
-            <figure class="services__figure" id="service--two">
-                <img src="img/items.jpg" alt="" class="services__image">
-                <figcaption class="services__figcaption">
-                    <h3 class="services__heading">Color</h3>
-                    <a href="#color_wrap" class="btn btn-standard">View Services</a>
-                </figcaption>
-            </figure>
-            <figure class="services__figure" id="service--three">
-                <img src="img/gridpic-1.jpg" alt="" class="services__image">
-                <figcaption class="services__figcaption">
-                    <h3 class="services__heading">Additional Services</h3>
-                    <a href="#additional_wrap" class="btn btn-standard">View Services</a>
-                </figcaption>
-            </figure>
+            
+            <div class="services_wrap">
+                <div class="services__main">
+                    <div class="services__image-wrap">
+                        <img src="img/img-blog.jpg" alt="girl getting massage" class="services__image">
+                    </div>
+                    <div class="services__description">
+                        <h3 class="services__description-heading">Cut &amp; Design</h3>
+                        <p class="services__summary">Consec tetur adipi sicing elit. Nostrum nobis culpa odit est? Saepe vel perfer endis, praesentium me gusta para el. </p>
+                        <a href="#cut-and-design_wrap" class="btn btn-standard btn-flex">View Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="services_wrap">
+                <div class="services__main">
+                    <div class="services__image-wrap">
+                        <img src="img/img-blog2.jpg" alt="girl getting massage" class="services__image">
+                    </div>
+                    <div class="services__description">
+                        <h3 class="services__description-heading">Color</h3>
+                        <p class="services__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nobis culpa odit est? Saepe vel perferendis, praesentium. </p>
+                        <a href="#color_wrap" class="btn btn-standard btn-flex">View Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="services_wrap">
+                <div class="services__main">
+                    <div class="services__image-wrap">
+                        <img src="img/img-blog3.jpg" alt="girl getting massage" class="blog__image">
+                    </div>
+                    <div class="services__description">
+                        <h3 class="services__description-heading">Additional Services</h3>
+                        <p class="services__summary">Disti anctio quidem necessit omnis nostrum, architecto reiciendis dolor sit amet pariatur facere</p>
+                        <a href="#additional_wrap" class="btn btn-standard btn-flex">View Services</a>
+                    </div>
+                </div>
+            </div>
+            
+            
         </div>
+       
         
         <div class="cut-and-design_wrap" id="cut-and-design_wrap">
             <a href="#service--one" class="close_modal" title="close window">&times;</a>
@@ -1784,6 +1806,7 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
 
     </section>
     
+    <!--
     <section class="gallery" id="gallery">
         <div class="pre-heading">Check out the </div>    
         <h2 class="intro__heading sect-heading">Lookbook</h2>
@@ -1867,78 +1890,115 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
             
        </div>
     </section>
-
-    <section class="testimonials" id="testimonials">
+    -->
+    
+    <section class="stats">
+        <section class="stats__grid">
+           <div class="stats__wrap">
+                <h3 class="stats__heading">Salon Statistics</h3>
+                <p class="stats__summary">
+                    Serving since 2018.
+                </p>
+           </div>
+           <div class="stats__stat stats__stat--one">
+               <div class="stats__number stats__number--one">35</div>
+               <div class="stats__service">Services</div>
+           </div>
+           <div class="stats__stat stats__stat--two">
+               <div class="stats__number stats__number--two">500</div>
+               <div class="stats__service">Hours Styling</div>
+           </div>
+           <div class="stats__stat stats__stat--three">
+               <div class="stats__number stats__number--three">100</div>
+               <div class="stats__service">Orders Accepted</div>
+           </div>
+           <div class="stats__stat stats__stat--four">
+               <div class="stats__number stats__number--four">140</div>
+               <div class="stats__service">Clients Served</div>
+           </div>
+        </section>    
+    </section>
+    
+    <section class="testimonial" id="testimonials">
         <div class="pre-heading">Read our</div>    
         <h2 class="intro__heading sect-heading">Testimonials</h2>
         <div class="sect-heading-img"></div>
         
         <div class="testimonials__wrap">
-            <div class="grid testimonials__flex">
-                 <div class="customer--one customer">
-                  <div class="customer--content">
-                      <div class="quoteWrap">
-                          <blockquote>
-                            Jenn has been doing my hair for years and I'm so excited she finally has her own salon! She is always up on the latest techniques and trends in hair and always comes with great suggestions on style and color. You won't be disappointed! 
-                          </blockquote>
-                          <cite>-Kim</cite>    
-                      </div>
-                     </div> 
-                 </div>        
-                 <div class="customer--two customer">
-              <div class="customer--content">
-                    <div class="quoteWrap">
-                        <blockquote>
-                            I highly recommend Jen to be your hair colorist and stylist. She is amazingly talented at cuts and color that will match and flatter your skin tone and your eyes. Being her neighbor it is beyond convenient to be able to go to her salon in her home on early evenings during the work week. I am thrilled with my cut and color. She offers everything and her pricing is more competitive than what you will pay at salons in the area. Book your appointment with Jen!!!
-                        </blockquote>
-                        <cite>-Amy</cite>    
-                    </div>
-              </div>  
-           </div>        
-                 <div class="customer--three customer">
-               <div class="customer--content">
-                    <div class="quoteWrap">
-                        <blockquote>
-                            It's been a long time since I've walked out of a salon with a cut and color that I loved. Jenn did an amazing job and really took the time to understand what I was looking for. I'm so happy with my new cut and color! I loved the individualized attention she gave me and her flexibility with scheduling. Looking forward to going back. 
-                        </blockquote>               
-                        <cite>-Amy</cite>    
-                    </div>
-              </div>
-           </div>  
-                 <div class="customer--four customer">
-               <div class="customer--content">
-                    <div class="quoteWrap">
-                        <blockquote>
-                            Jen is great! Nice, cozy environment to relax in and be pampered! Next time I’m bringing a bottle of wine! came in not really knowing exactly what I wanted, but she figured it out. I’m always hesitant about cuts because I have curly hair and I’ve ended up looking like a triangle/Bozo the clown too many times, but she has curly hair too so she knows what to do... I love the color she did and felt her sincerity on wanting to make sure I was happy. I also love leaving a salon with straight hair, because I don’t ever really do it myself. Overall great experience and will definitely be back! 
-                        </blockquote>
-                        <cite>-Jennifer</cite>    
-                    </div>
-              </div>
-           </div> 
-                 <div class="customer--five customer">
-               <div class="customer--content">
-                    <div class="quoteWrap">
-                        <blockquote>
-                            Couldn't recommend Elm &amp; Belle more. Jennifer is fantastic. I need some color (no cut this time), and she perfectly matched exactly what I was looking for. She's extremely knowledgable about every product she recommends and why she's using that specific product for your hair. Her hours are very convenient, her salon is beautiful, her rates are competitive, and she's so much fun to hang out and chat with while you're getting beautified. My husband was so impressed with my experience that he's booking his own appointment!
-                        </blockquote>
-                        <cite>-Laura</cite>    
-                    </div>
-              </div>
-           </div> 
-                 <div class="customer--six customer">
-               <div class="customer--content">
-                    <div class="quoteWrap">
-                        <blockquote>
-                            Jenn is amazing! I wasn’t sure what to do with all my hair to make it more manageable. Jenn was wonderful! She came up with an idea that I just love. She executed exactly what I wanted...even without being sure what that was exactly! So excited about my new go to place and person!! 
-                        </blockquote>
-                        <cite>-Kelly</cite>    
-                    </div>
-              </div>
-           </div>       
-             </div> 
-             <span class="testimonials__prev">&lt;</span>  
-             <span class="testimonials__next">&gt;</span> 
-             <div class="testimonials__dot-container"></div> 
+            <div class="grid testimonials__flex">             
+               <div class="testimonial__cell">
+                <div class="testimonial__wrap">
+                   <img src="img/gridpic-1.jpg" class="testimonial__image">
+                   <div class="testimonial__wrap-contact">
+                       <p class="testimonial__name">Kim</p>
+                       <p class="testimonial__address">Tupelo, MS 38801</p>
+                   </div> 
+                </div>
+                <p class="testimonial__review">
+                    Jenn has been doing my hair for years and I'm so excited she finally has her own salon! She is always up on the latest techniques and trends in hair and always comes with great suggestions on style and color. You won't be disappointed! 
+                </p>
+               </div>
+               <div class="testimonial__cell">
+                <div class="testimonial__wrap">
+                   <img src="img/gridpic-1.jpg" class="testimonial__image">
+                   <div class="testimonial__wrap-contact">
+                       <p class="testimonial__name">Amy</p>
+                       <p class="testimonial__address">Tupelo, MS 38801</p>
+                   </div> 
+                </div>
+                <p class="testimonial__review">
+                    I highly recommend Jen to be your hair colorist and stylist. She is amazingly talented at cuts and color that will match and flatter your skin tone and your eyes. Being her neighbor it is beyond convenient to be able to go to her salon in her home on early evenings during the work week. I am thrilled with my cut and color. She offers everything and her pricing is more competitive than what you will pay at salons in the area. Book your appointment with Jen!!! 
+                </p>
+               </div>
+               <div class="testimonial__cell">
+                <div class="testimonial__wrap">
+                   <img src="img/gridpic-1.jpg" class="testimonial__image">
+                   <div class="testimonial__wrap-contact">
+                       <p class="testimonial__name">Amy</p>
+                       <p class="testimonial__address">Tupelo, MS 38801</p>
+                   </div> 
+                </div>
+                <p class="testimonial__review">
+                    It's been a long time since I've walked out of a salon with a cut and color that I loved. Jenn did an amazing job and really took the time to understand what I was looking for. I'm so happy with my new cut and color! I loved the individualized attention she gave me and her flexibility with scheduling. Looking forward to going back. 
+                </p>
+               </div>
+               <div class="testimonial__cell">
+                <div class="testimonial__wrap">
+                   <img src="img/gridpic-1.jpg" class="testimonial__image">
+                   <div class="testimonial__wrap-contact">
+                       <p class="testimonial__name">Jennifer</p>
+                       <p class="testimonial__address">Tupelo, MS 38801</p>
+                   </div> 
+                </div>
+                <p class="testimonial__review">
+                    Jen is great! Nice, cozy environment to relax in and be pampered! Next time I’m bringing a bottle of wine! came in not really knowing exactly what I wanted, but she figured it out. I’m always hesitant about cuts because I have curly hair and I’ve ended up looking like a triangle/Bozo the clown too many times, but she has curly hair too so she knows what to do... I love the color she did and felt her sincerity on wanting to make sure I was happy. I also love leaving a salon with straight hair, because I don’t ever really do it myself. Overall great experience and will definitely be back!  
+                </p>
+               </div>
+               <div class="testimonial__cell">
+                <div class="testimonial__wrap">
+                   <img src="img/gridpic-1.jpg" class="testimonial__image">
+                   <div class="testimonial__wrap-contact">
+                       <p class="testimonial__name">Laura</p>
+                       <p class="testimonial__address">Tupelo, MS 38801</p>
+                   </div> 
+                </div>
+                <p class="testimonial__review">
+                    Couldn't recommend Elm &amp; Belle more. Jennifer is fantastic. I need some color (no cut this time), and she perfectly matched exactly what I was looking for. She's extremely knowledgable about every product she recommends and why she's using that specific product for your hair. Her hours are very convenient, her salon is beautiful, her rates are competitive, and she's so much fun to hang out and chat with while you're getting beautified. My husband was so impressed with my experience that he's booking his own appointment! 
+                </p>
+               </div>
+               <div class="testimonial__cell">
+                <div class="testimonial__wrap">
+                   <img src="img/gridpic-1.jpg" class="testimonial__image">
+                   <div class="testimonial__wrap-contact">
+                       <p class="testimonial__name">Kelly</p>
+                       <p class="testimonial__address">Tupelo, MS 38801</p>
+                   </div> 
+                </div>
+                <p class="testimonial__review">
+                    Jenn is amazing! I wasn’t sure what to do with all my hair to make it more manageable. Jenn was wonderful! She came up with an idea that I just love. She executed exactly what I wanted...even without being sure what that was exactly! So excited about my new go to place and person!!  
+                </p>
+               </div>
+            </div>            
         </div>
           
     </section>
@@ -2012,6 +2072,8 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
         <i class="js-btt-btn-icon fa fa-chevron-up"></i>
     </a>
 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
     <script src="js/baguetteBox.js"></script>
     <script src="js/script.js"></script>
     
