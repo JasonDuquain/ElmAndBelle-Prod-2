@@ -1,3 +1,67 @@
+/******* FADE HERO SECT ON SCROLL *********/
+
+let content = document.querySelector('.large-hero__main-heading');
+let blur = document.querySelector('.large-hero__overlay'); // this element has the filter: blur(4px) applied
+let wHeight = window.innerHeight;
+
+window.addEventListener('resize', () => wHeight = window.innerHeight);
+
+window.requestAnimFrame = (function() {
+    return window.requestAnimationFrame ||
+        function( cb ){
+            window.setTimeout(cb, 1000 / 60);
+        };
+})();
+
+class Scroller {
+    constructor() {
+        this.latestKnownScrollY = 0;
+        this.ticking = false; 
+    }
+    
+    init() {
+        window.addEventListener('scroll', this.onScroll.bind(this));
+        let hdr = document.querySelector('.large-hero');
+        let hdrStyles = window.getComputedStyle(hdr);
+        let hdrBgImg = hdrStyles.getPropertyValue('background-image');
+        blur.style.backgroundImage = hdrBgImg;
+    }
+
+    onScroll() {
+        this.latestKnownScrollY = window.scrollY;
+        this.requestTick();
+    }
+
+    requestTick() {
+        if ( !this.ticking ) {
+            window.requestAnimFrame(this.update.bind(this));
+        }
+        this.ticking = true;
+    }
+
+    update() {
+        let currentScrollY = this.latestKnownScrollY;
+        this.ticking = false;
+      
+        let slowScroll = currentScrollY / 2;
+        let blurScroll = currentScrollY * 2;
+        let opaScroll = 1.4 - currentScrollY / 400;
+        
+        /*nav.style.position = (currentScrollY > wHeight) ? 'fixed' : 'absolute';*/
+      
+        content.style.transform = `translateY(${slowScroll}px)`;
+        content.style.opacity = opaScroll;
+      
+        blur.style.opacity = blurScroll / wHeight; 
+    }
+    
+}
+
+var scroller = new Scroller();  
+scroller.init();
+
+
+
 /***********  SLIDER  ***********/
 
 $(document).ready(function(){
@@ -86,7 +150,7 @@ let nav = document.querySelector('.navigation');
 let hero = document.querySelector('.large-hero');
 
 document.addEventListener('scroll', (e) => {
-    if (hero.getBoundingClientRect().top <= 0) {
+    if (hero.getBoundingClientRect().bottom <= 0) {
         document.body.style.paddingTop = nav.getBoundingClientRect().height + 'px';
         nav.classList.add('fixed');
     } else {
@@ -100,7 +164,6 @@ document.addEventListener('scroll', (e) => {
 let navs = document.querySelectorAll('.navigation__link:not(.navigation__link-home)');
 let sects = document.querySelectorAll('section:not(:first-of-type):not(:last-of-type)');
 
-console.log(sects);
 
 document.addEventListener('scroll', (e) => {
     
@@ -115,15 +178,36 @@ document.addEventListener('scroll', (e) => {
 })
 
 /******  STATS numbers increasing fast  *******/
-let statOne = document.querySelector('.stats__number--one');
+
+let stats = document.querySelector('.stats');
 let numOne = 1; 
-let clearOne = setInterval(() => { 
-    numOne++;
-    statOne.textContent = numOne;
-    if (numOne === 35) {
-        clearInterval(clearOne);
-    } 
-}, 40);
+
+
+let statOne = document.querySelector('.stats__number--one');
+
+
+document.addEventListener('scroll', (e) => {
+    
+    
+    
+    if (stats.getBoundingClientRect().bottom < window.innerHeight) {
+        
+        console.log('yyyes')
+        
+        let clearOne = setInterval(() => { 
+            numOne++;
+            statOne.textContent = numOne;
+            if (numOne >= 35) {
+                clearInterval(clearOne);
+            } 
+        }, 40);
+        
+    }
+    
+})
+
+
+
     
 let statTwo = document.querySelector('.stats__number--two');
 let numTwo = 1; 

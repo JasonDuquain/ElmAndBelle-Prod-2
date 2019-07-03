@@ -11,11 +11,10 @@
     }
     
     &__item--hide {
-        //display: none;
         margin-left: 2em;
         transform: scale(2.2);
         opacity: 0;
-        transition: transform 1800ms ease-out, opacity 1500ms;
+        transition: transform 1000ms ease-out, opacity 800ms;
         
         & .navigation__link:link::after, & .navigation__link:visited::after {
             display: none;
@@ -63,7 +62,7 @@
         box-shadow: 0 3px 3px rgba(0,0,0,.3);
         padding-top: 0;
         padding-bottom: 0;
-        overflow: hidden; /*added to keep the sticky nav from expanding when logo animation happens */
+        overflow: hidden; /* added to keep the sticky nav from expanding when logo animation happens */
         
         & .navigation__list {
             width: 90%;
@@ -75,7 +74,7 @@
             margin-right: auto;
             margin-bottom: -8px;
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1.1);
         }
         
         & .navigation__item--hide svg {

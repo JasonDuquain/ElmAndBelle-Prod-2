@@ -1,6 +1,10 @@
+FIGURE OUT A WAY TO TURN OFF THE LARGE-HERO-OVERLAY CHANGING ONCE YOU ARE SCROLLED WELL PAST THE HERO SECT!!
+
+
 <section class="testimonial">
 
 was testimonials --might cause an issue down the road
+
 
 
 OLD services:

@@ -12,7 +12,7 @@
         margin: 4em 0;
     }
     
-    /*****OVERLAP GALLERY******/
+    /*****   OVERLAP GALLERY   ******/
     &__gallery {
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -53,7 +53,7 @@
         
     }
     
-    /*****SUMMARY******/
+    /*****   SUMMARY   ******/
     &__summary {
         align-self: center;
         
@@ -80,7 +80,7 @@
     }
     
 
-    /*****BRAND LOGOS*****/
+    /*****    BRAND LOGOS    *****/
     &__brands {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
@@ -101,7 +101,7 @@
         font-size: 1.3em;
         font-weight: 500;
         line-height: 1;
-        margin: 2em 0;
+        margin: 1em 0 2.5em 0;
         text-transform: uppercase;
         
         &::before, &::after {

@@ -6,17 +6,30 @@
     .2)), url('../img/hero.jpg');
     background-size: cover;
     position: relative;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center 80%;
+    background-position: center;
     border-bottom: .3em solid $gold;
+    position: relative;
+    overflow: hidden;
+    
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #333 center/cover no-repeat;
+        z-index: 0;
+        filter: blur(4px);
+        opacity: 0;
+    }
     
     &__main-heading {
+        color: #fff;
         text-align: center;
         font-family: 'Tangerine', cursive;
-        //font-family: 'Rochester', cursive;
         text-shadow: 2px 2px 3px rgba(0,0,0,.7);
-        font-size: 2.8em;
+        font-size: 3.5em;
         line-height: 1.1;
         color: #eee;
         margin: 0;
@@ -24,7 +37,8 @@
         top: 10%;
         left: 30%;
         transform: translateX(-50%, -50%);
-        width: 45%;
+        width: 55%;
+        z-index: 1;
         
         & .word {
             color: $gold;
@@ -47,7 +61,7 @@
         
         & .testfour {
             font-size: .9em;
-            animation-delay: 5000ms;
+            animation-delay: 5300ms;
             display: block;
             text-align: right;
             margin-top: .75em;
@@ -58,6 +72,7 @@
 }
 
 @keyframes fade-in {
+    
     100% {
         opacity: 1;
     }
