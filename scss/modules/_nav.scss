@@ -12,9 +12,12 @@
     
     &__item--hide {
         margin-left: 2em;
+        /* removed as svg space was preserved in mozilla changed to 
         transform: scale(2.2);
-        opacity: 0;
-        transition: transform 1000ms ease-out, opacity 800ms;
+        opacity: 0; 
+        transition: transform 1000ms ease-out, opacity 800ms; */ 
+        
+        display: none;
         
         & .navigation__link:link::after, & .navigation__link:visited::after {
             display: none;
@@ -70,11 +73,15 @@
         }
         
         & .navigation__item--hide {
-            //display: block;
             margin-right: auto;
             margin-bottom: -8px;
+            /* removed as svg space was preserved in mozilla
             opacity: 1;
             transform: scale(1.1);
+             */
+            
+            display: block;
+            
         }
         
         & .navigation__item--hide svg {
@@ -92,7 +99,7 @@
         }
         
         & .navigation__link.active:link, & .navigation__link.active:visited {
-            color: $gold-dark;
+            color: $gold;
         }
         
         & .navigation__link.active:link::after, & .navigation__link.active:visited::after {

@@ -179,6 +179,41 @@ document.addEventListener('scroll', (e) => {
 
 /******  STATS numbers increasing fast  *******/
 
+var a = 0;
+$(window).scroll(function() {
+
+  var oTop = $('.stats').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.stats__number').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+          }
+
+        });
+    });
+    a = 1;
+  }
+
+});
+
+
+/*
+
 let stats = document.querySelector('.stats');
 let numOne = 1; 
 
@@ -187,8 +222,6 @@ let statOne = document.querySelector('.stats__number--one');
 
 
 document.addEventListener('scroll', (e) => {
-    
-    
     
     if (stats.getBoundingClientRect().bottom < window.innerHeight) {
         
@@ -206,9 +239,6 @@ document.addEventListener('scroll', (e) => {
     
 })
 
-
-
-    
 let statTwo = document.querySelector('.stats__number--two');
 let numTwo = 1; 
 let clearTwo = setInterval(() => { 
@@ -238,6 +268,10 @@ let clearFour = setInterval(() => {
         clearInterval(clearFour);
     } 
 }, 10);
+
+*/
+
+
 
 /*
 let svcButtons = document.querySelectorAll('.services .btn-standard');

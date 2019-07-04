@@ -46,16 +46,14 @@
     }
 
     &__description-heading {
-        font-size: 1.2em;
+         font-size: 1.3em;
+         text-transform: uppercase;
          margin: 1em 0 .5em 0;
-        text-transform: capitalize;
-         font-family: 'Quicksand', sans-serif;
-         $grey-dark-2: #777;
-         transition: transform 300ms ease-out;
+         color: $grey-dark-2;
     }
 
     &__summary {
-        color: $grey-light-2;
+        color: $grey-dark-1;
         margin-bottom: 2em;
         hyphens: auto;
         

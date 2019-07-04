@@ -68,6 +68,12 @@
     font-weight: 700;
 }
 
+// MAKE TESTIMONIALS ALIGN NICELY..MIGHT BE AN OPTION IN THE SLIDER CFG TO DO THIS...check!!
+.slick-track {
+    display: flex !important;
+    align-items: center !important;
+}
+
 
 /* OLD STYLES WITH SLANT AND QUOTE  */
 
