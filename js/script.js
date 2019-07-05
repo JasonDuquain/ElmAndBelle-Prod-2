@@ -46,9 +46,7 @@ class Scroller {
         let slowScroll = currentScrollY / 2;
         let blurScroll = currentScrollY * 2;
         let opaScroll = 1.4 - currentScrollY / 400;
-        
-        /*nav.style.position = (currentScrollY > wHeight) ? 'fixed' : 'absolute';*/
-      
+
         content.style.transform = `translateY(${slowScroll}px)`;
         content.style.opacity = opaScroll;
       
@@ -61,8 +59,37 @@ var scroller = new Scroller();
 scroller.init();
 
 
+/***********  SERVICES ANIMATE IN ON SCROLL  ***********/
 
-/***********  SLIDER  ***********/
+const servicesSects = document.querySelectorAll('.services_wrap');
+const servicesGrid = document.querySelector('.services__grid')
+
+document.addEventListener('scroll', (e) => {
+    
+    if (servicesGrid.getBoundingClientRect().top < (window.innerHeight / 2)) {
+        servicesGrid.classList.add('animate-in')
+    } 
+    
+});
+
+
+/***********  IMG GALLERY ITEMS ANIMATE IN ON SCROLL  ***********/
+
+const gallerySects = document.querySelectorAll('.gallery__main a');
+const galleryGrid = document.querySelector('.gallery__main');
+
+document.addEventListener('scroll', (e) => { 
+    if (galleryGrid.getBoundingClientRect().top < (window.innerHeight / 2)) {
+        gallerySects.forEach((el, idx) => {
+            setTimeout(() => el.classList.add('animate-in'), 300 * idx);
+            idx++;
+        })  
+    } 
+    
+});
+
+
+/***********  TESTIMONIAL SLIDER  ***********/
 
 $(document).ready(function(){
   $('.testimonials__flex').slick({
@@ -127,21 +154,6 @@ function changeBlur(e) {
     let prevSib = e.target.previousElementSibling;
     prevSib.classList.remove('input-color');
 }
-
-
-/********  COPYRIGHT DATE *******/
-let year = document.querySelector('.year');
-year.textContent = new Date().getFullYear();
-
-
-/***********  TESTIMONIAL SLIDER   *********/
-let testimonialFlex = document.querySelector('.testimonials__flex');
-let customers = Array.from(document.querySelectorAll('.customer'));
-let prev = document.querySelector('.testimonials__prev');
-let next = document.querySelector('.testimonials__next');
-let dotContainer = document.querySelector('.testimonials__dot-container');
-
-
 
 
 /****************  STICKY HEADER   ****************/
@@ -210,6 +222,13 @@ $(window).scroll(function() {
   }
 
 });
+
+
+
+/********  COPYRIGHT DATE *******/
+let year = document.querySelector('.year');
+year.textContent = new Date().getFullYear();
+
 
 
 /*

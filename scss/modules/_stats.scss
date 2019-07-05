@@ -1,5 +1,6 @@
 
 .stats {
+    margin-top: 4em;
     background-color: #f0e7e7;
     background-image: url('../../img/elementor.svg');
     background-repeat: repeat-x;
@@ -64,8 +65,7 @@
     &__icon::before, &__icon::after {
         margin: 0 !important;
         font-size: 3em !important;
-        color: $gold-dark;
-        
+        color: $gold-dark; 
     }
       
 }

@@ -3,10 +3,10 @@
 .btn-standard {
     position: relative;
     color: #fff;
-    background-color: $gold-dark;
     display: inline-block;
     padding: .6em 1.2em;
-    
+    background-image: linear-gradient($gold-medium, $gold-dark);
+    border-radius: 3px;
     
     &::before, &::after {
         content: "";
@@ -41,6 +41,7 @@
 
 .btn-flex {
     align-self: center;
+    margin-top: 1.5em;
 }
 
 .js-btt-btn {

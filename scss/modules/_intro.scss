@@ -58,12 +58,11 @@
         align-self: center;
         
         p:first-of-type::first-letter {
-            font-family: 'Libre Baskerville', serif;
-            //font-family: Arial;
-            font-size: 3.8em;
-            line-height: 1.1;
+            font-family: serif;
+            font-size: 4.6em;
+            line-height: .9;
             float: left;
-            color: $gold;
+            color: $gold-dark;
             margin-right: .1em;
         }
         
