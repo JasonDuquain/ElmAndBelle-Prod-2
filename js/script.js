@@ -75,6 +75,7 @@ document.addEventListener('scroll', (e) => {
 
 /***********  IMG GALLERY ITEMS ANIMATE IN ON SCROLL  ***********/
 
+/*
 const gallerySects = document.querySelectorAll('.gallery__main a');
 const galleryGrid = document.querySelector('.gallery__main');
 
@@ -87,6 +88,7 @@ document.addEventListener('scroll', (e) => {
     } 
     
 });
+*/
 
 
 /***********  TESTIMONIAL SLIDER  ***********/
@@ -129,7 +131,7 @@ let heights = [docElement.scrollHeight, docBody.scrollHeight, docElement.offsetH
 let highestHeight = Math.max(...heights);
 
 document.addEventListener('scroll', (e) => {
-    (docElement.scrollTop > (highestHeight / 3)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
+    (docElement.scrollTop > (highestHeight / 4)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
 
 });
 

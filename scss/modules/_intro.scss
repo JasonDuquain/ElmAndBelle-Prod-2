@@ -6,8 +6,8 @@
     
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 4.5em;
+        grid-template-columns: 1.5fr 1fr;
+        grid-column-gap: .5em;
         //align-items: center;
         margin: 4em 0;
     }
@@ -96,8 +96,8 @@
         grid-template-columns: 1fr auto 1fr;
         grid-gap: .75em;
         align-items: center;
-        color: darken($gold, 10%);
-        font-size: 1.3em;
+        color: $gold-diamond;
+        font-size: 1.4em;
         font-weight: 500;
         line-height: 1;
         margin: 1em 0 2.5em 0;
@@ -107,11 +107,11 @@
             content: "";
             height: 5px;
             border-radius: 10px;
-            background-image: linear-gradient(to right, $gold, transparent);
+            background-image: linear-gradient(to right, $gold-diamond, transparent);
         }
         
         &::before {
-            background-image: linear-gradient(to left, $gold, transparent);
+            background-image: linear-gradient(to left, $gold-diamond, transparent);
         }
     }
     
@@ -132,6 +132,84 @@
 }
 
 
+
+.img-clip-block {
+    margin: 1.25em 0; /*was 20px*/
+}
+
+.img-clip-row {
+    text-align: center;
+}
+
+.img-clip-wrap {
+    display: block;
+    width: 18.75em; /* was 300px */
+    height: 18.75em; /* was 300px */
+    background-image: url("http://karenmenezes.com/shapes-polygon/clip-demo.jpg"); /* 600x600 */
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.img-clip-row:first-of-type .img-clip-wrap {
+    background-position: top;
+}
+
+.img-clip-row:nth-of-type(2) .img-clip-wrap:nth-of-type(odd) {
+    background-position: left;
+}
+
+.img-clip-row:nth-of-type(2) .img-clip-wrap:nth-of-type(even) {
+    background-position: right;
+}
+
+.img-clip-row:last-of-type .img-clip-wrap {
+    background-position: bottom;
+}
+
+.overlay {
+    transition: all 0.3s linear;
+    background: rgba(171, 147, 116, 0.8);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.overlay-content {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+    font-size: 180%;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.img-clip-wrap:hover .overlay {
+    transition: all 0.4s ease-in;
+    background: none; /* transparent would also work */
+}
+
+@media only screen and (min-width: 550px) {
+    .img-clip-row { 
+        margin-top: -9.625em; /* was -154px */
+    }
+
+    .img-clip-row:first-of-type {
+        margin-top: auto;
+    }
+
+    .img-clip-wrap {
+        display: inline-block;
+    }
+}
 
 
 

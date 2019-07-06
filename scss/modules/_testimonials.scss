@@ -51,11 +51,11 @@
         
         &::before {
             content: "\201C";
-            color: $gold;
+            color: $gold-diamond;
             font-size: 14em;
             line-height: .5;
             position: absolute;
-            top: .15em;
+            top: .13em;
             left: -.03em;
             font-family: sans-serif;
             z-index: -1;
@@ -73,38 +73,4 @@
     display: flex !important;
     align-items: center !important;
 }
-
-
-/* OLD STYLES WITH SLANT AND QUOTE  */
-
-div.quoteWrap {
-    padding: 2em;
-    background-color: darken($pink-light, 10%);
-    margin-left: -1.5em;
-    margin-right: -1.5em;
-    clip-path: polygon(0 1em, 100% 0, 100% calc(100% - 1em), 0 100%);
-    color: #fff;
-}
-
-
-blockquote::before {
-    content: "\201C";
-    color: rgba(255,255,255,.3);
-    font-size: 11em;
-    line-height: .5;
-    display: block;
-    position: absolute;
-    top: .05em;
-    left: -.22em;
-    font-family: sans-serif;
-}
-
-
-cite {
-    font-style: italic;
-    font-weight: 700;
-    text-align: right;
-    display: block;
-}
-
 

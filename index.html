@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="js/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,300,300i,400,400i,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
     <link rel="stylesheet" href="css/font/flaticon.css">
     <link rel="stylesheet" href="f-a/css/font-awesome.min.css">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
@@ -1408,8 +1407,8 @@ l38 91 67 -66 c38 -36 94 -82 126 -100 56 -34 59 -34 72 -16 8 10 14 24 14 31
   
         </a>
         <div class="site-header__button-container">
-            <a href="#services" class="site-header__button site-header__button-1">View Services</a>
-            <a href="#appointments" class="site-header__button site-header__button-2">Book Now</a>
+            <a href="#services" title="check out our 25 services" class="site-header__button site-header__button-1">View Services</a>
+            <a href="#appointments" title="book your appointment now" class="site-header__button site-header__button-2">Book Now</a>
         </div>
     </header>
     
@@ -1578,7 +1577,7 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
         <p class="large-hero__main-heading">
         <span class="test">&ldquo;People will forget what you said,</span> 
         <span class="testtwo">people will forget what you did,</span>
-        <span class="testthree">but people will never forget how you made them <span class="word">feel.</span>&rdquo;</span> 
+        <span class="testthree">but people will never forget how you made them feel &rdquo;</span> 
         <span class="testfour">-Maya Angelou</span></p>
         
         <div class="large-hero__container">
@@ -1593,24 +1592,55 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
         <h2 class="intro__heading sect-heading">Elm &amp; Belle</h2>
         <div class="sect-heading-img"></div>
 
-        <div class="intro__grid">      
+        <div class="intro__grid"> 
+             <!--   
             <div class="intro__gallery">
                 <img src="img/gridpic-1.jpg" alt="hair-back" class="intro__img intro__img-1">
                 <img src="img/sample.jpg" alt="brunette" class="intro__img intro__img-2">
             </div>
-        
+            -->
+            
+            <div class="img-clip-block">
+       
+                <div class="img-clip-row">
+                    <div class="img-clip-wrap"></div><!--empty div positioned relatively-->
+                </div>
+
+                <div class="img-clip-row">
+                    <a href="https://stocksnap.io/photo/J633WD7BAR" class="img-clip-wrap"><!--position: relative-->
+                        <div class="overlay"><!--position: absolute-->
+                            <div class="overlay-content">Elm</div><!--position: absolute-->
+                        </div>
+                    </a>
+                    <a href="https://stocksnap.io/photo/J633WD7BAR" class="img-clip-wrap"><!--postion: relative-->
+                        <div class="overlay"><!--position: absolute-->
+                            <div class="overlay-content">Belle</div><!--position: absolute-->
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img-clip-row">
+                    <a href="https://stocksnap.io/photo/J633WD7BAR" class="img-clip-wrap polygon-clip-rhombus"><!--position: relative-->
+                        <div class="overlay"><!--position: absolute-->
+                            <div class="overlay-content">&amp;</div><!--position: absolute-->
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            
             <div class="intro__summary">
                 <p>Welcome to Elm &amp; Belle, a boutique salon studio located in Cumming, GA. At E&amp;B, we love what we do! Our mission is to help our clients look and feel their best!
-                Step into a salon where style and comfort meet to allow for the most personalized salon experience. 
+                Step into a salon where style and comfort meet to allow for the most personalized salon&nbsp;experience. 
                 </p>
 
-               <p>With over 15 years of experience, stylist Jennifer Duquain specializes in women’s color, highlighting, balayage and hair design. </p>
+               <p>With over 15 years of experience, stylist Jennifer Duquain specializes in women’s color, highlighting, balayage and hair&nbsp;design. </p>
 
-                <p>Jennifer has been trained by Atlanta to New York’s top stylists and product educators. She has experience with the industry’s best products from Redken to Pureology to Pravana, Wella, Moroccan Oil and more. </p>
+                <p>Jennifer has been trained by Atlanta to New York’s top stylists and product educators. She has experience with the industry’s best products from Redken to Pureology to Pravana, Wella, Moroccan Oil and&nbsp;more. </p>
 
-                <p>Jennifer makes staying current on continuing Salon education a priority, offering her clients a combination of experience and cutting-edge trends. She will work with you to select and create the perfect!</p>
+                <p>Jennifer makes staying current on continuing Salon education a priority, offering her clients a combination of experience and cutting-edge trends. She will work with you to select and create the perfect&nbsp;style!??</p>
 
-                <p>The Elm &amp; Belle salon experience starts with a full consultation.  Every service includes an aromatherapy neck massage, scalp massage and conditioning treatment. </p>
+                <p>The Elm &amp; Belle salon experience starts with a full consultation.  Every service includes an aromatherapy neck massage, scalp massage and conditioning&nbsp;treatment. </p>
             </div>             
         </div>  
         
@@ -2026,6 +2056,18 @@ l-7 -40 -37 40 c-20 22 -50 45 -66 51 -46 18 -145 19 -199 3z m204 -81 c41
         <!-- **********  SQUARE APP  ********** -->
         <script src='https://squareup.com/appointments/buyer/widget/ab7868d6-a5f7-4466-9188-5aba2908d882/JHR0FFSZ2N4YE.js'></script>
     </section>
+    
+    
+    
+    <section class="frost">
+        <main>
+        <blockquote><em>"The only way to get rid of a temptation is to yield to it. Resist it, and your soul grows sick with longing for the things it has forbidden to itself, with desire for what its monstrous laws have made monstrous and unlawful."</em>
+        <cite>—  Oscar Wilde, The Picture of Dorian Gray</cite>
+        </blockquote>
+        </main>
+    </section>
+    
+    
     
     <section class="subscribe">
         <h2 class="subscribe__heading sect-heading">Stay In the Know</h2>

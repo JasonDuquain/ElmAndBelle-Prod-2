@@ -31,7 +31,7 @@
         text-shadow: 2px 2px 3px rgba(0,0,0,.7);
         font-size: 3.7em;
         line-height: 1.1;
-        color: #eee;
+        color: #fff;
         margin: 0;
         position: absolute;
         top: 10%;
@@ -39,11 +39,6 @@
         transform: translateX(-50%, -50%);
         width: 55%;
         z-index: 1;
-        
-        & .word {
-            color: $gold;
-            font-size: 1.1em;
-        }
         
         & [class^=test] {
             opacity: 0;
@@ -60,7 +55,9 @@
         }
         
         & .testfour {
-            font-size: .9em;
+            font-family: 'Raleway';
+            font-size: .5em;
+            font-weight: 300;
             animation-delay: 5300ms;
             display: block;
             text-align: right;

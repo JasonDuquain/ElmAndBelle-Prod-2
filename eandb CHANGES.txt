@@ -3,6 +3,60 @@ FIGURE OUT A WAY TO TURN OFF THE LARGE-HERO-OVERLAY CHANGING ONCE YOU ARE SCROLL
 ADDED OVERFLOW-X: HIDDEN TO THE BODY..REMOVE IF ANY ISSUES
 
 
+INTRO COPY:
+
+
+ old grid:
+ 
+ &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4.5em;
+        //align-items: center;
+        margin: 4em 0;
+    }
+	
+	
+<section class="intro">    
+        <div class="pre-heading">Meet</div>    
+        <h2 class="intro__heading sect-heading">Elm &amp; Belle</h2>
+        <div class="sect-heading-img"></div>
+
+        <div class="intro__grid">      
+            <div class="intro__gallery">
+                <img src="img/gridpic-1.jpg" alt="hair-back" class="intro__img intro__img-1">
+                <img src="img/sample.jpg" alt="brunette" class="intro__img intro__img-2">
+            </div>
+        
+            <div class="intro__summary">
+                <p>Welcome to Elm &amp; Belle, a boutique salon studio located in Cumming, GA. At E&amp;B, we love what we do! Our mission is to help our clients look and feel their best!
+                Step into a salon where style and comfort meet to allow for the most personalized salon experience. 
+                </p>
+
+               <p>With over 15 years of experience, stylist Jennifer Duquain specializes in women’s color, highlighting, balayage and hair design. </p>
+
+                <p>Jennifer has been trained by Atlanta to New York’s top stylists and product educators. She has experience with the industry’s best products from Redken to Pureology to Pravana, Wella, Moroccan Oil and more. </p>
+
+                <p>Jennifer makes staying current on continuing Salon education a priority, offering her clients a combination of experience and cutting-edge trends. She will work with you to select and create the perfect!</p>
+
+                <p>The Elm &amp; Belle salon experience starts with a full consultation.  Every service includes an aromatherapy neck massage, scalp massage and conditioning treatment. </p>
+            </div>             
+        </div>  
+        
+            <h3 class="intro__brands__heading">Brands</h3>
+            <div class="intro__brands">
+                <img src="img/brands/redken-1.svg" alt="redken" class="intro__brands__img intro__brands__img-1">
+                <img src="img/brands/pureology2.png" alt="pureology" class="intro__brands__img intro__brands__img-2">
+                <img src="img/brands/pravana-logo.png" alt="pravana" class="intro__brands__img intro__brands__img-8">
+                <img src="img/brands/wella-1.svg" alt="wella" class="intro__brands__img intro__brands__img-3">
+                <img src="img/brands/Moroccanoil.png" alt="moroccanoil" class="intro__brands__img intro__brands__img-4">
+                <img src="img/brands/IGK.jpg" alt="igk" class="intro__brands__img intro__brands__img-5">
+                <img src="img/brands/amika.png" alt="amika" class="intro__brands__img intro__brands__img-6">
+                <img src="img/brands/miracle10.jpg" alt="miracle10" class="intro__brands__img intro__brands__img-7">
+            </div>
+         
+    </section>
+
 
 <section class="testimonial">
 

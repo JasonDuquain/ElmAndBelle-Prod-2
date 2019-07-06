@@ -1,3 +1,51 @@
+.frost {
+    min-height: 100vh;
+	box-sizing: border-box;
+	margin: 0;
+	padding-top: calc(50vh - 6em);
+	font: 140%/1.5 Raleway, Palatino, serif;
+}
+
+.frost {
+	background: url('http://csssecrets.io/images/tiger.jpg') 0 / cover fixed;
+}
+
+main {
+	margin: 0 auto;
+	padding: 2em;
+	max-width: 23em;
+	background: rgba(255,255,255,.25) border-box;
+	border-radius: .3em;
+	box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,
+	0 .5em 1em rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
+	position: relative;
+	overflow: hidden;
+    
+    z-index: 3; // this gets it close 
+    
+}
+
+main::before {
+	content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: url('http://csssecrets.io/images/tiger.jpg') 0 / cover fixed;
+	filter: blur(20px);
+	z-index: -1;
+	margin: -30px;
+}
+
+blockquote { 
+font-style: italic 
+}
+
+blockquote cite { 
+    font-style: normal;
+    display: block;
+}
+
+
 
 .subscribe {
     background-image: url(../img/subscribe.jpg);
@@ -9,7 +57,9 @@
     }
     
     &__heading {
-        font-size: 1.3em;
+        font-size: 1.5em;
+        margin-bottom: .4em;
+        font-weight: 300;
     }
     
     &__paragraph {
