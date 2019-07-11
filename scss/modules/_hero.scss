@@ -8,7 +8,7 @@
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
-    border-bottom: .3em solid $gold;
+    border-bottom: .6vw solid $gold;
     position: relative;
     overflow: hidden;
     
@@ -28,6 +28,7 @@
         color: #fff;
         text-align: center;
         font-family: 'Tangerine', cursive;
+        //font-family: 'lucien_schoenschriftv_catRg', cursive;
         text-shadow: 2px 2px 3px rgba(0,0,0,.7);
         font-size: 3.7em;
         line-height: 1.1;
@@ -35,48 +36,45 @@
         margin: 0;
         position: absolute;
         top: 10%;
-        left: 30%;
-        transform: translateX(-50%, -50%);
+        left: 50%;
+        transform: translate(-50%, 0%);
         width: 55%;
         z-index: 1;
-        
-        & [class^=test] {
-            opacity: 0;
-            display: block;
-            animation: fade-in 800ms 700ms ease-in both; 
-        }
-        
-        & .testtwo {
-            animation-delay: 2000ms;
-        }
-        
-        & .testthree {
-            animation-delay: 4000ms;
-        }
-        
-        & .testfour {
-            font-family: 'Raleway';
-            font-size: .5em;
-            font-weight: 300;
-            animation-delay: 5300ms;
-            display: block;
-            text-align: right;
-            margin-top: .75em;
-        }
-        
     }
     
-    /*&__container {
-        position: fixed;
-        top: .5em;
-        right: 9em;
-        z-index: 99;
+    &__quote {
+        opacity: 0;
+        display: block;
+        animation: fade-in 800ms 700ms ease-in both;
     }
     
-    &__logo {
-        width: 8em;
-        
-    }*/
+    &__quote--2 {
+        animation-delay: 2000ms;
+    }
+
+    &__quote--3 {
+        animation-delay: 4000ms;
+    }
+
+    &__quote--4 {
+        font-family: 'Raleway', sans-serif;
+        font-size: .5em;
+        font-weight: 300;
+        animation-delay: 5300ms;
+        display: block;
+        text-align: right;
+        margin-top: .85em;
+    }
+    
+    &__amp {
+        font-size: 1.4em;
+        line-height: .6;
+    }
+    
+    &__amp--right {
+        margin-left: 3px;
+    }
+    
     
 }
 

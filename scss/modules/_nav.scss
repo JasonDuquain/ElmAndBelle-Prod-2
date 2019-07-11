@@ -2,6 +2,21 @@
 .navigation {
     padding: 1em 1.5em;
     transition: background-color 350ms ease-in;
+    border-top: 1px solid $grey-light-2;
+    
+    @include breakpoint(1200px) {
+        padding: 1em calc(50% - 600px);
+    }
+    
+    &__amp {
+        color: $gold;
+    }
+    
+    &__logo-text {
+        font-family: 'lucien_schoenschriftv_catRg', cursive;
+        font-size: 2.7em;
+        text-transform: none;
+    }
     
     &__list {
         width: 70%;
@@ -12,6 +27,7 @@
     
     &__item--hide {
         margin-left: 2em;
+        
         /* removed as svg space was preserved in mozilla changed to 
         transform: scale(2.2);
         opacity: 0; 
@@ -61,10 +77,9 @@
         top: 0;
         left: 0;
         right: 0;
+        padding: .75em; 
         background-color: rgba(0,0,0,.7);
         box-shadow: 0 3px 3px rgba(0,0,0,.3);
-        padding-top: 0;
-        padding-bottom: 0;
         overflow: hidden; /* added to keep the sticky nav from expanding when logo animation happens */
         
         & .navigation__list {
@@ -74,7 +89,6 @@
         
         & .navigation__item--hide {
             margin-right: auto;
-            margin-bottom: -8px;
             /* removed as svg space was preserved in mozilla
             opacity: 1;
             transform: scale(1.1);
@@ -82,12 +96,6 @@
             
             display: block;
             
-        }
-        
-        & .navigation__item--hide svg {
-            fill: #fff;
-            width: 250px;
-            height: 60px;
         }
         
         & .navigation__item {

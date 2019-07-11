@@ -46,8 +46,9 @@ class Scroller {
         let slowScroll = currentScrollY / 2;
         let blurScroll = currentScrollY * 2;
         let opaScroll = 1.4 - currentScrollY / 400;
-
-        content.style.transform = `translateY(${slowScroll}px)`;
+        
+        /* needed to adjust the translate since the initial heading is xlated  */
+        content.style.transform = `translate(-50%, ${slowScroll}px)`;
         content.style.opacity = opaScroll;
       
         blur.style.opacity = blurScroll / wHeight; 
@@ -73,24 +74,6 @@ document.addEventListener('scroll', (e) => {
 });
 
 
-/***********  IMG GALLERY ITEMS ANIMATE IN ON SCROLL  ***********/
-
-/*
-const gallerySects = document.querySelectorAll('.gallery__main a');
-const galleryGrid = document.querySelector('.gallery__main');
-
-document.addEventListener('scroll', (e) => { 
-    if (galleryGrid.getBoundingClientRect().top < (window.innerHeight / 2)) {
-        gallerySects.forEach((el, idx) => {
-            setTimeout(() => el.classList.add('animate-in'), 300 * idx);
-            idx++;
-        })  
-    } 
-    
-});
-*/
-
-
 /***********  TESTIMONIAL SLIDER  ***********/
 
 $(document).ready(function(){
@@ -105,17 +88,17 @@ $(document).ready(function(){
 
 
 /**** REMOVE HERO TEXT ANIMATION AFTER ONE TIME*****/
-let tests = document.querySelectorAll('[class^=test]');
+let tests = document.querySelectorAll('[class*=quote]');
 
 tests.forEach((el) => {
     el.addEventListener('animationend', function(e) {
-        window.sessionStorage.setItem('test', 'testValue');
+        window.sessionStorage.setItem('quote', 'complete');
     });
 });
 
 
 tests.forEach((el) => {
-    if (window.sessionStorage.getItem('test')) {
+    if (window.sessionStorage.getItem('quote')) {
         el.style.animation = 'none';
         el.style.opacity = '1';
     }

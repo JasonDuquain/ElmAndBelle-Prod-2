@@ -1,19 +1,23 @@
 
 .site-header {
     transition: all 400ms ease-out;
-    padding: .5em 1.5em;
     background-color: #fff;
     width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid $grey-light-2;
     
-    @include breakpoint(1200px) {
-        padding: 0 calc(50% - 600px);
+    
+    &__wrap {
+        display: flex;
+        align-items: center;
+        padding: .5em 1.5em;
+        
+        @include breakpoint(1200px) {
+            padding: 0 calc(50% - 600px);
+        }
+
     }
     
     &__social {
-        width: 33.333%;
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -41,20 +45,24 @@
     }
 
     &__logo-link {
-        width: 33.333%;
-        text-align: center;
+        font-family: 'lucien_schoenschriftv_catRg', cursive;
+        font-size: 4em;
+        line-height: 1.6;
+        color: $grey-dark-1;
+        flex: 2;
+        display: flex;
+        justify-content: center;
     }
     
-    &__logo {
-        width: 30em;
-        height: auto;
+    &__amp {
+        color: $gold-dark;
     }
     
     &__button-container {
-        width: 33.333%;
+        flex: 1;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
     }
     
     &__button:link, &__button:visited {

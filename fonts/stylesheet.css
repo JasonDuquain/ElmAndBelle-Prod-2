@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'lucien_schoenschriftv_catRg';
+    src: url('Lucian Schoenschrift CAT-webfont.eot');
+    src: url('Lucian Schoenschrift CAT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Lucian Schoenschrift CAT-webfont.woff2') format('woff2'),
+         url('Lucian Schoenschrift CAT-webfont.woff') format('woff'),
+         url('Lucian Schoenschrift CAT-webfont.ttf') format('truetype'),
+         url('Lucian Schoenschrift CAT-webfont.svg#lucien_schoenschriftv_catRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
