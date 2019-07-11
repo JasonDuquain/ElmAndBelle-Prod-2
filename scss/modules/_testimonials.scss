@@ -12,45 +12,59 @@
     &__cell {
         box-shadow: 2px 2px 3px 3px rgba(224, 224, 224, 0.3);
         background-color: #fff;
-        border-radius: 3px;
-        margin: 1em;
+        border-radius: 5px;
+        margin-left: 9em;
+        margin-right: 9em;
+        border: 1px solid $gold;
+        
+        // temp fix for height issue
+        padding-bottom: 4em;
     }
     
     &__wrap {
         display: flex;
         align-items: center;
+        justify-content: center;
         border-bottom: 1px solid $grey-light-2;
-        padding: 2rem;
+        padding: 1em;
     }
     
     &__image {
-        width: 8em;
-        height: 8em;
+        width: 5em;
+        height: 5em;
         border-radius: 50%;
-        margin-right: 2em;
+        border: 1px solid $grey-dark-2;
+        display: block;
     }
 
     &__name {
-        font-family: 'Quicksand', sans-serif;
-        font-size: 1.7em;
-        font-weight: 700;
+        font-size: 1.3em;
+        font-style: italic;
         color: $grey-dark-2;
-    }
-    
-    &__address {
-        color: $grey-dark-2;
+        text-align: center;
+        margin-top: 40px;
+        transform: translateX(-1em);
     }
     
     &__review {
-        font-size: 1.1em;
-        line-height: 1.5;
+        
+        /*font-size: 1.1em;
+        line-height: 1.6;
         color: $grey-dark-1;
-        padding: 2rem 2rem 4rem 2rem;
+        padding: 2em;
         position: relative;
-        z-index: 2;
+        z-index: 2;*/
+        
+        color: $grey-dark-1;
+        line-height: 1.6;
+        padding: 1.5em;
+        margin: 1em;
+        border-radius: 30px;
+        border: 8px solid $gold;
+        position: relative;
         
         &::before {
-            content: "\201C";
+            /*content: "\201C";
             color: $gold-diamond;
             font-size: 14em;
             line-height: .5;
@@ -58,14 +72,38 @@
             top: .13em;
             left: -.03em;
             font-family: sans-serif;
-            z-index: -1;
+            z-index: -1;*/
+
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+            top: auto;
+            bottom: -40px;
+            border: 20px solid;
+            border-color: $gold transparent transparent $gold;
         }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+            top: auto;
+            bottom: -20px;
+            border: 12px solid;
+            border-color: #fff transparent transparent #fff;
+
+        }
+        
     }
     
-}
-
-.bold {
-    font-weight: 700;
 }
 
 // MAKE TESTIMONIALS ALIGN NICELY..MIGHT BE AN OPTION IN THE SLIDER CFG TO DO THIS...check!!

@@ -64,10 +64,6 @@
         flex-direction: column;
     }
     
-    &__icon {
-        
-    }
-    
     &__icon::before, &__icon::after {
         margin: 0 !important;
         font-size: 3em !important;
@@ -93,7 +89,6 @@
         color: $grey-dark-1;
         margin-bottom: 1em;
         hyphens: auto;
-        
     }
     
     &__link {
@@ -158,22 +153,37 @@
     
     
     /**********   SERVICES TABLE LIST   **********/
-    &__table {
+    &__table-wrap {
         width: 60%;
-        border-collapse: collapse;
-        border-radius: 20px;
+        
+        position: relative;
         
         opacity: 0;
         visibility: hidden;
         transform: scale(0);
         transition: 400ms ease-out;
+    }
+    
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
         
+        /* only do a bottom radius as the caption has a top radius  */
+        border-radius: 0 0 12px 12px;
+        
+        /* added this for border-radius to work */
+        overflow: hidden;
+        
+
         &-caption {
             padding: .5em 0 .5em 0;
             text-align: center;
             font-size: 3.4em;
             color: #333;
             background-color: lighten($gold, 15%);
+            
+            /* mozilla needs the caption to have a border radius in order for the top of the table to have a border radius  */
+            border-radius: 12px 12px 0 0;
         }
         
         &-caption-span {
@@ -181,7 +191,7 @@
             line-height: .7;
             text-align: center;
             display: block;
-            font-size: 1.2em;
+            font-size: 2em;
             color: $gold-dark;
         }
       
@@ -205,8 +215,8 @@
             padding: 1em 1em 1em 2em;
             font-weight: 500;
         }
-    }  
-    
+    } 
+
 }
 
 /** Animate services sects on scroll  ***/
@@ -233,13 +243,10 @@
     
     &:target {
         opacity: 1;
-        visibility: visible;
-         
+        visibility: visible; 
     }
-    
-    &:target .services__table-cut, 
-    &:target .services__table-color,
-    &:target .services__table-additional {
+     
+    &:target .services__table-wrap {
         opacity: 1;
         visibility: visible;
         transform: scale(1);
@@ -251,19 +258,20 @@
     position: absolute;
     display: block;
     font-size: 3em;
-    top: 3em;
-    right: 1em;
+    top: 0;
+    right: 0;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
-    background-color: #fff;
     text-align: center;
     line-height: .9em;
     cursor: pointer;
     transition: all 300ms ease-out;
+    color: $grey-dark-1;
+    border-top-right-radius: 12px;
 }
 
 .close_modal:hover {
-    color: green;
+    color: #fff;
+    background-color: #ce1010;
 }
 

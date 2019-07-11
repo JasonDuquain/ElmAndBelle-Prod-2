@@ -47,7 +47,7 @@ class Scroller {
         let blurScroll = currentScrollY * 2;
         let opaScroll = 1.4 - currentScrollY / 400;
         
-        /* needed to adjust the translate since the initial heading is xlated  */
+        /* needed to adjust the translate since the initial heading is xlated in css  */
         content.style.transform = `translate(-50%, ${slowScroll}px)`;
         content.style.opacity = opaScroll;
       
@@ -80,9 +80,11 @@ $(document).ready(function(){
   $('.testimonials__flex').slick({
   dots: true,
   infinite: true,
-  speed: 300,
+  speed: 500,
   slidesToShow: 1,
-  adaptiveHeight: true
+  adaptiveHeight: true/*,
+  autoplay: true,
+  autoplaySpeed: 5000*/
   });
 });
 
@@ -114,7 +116,7 @@ let heights = [docElement.scrollHeight, docBody.scrollHeight, docElement.offsetH
 let highestHeight = Math.max(...heights);
 
 document.addEventListener('scroll', (e) => {
-    (docElement.scrollTop > (highestHeight / 4)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
+    (docElement.scrollTop > (highestHeight / 8)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
 
 });
 
@@ -213,86 +215,6 @@ $(window).scroll(function() {
 /********  COPYRIGHT DATE *******/
 let year = document.querySelector('.year');
 year.textContent = new Date().getFullYear();
-
-
-
-/*
-
-let stats = document.querySelector('.stats');
-let numOne = 1; 
-
-
-let statOne = document.querySelector('.stats__number--one');
-
-
-document.addEventListener('scroll', (e) => {
-    
-    if (stats.getBoundingClientRect().bottom < window.innerHeight) {
-        
-        console.log('yyyes')
-        
-        let clearOne = setInterval(() => { 
-            numOne++;
-            statOne.textContent = numOne;
-            if (numOne >= 35) {
-                clearInterval(clearOne);
-            } 
-        }, 40);
-        
-    }
-    
-})
-
-let statTwo = document.querySelector('.stats__number--two');
-let numTwo = 1; 
-let clearTwo = setInterval(() => { 
-    numTwo++;
-    statTwo.textContent = numTwo;
-    if (numTwo === 12) {
-        clearInterval(clearTwo);
-    } 
-}, 120);
-    
-let statThree = document.querySelector('.stats__number--three');
-let numThree = 1; 
-let clearThree = setInterval(() => { 
-    numThree++;
-    statThree.textContent = numThree;
-    if (numThree === 100) {
-        clearInterval(clearThree);
-    } 
-}, 15);
-
-let statFour = document.querySelector('.stats__number--four');
-let numFour = 1; 
-let clearFour = setInterval(() => { 
-    numFour++;
-    statFour.textContent = numFour;
-    if (numFour === 140) {
-        clearInterval(clearFour);
-    } 
-}, 10);
-
-*/
-
-
-
-/*
-let svcButtons = document.querySelectorAll('.services .btn-standard');
-
-svcButtons.forEach((el) => {
-   el.addEventListener('click', function(e) {
-       document.body.classList.add('blur');
-   }) 
-});
-
-*/
-
-
-
-
-
-
 
 
 

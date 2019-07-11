@@ -51,7 +51,8 @@
     width: 2.7em;
     height: 2.7em;
     border-radius: 50%;
-    background-color: #333;
+    border: 1px solid $grey-dark-1;
+    background-color: $grey-dark-1;
     text-align: center;
     line-height: 2.7em;
     color: #fff;
@@ -66,7 +67,8 @@
     }
     
     &:hover {
-        color: forestgreen;
+        color: $grey-dark-1;
+        background-color: #fff;
     }
     
 }

@@ -48,7 +48,7 @@
         color: $grey-dark-1;
         text-transform: uppercase;
         position: relative;
-        padding-bottom: .2em;
+        padding-bottom: .4em;
     }
     
     &__link:link:hover, &__link:visited:hover {
@@ -85,6 +85,7 @@
         & .navigation__list {
             width: 90%;
             align-items: center;
+            max-width: 1280px;
         }
         
         & .navigation__item--hide {
@@ -93,7 +94,7 @@
             opacity: 1;
             transform: scale(1.1);
              */
-            
+   
             display: block;
             
         }
