@@ -8,6 +8,10 @@
         padding: 1em calc(50% - 600px);
     }
     
+    @include breakpoint (max-width 760px) {
+        display: none;
+    }
+    
     &__amp {
         color: $gold;
     }
@@ -126,5 +130,73 @@
     }
 }
 
+
+@include breakpoint (max-width 760px) {
+
+    .navigation.hamburger-on {
+        display: block; 
+    }
+
+    .navigation.hamburger-on .navigation__list {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .navigation.hamburger-on .navigation__item {
+        background-color: $grey-dark-2;
+        text-align: center;
+    }
+
+    .navigation.hamburger-on .navigation__item:not(:last-of-type) {
+        border-bottom: 1px dotted #fff;
+    }
+
+    .navigation.hamburger-on .navigation__link {
+        color: #fff;
+        font-size: 1em;
+        padding: 1.5em;
+        display: block;
+
+        &:hover {
+            background-color: $gold;
+            color: #fff;
+        }
+    }
+
+    .navigation.hamburger-on .navigation__link:hover::after {
+        left: 50%;
+        right: 50%;
+    }
+    
+    
+    
+    /***** FIXED HEADER  ******/
+    .navigation.hamburger-on.fixed .navigation__item {
+        width: 100%;
+    }
+    
+    .navigation.hamburger-on.fixed .navigation__item--hide {
+        margin-right: 0;
+    }
+    
+    /*.navigation.hamburger-on.fixed .navigation__link:link, & .navigation__link:visited {
+        color: #fff;
+    }*/
+        
+    .navigation.hamburger-on.fixed .navigation__link.active:link, .navigation.hamburger-on.fixed .navigation__link.active:visited {
+        color: $gold;
+        
+        &:hover {
+            color: #fff;
+        }
+    }
+    
+    .navigation.hamburger-on.fixed .navigation__link.active:link::after, .navigation.hamburger-on.fixed .navigation__link.active:visited::after {
+        left: 50%;
+        right: 50%;
+    }
+    
+
+}
 
 

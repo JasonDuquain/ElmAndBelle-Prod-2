@@ -98,7 +98,6 @@ tests.forEach((el) => {
     });
 });
 
-
 tests.forEach((el) => {
     if (window.sessionStorage.getItem('quote')) {
         el.style.animation = 'none';
@@ -106,8 +105,7 @@ tests.forEach((el) => {
     }
 });
 
-
-/******   BACK TO TOP BTN    *******/
+/********   BACK TO TOP BTN  *********/
 let docElement = document.documentElement;
 let docBody = document.body;
 let bttBtn = document.querySelector('.js-btt-btn');
@@ -156,7 +154,18 @@ document.addEventListener('scroll', (e) => {
         document.body.style.paddingTop = 0;
         nav.classList.remove('fixed');
     }
-})
+});
+
+
+/*********** HAMBURGER MENU  ***********/
+
+let hamburgerMenu = document.querySelector('.hamburger-icon');
+
+hamburgerMenu.addEventListener('click', function(e) {
+    this.classList.toggle('interact');
+    nav.classList.toggle('hamburger-on');
+});
+
 
 
 /****************  HIGHTLIGHT NAV ITEMS ON SCROLL   ****************/
