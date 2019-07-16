@@ -1,8 +1,11 @@
 add a load (hero img load) event for the maya quote animation to make sure the animation does not start until the hero img is loaded
 
-
+redo @font-face list to put woff2 at the top and maybe add a font-swap declaration..CONFIRM BROWSER IS USING WOFF2 WHEN DONE!!
 
 FIGURE OUT A WAY TO TURN OFF THE LARGE-HERO-OVERLAY CHANGING ONCE YOU ARE SCROLLED WELL PAST THE HERO SECT!!
+
+POSSIBLE TO LAZY LOAD THE SQUARE APP FROM LOADING RIGHT AWAY??
+
 
 ADDED OVERFLOW-X: HIDDEN TO THE BODY..REMOVE IF ANY ISSUES
 

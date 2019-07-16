@@ -1,3 +1,6 @@
+
+
+
 /******* FADE HERO SECT ON SCROLL *********/
 
 let content = document.querySelector('.large-hero__main-heading');
@@ -226,6 +229,8 @@ let year = document.querySelector('.year');
 year.textContent = new Date().getFullYear();
 
 
-
-
+/******** ONLY LOAD MAYA QUOTE ON COMPLETE PAGE LOAD - FIX THIS TO WORK ON HERO BG IMG LOAD  *******/
+window.addEventListener('load', function(e) {
+    hero.classList.add('loaded')
+})
 

@@ -28,7 +28,6 @@
         color: #fff;
         text-align: center;
         font-family: 'Tangerine', cursive;
-        //font-family: 'lucien_schoenschriftv_catRg', cursive;
         text-shadow: 2px 2px 3px rgba(0,0,0,.7);
         font-size: 3.7em;
         line-height: 1.1;
@@ -45,22 +44,22 @@
     &__quote {
         opacity: 0;
         display: block;
-        animation: fade-in 800ms 700ms ease-in both;
+        //animation: fade-in 800ms 700ms ease-in both;
     }
     
     &__quote--2 {
-        animation-delay: 2000ms;
+        //animation-delay: 2000ms;
     }
 
     &__quote--3 {
-        animation-delay: 4000ms;
+        //animation-delay: 4000ms;
     }
 
     &__quote--4 {
         font-family: 'Raleway', sans-serif;
         font-size: .5em;
         font-weight: 300;
-        animation-delay: 5300ms;
+        //animation-delay: 5300ms;
         display: block;
         text-align: right;
         margin-top: .85em;
@@ -84,4 +83,22 @@
         opacity: 1;
     }
 }
+
+
+.large-hero.loaded .large-hero__quote {
+    animation: fade-in 800ms 700ms ease-in both;
+}
+
+.large-hero.loaded .large-hero__quote--2 {
+    animation-delay: 2000ms;
+}
+
+.large-hero.loaded .large-hero__quote--3 {
+    animation-delay: 4000ms;
+}
+
+.large-hero.loaded .large-hero__quote--4 {
+    animation-delay: 5300ms;
+}
+
 
