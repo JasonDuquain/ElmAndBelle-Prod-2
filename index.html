@@ -70,8 +70,7 @@
        </nav>
         
     </header>
-    
-    
+       
     <div class="large-hero">
         <p class="large-hero__main-heading">
         <span class="large-hero__quote large-hero__quote--1"><span class="large-hero__amp">&ldquo;</span>People will forget what you said,</span> 
@@ -99,7 +98,11 @@
             <div class="img-clip-block">
        
                 <div class="img-clip-row">
-                    <div class="img-clip-wrap"></div><!--empty div positioned relatively-->
+                    <div class="img-clip-wrap">
+                        <div class="overlay"><!--position: absolute-->
+                            <div class="overlay-content">&amp;</div><!--position: absolute-->
+                        </div>
+                    </div><!--empty div positioned relatively-->
                 </div>
 
                 <div class="img-clip-row">
@@ -118,7 +121,9 @@
                 <div class="img-clip-row">
                     <a href="https://stocksnap.io/photo/J633WD7BAR" class="img-clip-wrap polygon-clip-rhombus"><!--position: relative-->
                         <div class="overlay"><!--position: absolute-->
-                            <div class="overlay-content">&amp;</div><!--position: absolute-->
+                            <div class="overlay-content">
+                                <img src="img/logo/Shears/shears.png" alt="">
+                            </div><!--position: absolute-->
                         </div>
                     </a>
                 </div>
@@ -148,8 +153,11 @@
                 <img src="img/brands/wella-1.svg" alt="wella" class="intro__brands__img intro__brands__img-3">
                 <img src="img/brands/Moroccanoil.png" alt="moroccanoil" class="intro__brands__img intro__brands__img-4">
                 <img src="img/brands/IGK.jpg" alt="igk" class="intro__brands__img intro__brands__img-5">
-                <img src="img/brands/amika.png" alt="amika" class="intro__brands__img intro__brands__img-6">
-                <img src="img/brands/miracle10.jpg" alt="miracle10" class="intro__brands__img intro__brands__img-7">
+                <img src="img/brands/blowout.png" alt="igk" class="intro__brands__img intro__brands__img-6">
+                <img src="img/brands/joico.png" alt="igk" class="intro__brands__img intro__brands__img-7">
+                <img src="img/brands/olapex.png" alt="igk" class="intro__brands__img intro__brands__img-8">
+                <img src="img/brands/amika.png" alt="amika" class="intro__brands__img intro__brands__img-9">
+                <img src="img/brands/miracle10.jpg" alt="miracle10" class="intro__brands__img intro__brands__img-10">
             </div>
          
     </section>
@@ -164,10 +172,9 @@
             <div class="services__wrap">
                 <div class="services__main">
                     <div class="services__image-wrap">
-                        <img src="img/img-blog.jpg" alt="girl getting massage" class="services__image">
+                        <img src="https://res.cloudinary.com/jduquain/image/upload/c_scale,f_auto,h_267,q_auto,w_400/v1563278973/cut_mbnapz.jpg" alt="girl getting massage" class="services__image">
                     </div>
                     <div class="services__description">
-                       <i class="services__icon flaticon-woman-with-long-hair"></i>
                        <div class="services__border"></div>
                         <h3 class="services__description-heading">Cut &amp; Design</h3>
                         <p class="services__summary">Consec tetur adipi sicing elit. Nostrum nobis culpa odit est? Saepe vel perfer endis, praesentium me gusta para el. </p>
@@ -179,10 +186,9 @@
             <div class="services__wrap">
                 <div class="services__main">
                     <div class="services__image-wrap">
-                        <img src="img/img-blog2.jpg" alt="girl getting massage" class="services__image">
+                        <img src="https://res.cloudinary.com/jduquain/image/upload/c_scale,f_auto,h_267,q_auto,w_400/v1563279368/color_krrta6.jpg" alt="girl getting massage" class="services__image">
                     </div>
                     <div class="services__description">
-                       <i class="services__icon flaticon-oval-vertical-mirror"></i>
                        <div class="services__border"></div>
                         <h3 class="services__description-heading">Color</h3>
                         <p class="services__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nobis culpa odit est? Saepe vel perferendis, praesentium. Consec tetur adipi sicing elit. Nostrum nobis culpa odit est? Saepe vel perfer endis, praesentium me gusta para el</p>
@@ -194,10 +200,9 @@
             <div class="services__wrap">
                 <div class="services__main">
                     <div class="services__image-wrap">
-                        <img src="img/img-blog3.jpg" alt="girl getting massage" class="blog__image">
+                        <img src="https://res.cloudinary.com/jduquain/image/upload/c_scale,f_auto,h_267,q_auto,w_400/v1563279368/addtl_svcs_o1jgby.png" alt="girl getting massage" class="blog__image">
                     </div>
                     <div class="services__description">
-                       <i class="services__icon flaticon-open-hair-salon-signal"></i>
                        <div class="services__border"></div>
                         <h3 class="services__description-heading">Additional Services</h3>
                         <p class="services__summary">Disti anctio quidem necessit omnis nostrum, architecto reiciendis dolor sit amet pariatur facere</p>
@@ -208,14 +213,7 @@
             </div> 
         </div>
         
-        <div class="services__special">
-            <h3 class="services__special-heading"><span class="services__special-month">July</span> Special</h3>
-            <p class="services__special-para">
-                Get the best summer style Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ducimus, cupiditate fugiat ipsum temporibus autem
-            </p>
-        </div>
-       
-        
+        <!-------- modals ----------->
         <div class="cut-and-design_wrap" id="cut-and-design_wrap">
            <div class="services__table-wrap">
             <a href="#service--one" class="close_modal" title="close window">&times;</a>
@@ -259,8 +257,7 @@
                 </tr>
             </table>     
            </div>
-        </div>   
-          
+        </div>       
         <div class="color_wrap" id="color_wrap">
            <div class="services__table-wrap">
             <a href="#service--two" class="close_modal" title="close window">&times;</a>
@@ -314,9 +311,7 @@
            </div>
         </div>
         
-
-
-       <div class="additional_wrap" id="additional_wrap">
+        <div class="additional_wrap" id="additional_wrap">
            <div class="services__table-wrap">
                <a href="#service--three" class="close_modal" title="close window">&times;</a>
                 <table class="services__table services__table-additional">
@@ -348,8 +343,33 @@
                 </table>
            </div>
         </div>
-   
-   
+        
+        
+        <!--<div class="services__special">
+            <h3 class="services__special-heading"><span class="services__special-month">July</span> Special</h3>
+            <p class="services__special-para">
+                Get the best summer style Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ducimus, cupiditate fugiat ipsum temporibus autem
+            </p>
+        </div>-->
+        <aside id="stm_schedule-2" class="widget widget_stm_schedule footer_widgets">
+            <div class="stm_schedule_title_wr">
+                <div class="stm_schedule_title_separator left">
+                    <span></span>
+                </div>
+                <div class="widget_title">
+                    <h3>Summer Hair</h3>
+                </div>
+                <div class="stm_schedule_title_separator">
+                    <span></span>
+                </div>
+            </div>
+            <div class="widget_stm_schedule_wr">
+                <h4>Take Care!</h4>
+                <p>Mention this promotion and receive a complimentary hair mask treatment!</p>
+            </div>
+    </aside>
+        
+
     </section>
     
     <section class="gallery" id="gallery">
@@ -485,7 +505,7 @@
                     <p class="testimonial__paragraph">Jenn has been doing my hair for years and I'm so excited she finally has her own salon! She is always up on the latest techniques and trends in hair and always comes with great suggestions on style and color. You won't be disappointed! 
                     </p>
                 </div>
-                <p class="testimonial__name">Kim</p>
+                <p class="testimonial__name">-Kim</p>
                </div>
                <div class="testimonial__cell">
                 <div class="testimonial__wrap">
@@ -499,52 +519,40 @@
                 <p class="testimonial__name">-Amy</p>
                </div>
                <div class="testimonial__cell">
-                <div class="testimonial__wrap">
+                 <div class="testimonial__wrap">
                    <img src="img/logo/Shears/shearsBlack.svg" class="testimonial__image" alt="logo">
-                   <div class="testimonial__wrap-contact">
-                       <p class="testimonial__name">Amy</p>
-                       <p class="testimonial__address">agh!!!!!</p>
-                   </div> 
-                </div>
-                <p class="testimonial__review">
+                 </div>
+                 <p class="testimonial__review">
                     It's been a long time since I've walked out of a salon with a cut and color that I loved. Jenn did an amazing job and really took the time to understand what I was looking for. I'm so happy with my new cut and color! I loved the individualized attention she gave me and her flexibility with scheduling. Looking forward to going back. 
-                </p>
+                 </p>
+                 <p class="testimonial__name">-Amy</p>
                </div>
                <div class="testimonial__cell">
                 <div class="testimonial__wrap">
                    <img src="img/logo/Shears/shearsBlack.svg" class="testimonial__image" alt="logo">
-                   <div class="testimonial__wrap-contact">
-                       <p class="testimonial__name">Jennifer</p>
-                       <p class="testimonial__address">Tupelo, MS 38801</p>
-                   </div> 
                 </div>
                 <p class="testimonial__review">
                     Jen is great! Nice, cozy environment to relax in and be pampered! Next time I’m bringing a bottle of wine! came in not really knowing exactly what I wanted, but she figured it out. I’m always hesitant about cuts because I have curly hair and I’ve ended up looking like a triangle/Bozo the clown too many times, but she has curly hair too so she knows what to do. I love the color she did and felt her sincerity on wanting to make sure I was happy. I also love leaving a salon with straight hair, because I don’t ever really do it myself. Overall great experience and will definitely be back!  
                 </p>
+                <p class="testimonial__name">-Jennifer</p>
                </div>
                <div class="testimonial__cell">
                 <div class="testimonial__wrap">
                    <img src="img/logo/Shears/shearsBlack.svg" class="testimonial__image" alt="logo">
-                   <div class="testimonial__wrap-contact">
-                       <p class="testimonial__name">Laura</p>
-                       <p class="testimonial__address">Tupelo, MS 38801</p>
-                   </div> 
                 </div>
                 <p class="testimonial__review">
                     Couldn't recommend Elm &amp; Belle more. Jennifer is fantastic. I need some color (no cut this time), and she perfectly matched exactly what I was looking for. She's extremely knowledgable about every product she recommends and why she's using that specific product for your hair. Her hours are very convenient, her salon is beautiful, her rates are competitive, and she's so much fun to hang out and chat with while you're getting beautified. My husband was so impressed with my experience that he's booking his own appointment! 
                 </p>
+                <p class="testimonial__name">-Laura</p>
                </div>
                <div class="testimonial__cell">
                 <div class="testimonial__wrap">
                    <img src="img/logo/Shears/shearsBlack.svg" class="testimonial__image" alt="logo">
-                   <div class="testimonial__wrap-contact">
-                       <p class="testimonial__name">Kelly</p>
-                       <p class="testimonial__address">Tupelo, MS 38801</p>
-                   </div> 
                 </div>
                 <p class="testimonial__review">
                     Jenn is amazing! I wasn’t sure what to do with all my hair to make it more manageable. Jenn was wonderful! She came up with an idea that I just love. She executed exactly what I wanted...even without being sure what that was exactly! So excited about my new go to place and person!!  
                 </p>
+                <p class="testimonial__name">-Kelly</p>
                </div>
             </div>            
         </div>
