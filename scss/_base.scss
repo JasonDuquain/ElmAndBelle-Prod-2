@@ -25,14 +25,16 @@ body {
     font-size: 100%;
     font-family: 'Raleway', serif;
     color: #333;
-    
     /* keeps horizontal scrollbars from appearing when items are animated to the left or right of the viewport */
-    
-    //overflow-x: hidden; 
+    overflow-x: hidden; 
 }
 
 section {
     padding: 6em 2em;
+    
+    @include breakpoint(max-width $medium) {
+        padding: 4em 1em;
+    }
 }
 
 .pre-heading {
@@ -53,26 +55,14 @@ section {
 }
 
 .sect-heading-img {
-    height: 13px;
-    width: 142px;
+    height: .8125em;
+    width: 8.875em;
     background-image: url('../img/heading-img.svg');
     margin: 0 auto 3em auto;
     opacity: .5;
 }
 
-/*svg#test {
-    width: 142px;
-    height: 13px;
-    margin: 0 auto 3em auto;
-    text-align: center;
-    display: block;
-}
 
-.intro use {
-    opacity: .5;
-    display: inline-block;
-    fill: #414042;
-}*/
 
 
 

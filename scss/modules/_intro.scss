@@ -1,7 +1,7 @@
 
 .intro {
-    @include breakpoint(1200px) {
-        padding: 6em calc(50% - 600px);
+    @include breakpoint(1280px) {
+        padding: 6em calc(50% - 640px);
     }
     
     &__grid {
@@ -84,10 +84,15 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
         grid-gap: 2em;
-        width: 80%;
+        width: 90%;
         justify-items: center;
         align-items: center;
         margin: 0 auto;
+        
+        @include breakpoint(max-width $largest) {
+            width: 100%;
+        }
+        
     }
     
     &__brands__heading {
@@ -105,8 +110,8 @@
         
         &::before, &::after {
             content: "";
-            height: 5px;
-            border-radius: 10px;
+            height: .3125em;
+            border-radius: .625em;
             background-image: linear-gradient(to right, $gold-diamond, transparent);
         }
         
@@ -116,8 +121,8 @@
     }
     
     &__brands__img {
-        width: 150px;
-        height: 100px;
+        width: 9.375em;
+        height: 6.25em;
         object-fit: cover;
         opacity: .2;
         filter: grayscale(100%);
@@ -132,17 +137,25 @@
 }
 
 
+/******** DIAMOND INTRO GRID  *********/
 
-.img-clip-block {
-    margin: 1.25em 0; /*was 20px*/
+@include breakpoint(max-width $largest) {
+    .img-clip-block {
+        align-self: center;
+    }
 }
 
 .img-clip-row {
     text-align: center;
+    margin-top: -9.625em; 
+    
+    @include breakpoint(max-width $largest) {
+        margin-top: -7.725em;
+    }
 }
 
 .img-clip-wrap {
-    display: block;
+    display: inline-block;
     width: 18.75em; /* was 300px */
     height: 18.75em; /* was 300px */
     background-image: url("http://karenmenezes.com/shapes-polygon/clip-demo.jpg"); /* 600x600 */
@@ -151,6 +164,15 @@
     margin-right: auto;
     position: relative;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    
+    @include breakpoint(max-width $largest) {
+        width: 15em; 
+        height: 15em; 
+    }
+}
+
+.img-clip-row:first-of-type {
+    margin-top: auto;
 }
 
 .img-clip-row:first-of-type .img-clip-wrap {
@@ -190,11 +212,19 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    
+    @include breakpoint(max-width $largest) {
+        font-size: 150%;
+    }
 }
 
 .overlay-content img {
-   width: 100%;
+    width: 100%;
     height: auto;
+    
+    @include breakpoint(max-width $largest) {
+        width: 90%;
+    }
 }
 
 .img-clip-wrap:hover .overlay {
@@ -204,20 +234,6 @@
 
 
 
-
-@media only screen and (min-width: 550px) {
-    .img-clip-row { 
-        margin-top: -9.625em; /* was -154px */
-    }
-
-    .img-clip-row:first-of-type {
-        margin-top: auto;
-    }
-
-    .img-clip-wrap {
-        display: inline-block;
-    }
-}
 
 
 

@@ -1,3 +1,5 @@
+fix the services modal(s) from scaling down to zero on page load!!
+
 add a load (hero img load) event for the maya quote animation to make sure the animation does not start until the hero img is loaded
 
 redo @font-face list to put woff2 at the top and maybe add a font-swap declaration..CONFIRM BROWSER IS USING WOFF2 WHEN DONE!!

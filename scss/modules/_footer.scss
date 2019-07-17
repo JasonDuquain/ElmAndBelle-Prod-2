@@ -5,8 +5,8 @@ footer {
     color: #888;
     padding: 3em;
     
-    @include breakpoint(1200px) {
-        padding: 4em calc(50% - 600px);
+    @include breakpoint(1280px) {
+        padding: 4em calc(50% - 640px);
     }
 }
 
@@ -29,9 +29,7 @@ p.footer--main {
     max-width: 70%;
     margin: 0 auto 2.5em auto;
     
-    @include breakpoint(max-width $medium) {
-        max-width: none;
-    }
+    
 }
 
 div.footerNavWrapper {
@@ -96,10 +94,11 @@ div.footer--icons a:last-of-type i:hover {
     display: flex;
     width: 70%;
     justify-content: space-between;
+    flex-wrap: wrap;
     
-    @include breakpoint(max-width $medium) {
+    /*@include breakpoint(max-width $medium) {
         flex: 0 0 100%;
-    }
+    }*/
     
 }
 
