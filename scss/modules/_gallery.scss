@@ -1,58 +1,57 @@
 
-.demo {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 300px;
-    grid-gap: 1em;
-    grid-auto-flow: dense;
+.gallery {
+    
+    &__grid {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1em;
+        grid-auto-flow: dense; 
+    }
+    
+    &__link {
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: #000;
+    }
+    
+    &__link:hover .gallery__figure {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    
+    &__figure {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        opacity: .7;
+        transition: all 300ms ease-out;
+    }
+    
+    &__caption {
+        opacity: 0;
+        transition: padding 300ms ease-in 200ms;
+    }
+    
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /*
+    &__link:nth-child(2), &__link:nth-child(4), &__link:nth-child(9) {
+        grid-column: span 2;
+    }
+    
+    &__link:nth-child(1), &__link:nth-child(5) {
+        grid-row: span 2;
+    }
+    
+    */
 }
 
-.demo a {
-    //width: 300px;
-    //height: auto;
-    //object-fit: cover;
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #000;
-}
-
-.demo a:hover figure {
-    transform: scale(1.3);
-    opacity: 1;
-}
-
-.demo figure {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    opacity: .7;
-    transition: all 300ms ease-out;
-}
-
-.demo figcaption {
-    opacity: 0;
-    transition: padding 300ms ease-in 200ms;
-}
-
-.demo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.demo a:nth-child(1) img {
-    object-position: left center;
-}
-
-.demo a:nth-child(2), .demo a:nth-child(4), .demo a:nth-child(9) {
-    grid-column: span 2;
-}
-
-.demo a:nth-child(1), .demo a:nth-child(5) {
-    grid-row: span 2;
-}
 
 
 /****** ANIMATED HOVER STYLE one *****/
@@ -81,12 +80,6 @@
     bottom: -145%;
     left: 0;
     right: 0;
-}
-
-.snip1576 img {
-    /*display: block;
-    max-width: 100%;
-    backface-visibility: hidden;*/
 }
 
 .snip1576 figcaption {
@@ -177,8 +170,6 @@
 }
 
 
-
-
 .snip1334 figcaption {
     position: absolute;
     top: 0;
@@ -209,12 +200,6 @@
     opacity: 0;
 }
 
-//shouldnt need this - uncomment if any issues
-/*
-.snip1334:hover img {
-    opacity: .5;
-}
-*/
 
 .snip1334:hover:before {
     left: 0;
