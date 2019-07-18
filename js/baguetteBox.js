@@ -762,5 +762,6 @@
     };
 }));
 
-baguetteBox.run('.demo');
+
+baguetteBox.run('.gallery__grid');
 

@@ -5,15 +5,31 @@
         max-width: 1280px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 1em;
         grid-auto-flow: dense; 
+        
+        grid-auto-rows: 300px;
+        
+        @include breakpoint(max-width $small) {
+            
+        }
     }
     
     &__link {
         overflow: hidden;
         border-radius: 10px;
         background-color: #000;
+    }
+    
+    &__link.featured {
+        grid-row: span 2;
+        grid-column: span 2;
+        
+        @include breakpoint(max-width $small) {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
     }
     
     &__link:hover .gallery__figure {
@@ -25,13 +41,8 @@
         width: 100%;
         height: 100%;
         position: relative;
-        opacity: .7;
+        opacity: .75;
         transition: all 300ms ease-out;
-    }
-    
-    &__caption {
-        opacity: 0;
-        transition: padding 300ms ease-in 200ms;
     }
     
     &__image {
@@ -40,16 +51,6 @@
         object-fit: cover;
     }
     
-    /*
-    &__link:nth-child(2), &__link:nth-child(4), &__link:nth-child(9) {
-        grid-column: span 2;
-    }
-    
-    &__link:nth-child(1), &__link:nth-child(5) {
-        grid-row: span 2;
-    }
-    
-    */
 }
 
 

@@ -1,23 +1,25 @@
 
 .subscribe {
-    background-image: url(../img/items.jpg);
+    background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563458466/eandb/bg-subscribe.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
+    padding-top: 8em;
+    padding-bottom: 8em;
     
     @include breakpoint(1200px) {
-        padding: 6em calc(50% - 600px);
+        padding: 8em calc(50% - 600px);
     }
     
     &__heading {
         font-size: 1.5em;
-        margin-bottom: .4em;
+        margin-bottom: 1em;
         font-weight: 400;
     }
     
     &__paragraph {
         text-align: center;
-        margin-bottom: 1.8em;
+        margin-bottom: 4em;
     }
     
     &__form {
