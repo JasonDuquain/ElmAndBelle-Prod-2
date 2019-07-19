@@ -1,13 +1,24 @@
 
 .services {
     
+    @include breakpoint (max-width $smallest) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    
     &__grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-gap: 2em;
+        grid-gap: 1em;
         max-width: 1280px;
         margin: 0 auto;
         align-items: center;
+        
+        @include breakpoint (max-width $large) {
+            grid-row-gap: 3em;
+            justify-items: center;
+        }
     }
 
     &__wrap {
