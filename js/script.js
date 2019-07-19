@@ -1,7 +1,7 @@
 
-
-
 /******* FADE HERO SECT ON SCROLL *********/
+
+/* the onScroll method has a conditional to keep it from running when the hero image is above the viewport - remove if any issues  */
 
 let content = document.querySelector('.large-hero__main-heading');
 let blur = document.querySelector('.large-hero__overlay'); // this element has the filter: blur(4px) applied
@@ -31,8 +31,12 @@ class Scroller {
     }
 
     onScroll() {
-        this.latestKnownScrollY = window.scrollY;
-        this.requestTick();
+
+        if (blur.getBoundingClientRect().bottom > 150) {
+            this.latestKnownScrollY = window.scrollY;
+            this.requestTick();
+        } else { return; }
+
     }
 
     requestTick() {
@@ -186,42 +190,7 @@ document.addEventListener('scroll', (e) => {
             el.classList.remove('active');
         }
     })
-})
-
-/******  STATS numbers increasing fast  *******/
-
-var a = 0;
-$(window).scroll(function() {
-
-  var oTop = $('.stats').offset().top - window.innerHeight;
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $('.stats__number').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
-
-        {
-
-          duration: 2000,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-          }
-
-        });
-    });
-    a = 1;
-  }
-
 });
-
 
 
 /********  COPYRIGHT DATE *******/

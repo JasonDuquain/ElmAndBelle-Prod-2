@@ -1,12 +1,21 @@
 
 .gallery {
     
+    padding-bottom: 12em;
+    
     &__grid {
+        
+        // this keeps empty areas at the end of the grid from being able to be hovered
+        pointer-events: none;
+        
+        //background: #131212;
+        
+        
         max-width: 1280px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 1em;
+        //grid-gap: 1em;
         grid-auto-flow: dense; 
         
         grid-auto-rows: 300px;
@@ -17,9 +26,16 @@
     }
     
     &__link {
+        // reenable hover events for individual grid items
+        pointer-events: auto;
+        
+        display: block;
         overflow: hidden;
-        border-radius: 10px;
-        background-color: #000;
+        //border-radius: 10px;
+        background: #131212;
+        
+        //opacity: 1;
+        
     }
     
     &__link.featured {
@@ -32,20 +48,29 @@
         }
     }
     
-    &__link:hover .gallery__figure {
-        transform: scale(1.2);
-        opacity: 1;
+    &__grid:hover .gallery__figure { opacity: .3; }
+    &__grid:hover .gallery__figure:hover { opacity: 1;  }
+    
+    
+    &__link:hover  {
+        //transform: scale(1.1);
+        //opacity: 1;
     }
     
     &__figure {
         width: 100%;
         height: 100%;
         position: relative;
-        opacity: .75;
-        transition: all 300ms ease-out;
+        //opacity: .3;
+        transition: opacity 800ms ease-out;
+        
+        overflow: hidden;
+        
+         
     }
     
     &__image {
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -56,6 +81,8 @@
 
 
 /****** ANIMATED HOVER STYLE one *****/
+
+/*
 
 .snip1576 {
     font-size: 24px;
@@ -136,8 +163,13 @@
     transform: none;
 }
 
+*/
 
 /****** ANIMATED HOVER STYLE two *****/
+
+
+
+/*
 
 .snip1334 {
     position: relative;
@@ -153,6 +185,9 @@
     transition: all 0.35s ease-out;
 }
 
+*/
+
+/*
 .snip1334 img {
     transition: all 0.8s ease-out;
 }
@@ -169,7 +204,6 @@
     bottom: 0;
     box-shadow: 0 0 50px white;
 }
-
 
 .snip1334 figcaption {
     position: absolute;
@@ -225,7 +259,6 @@
 }
 
 
-
 .demo .snip1334 {
     opacity: .7;
 }
@@ -237,3 +270,6 @@
 .demo .snip1334 figcaption {
     opacity: 1;
 }
+
+
+*/
