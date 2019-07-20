@@ -1,11 +1,11 @@
 
+
 .services {
     
     @include breakpoint (max-width $smallest) {
         padding-right: 0;
         padding-left: 0;
-    }
-    
+    } 
     
     &__grid {
         display: grid;

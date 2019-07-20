@@ -6,6 +6,7 @@
 }
 
 /* Icons */
+
 @font-face
 {
     font-family: 'slick';
@@ -15,6 +16,9 @@
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
+
+
+
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -178,7 +182,13 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
+    
+     
+    /* font-size: 6px; */
+    
+    /* make dots bigger  */
+    font-size: 16px;
+    
     line-height: 20px;
 
     position: absolute;

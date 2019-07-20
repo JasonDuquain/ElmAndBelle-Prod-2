@@ -1,9 +1,8 @@
 
-
 .large-hero {
     height: 55vw;
-    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,
-    .2)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456910/eandb/hero.jpg');
+    background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,
+    .25)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456910/eandb/hero.jpg');
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
@@ -11,6 +10,16 @@
     border-bottom: .6vw solid $gold;
     position: relative;
     overflow: hidden;
+    
+    @include breakpoint (max-width $large) {
+        height: 65vw;
+        /* this is causing the img hero bg to go blank for an instant before the new img loads - fix that or don't change the img
+        
+        
+        */
+        
+        background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_771/v1563456910/eandb/hero.jpg');
+    }
     
     &__overlay {
         position: absolute;
@@ -84,7 +93,7 @@
     }
     
     &__amp--right {
-        margin-left: 3px;
+        margin-left: 13px;
     }
     
     

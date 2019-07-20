@@ -21,6 +21,11 @@
     }
 }
 
+// less vivid red for active links
+a:active {
+    color: rgb(191, 43, 88);
+}
+
 body {
     font-size: 100%;
     font-family: 'Raleway', serif;
@@ -33,7 +38,7 @@ section {
     padding: 6em 2em;
     
     @include breakpoint(max-width $medium) {
-        padding: 4em 1em;
+        padding: 5em 1em;
     }
 }
 
@@ -58,7 +63,7 @@ section {
     height: .8125em;
     width: 8.875em;
     background-image: url('../img/heading-img.svg');
-    margin: 0 auto 3em auto;
+    margin: 0 auto 4em auto;
     opacity: .5;
 }
 

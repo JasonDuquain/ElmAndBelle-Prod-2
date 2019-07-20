@@ -1,3 +1,9 @@
+// PLURAL FIX THIS SOON SO ALL ARE SINGULAR as there is a .testimonials__flex !!
+.testimonials__wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 
 .testimonial {
     background-image: linear-gradient(105deg, #fff, #fff, 50%, transparent 50%), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
@@ -5,9 +11,13 @@
     background-size: cover;
     padding: 6em 2em 2em 2em;
     
+    height: 100vh;
+    
+    /*
     @include breakpoint(1200px) {
         padding: 6em calc(50% - 600px);
     }
+    */
     
     &__cell {
         box-shadow: 2px 2px 3px 3px rgba(224, 224, 224, 0.3);
@@ -17,15 +27,31 @@
         margin-right: 9em;
         
         // temp fix for height issue
-        padding-bottom: 4em;
+        padding-bottom: 2em;
+        
+        // add extra space betwen imgs and dots
+        margin-bottom: 2em;
+        
+        @include breakpoint(max-width $medium) {
+            margin-left: 6em;
+            margin-right: 6em;
+        }
+        
+        @include breakpoint(max-width $medium-small) {
+            margin-left: 4em;
+            margin-right: 4em;
+        }
+        
     }
     
+    // this is the wrap inside the cell 
     &__wrap {
         display: flex;
         align-items: center;
         justify-content: center;
         border-bottom: 1px solid $grey-light-2;
         padding: 1em;
+        
     }
     
     &__image {

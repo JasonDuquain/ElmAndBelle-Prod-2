@@ -10,6 +10,12 @@
         grid-column-gap: .5em;
         //align-items: center;
         margin: 4em 0;
+        
+        @include breakpoint(max-width $medium-small) {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 1em;
+        }
     }
     
     /*****   OVERLAP GALLERY   ******/
@@ -57,6 +63,15 @@
     &__summary {
         align-self: center;
         
+        @include breakpoint(max-width $medium-small) {
+            padding: 3em;
+            font-size: 1.1em;
+        }
+        
+        @include breakpoint(max-width $small) {
+            padding: 2em 0;
+        }
+        
         p:first-of-type::first-letter {
             font-family: serif;
             font-size: 4.6em;
@@ -82,14 +97,14 @@
     /*****    BRAND LOGOS    *****/
     &__brands {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(8.437em, 1fr));
         grid-gap: 2em;
         width: 90%;
         justify-items: center;
         align-items: center;
         margin: 0 auto;
         
-        @include breakpoint(max-width $largest) {
+        @include breakpoint(max-width $small) {
             width: 100%;
         }
         
@@ -105,7 +120,7 @@
         font-size: 1.4em;
         font-weight: 500;
         line-height: 1;
-        margin: 1em 0 2.5em 0;
+        margin: 2em 0 2.5em 0;
         text-transform: uppercase;
         
         &::before, &::after {
@@ -124,7 +139,7 @@
         width: 9.375em;
         height: 6.25em;
         object-fit: cover;
-        opacity: .2;
+        opacity: .35;
         filter: grayscale(100%);
         transition: 400ms ease-out;
         
@@ -192,7 +207,7 @@
 }
 
 .overlay {
-    transition: all 0.3s linear;
+    transition: all 400ms linear;
     background: rgba(171, 147, 116, 0.8);
     position: absolute;
     left: 0;
