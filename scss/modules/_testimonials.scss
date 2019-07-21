@@ -82,7 +82,7 @@
         padding: 1em;
         
         @include breakpoint(max-width $smallest) {
-            padding: .75em;
+            padding: .7em;
         }
         
     }
@@ -117,13 +117,13 @@
         font-size: 1.1em;
         line-height: 1.6;
         color: $grey-dark-1;
-        padding: 2em;
+        padding: 1.5em;
         position: relative;
         z-index: 2;
         
         @include breakpoint(max-width $small) {
             font-size: 1em;
-            padding: 1.5em;
+            padding: 1em;
             line-height: 1.3;
         }
         
