@@ -1,5 +1,7 @@
 
 
+
+
 .services {
     
     @include breakpoint (max-width $smallest) {
@@ -17,8 +19,14 @@
         
         @include breakpoint (max-width $large) {
             grid-row-gap: 3em;
+            grid-column-gap: 0;
             justify-items: center;
         }
+        
+        @include breakpoint (max-width $smallest) {
+            grid-template-columns: 1fr;
+        } 
+        
     }
 
     &__wrap {
@@ -46,6 +54,10 @@
         border-radius: 3px;
         box-shadow: 0 0 2px 2px rgba($grey-light-2,.3);
         //transition: transform 300ms ease-in;
+        
+        @include breakpoint (max-width $smallest) {
+           width: 350px;
+        }
     }
     
     &__image-wrap {
@@ -62,10 +74,16 @@
         height: 52px; /*will not fit perfectly when width changes - update this soon*/
         background-repeat: no-repeat;
         background-size: 100%;
+        
+        @include breakpoint (max-width $smallest) {
+            height: 45px;
+        }
     }
     
     &__image {
         display: block;
+        width: 100%;
+        height: 100%;
     }
     
     &__description {

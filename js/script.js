@@ -84,7 +84,7 @@ document.addEventListener('scroll', (e) => {
 /***********  TESTIMONIAL SLIDER  ***********/
 
 $(document).ready(function(){
-  $('.testimonials__flex').slick({
+  $('.testimonial__flex').slick({
   dots: true,
   infinite: true,
   speed: 500,

@@ -167,6 +167,10 @@
     @include breakpoint(max-width $largest) {
         margin-top: -7.725em;
     }
+    
+    @include breakpoint(max-width $smallest) {
+        margin-top: -6.2em;
+    }
 }
 
 .img-clip-wrap {
@@ -183,6 +187,11 @@
     @include breakpoint(max-width $largest) {
         width: 15em; 
         height: 15em; 
+    }
+    
+    @include breakpoint(max-width $smallest) {
+        width: 12em; 
+        height: 12em; 
     }
 }
 

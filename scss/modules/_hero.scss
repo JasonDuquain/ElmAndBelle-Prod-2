@@ -14,11 +14,12 @@
     @include breakpoint (max-width $large) {
         height: 65vw;
         /* this is causing the img hero bg to go blank for an instant before the new img loads - fix that or don't change the img
-        
-        
-        */
-        
         background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_771/v1563456910/eandb/hero.jpg');
+        */
+    }
+    
+    @include breakpoint (max-width $medium-small) {
+        height: 85vw;
     }
     
     &__overlay {
@@ -51,14 +52,17 @@
         
         @include breakpoint (max-width $medium-small) {
             font-size: 3em;
+            width: 65%;
         }
         
         @include breakpoint (max-width $small) {
-            font-size: 2.5em;
+            font-size: 2.6em;
+            width: 75%;
         }
         
         @include breakpoint (max-width $smallest) {
-            font-size: 2.2em;
+            font-size: 2.3em;
+            width: 80%;
         }
         
     }
