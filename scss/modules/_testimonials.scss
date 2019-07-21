@@ -1,11 +1,31 @@
 
+// darkend the pre-heading and hdg img when skewed gradient is removed as now the heading is completely in front of the img
+
+@include breakpoint(max-width $small) {
+    
+    .testimonial .pre-heading {
+        color: $grey-dark-1;
+    }
+
+    .testimonial .sect-heading-img {
+        color: $grey-dark-1;
+        opacity: 1;
+    }
+    
+}
+
+
 .testimonial {
     background-image: linear-gradient(105deg, #fff, #fff, 50%, transparent 50%), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
     background-attachment: fixed;
     background-size: cover;
     padding: 6em 2em 2em 2em;
-    
     height: 100vh;
+    
+    @include breakpoint(max-width $small) {
+        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
+        background-position: 50% 0%;
+    }
     
     /*
     @include breakpoint(1200px) {
@@ -61,6 +81,10 @@
         border-bottom: 1px solid $grey-light-2;
         padding: 1em;
         
+        @include breakpoint(max-width $smallest) {
+            padding: .75em;
+        }
+        
     }
     
     &__image {
@@ -69,6 +93,11 @@
         border-radius: 50%;
         border: 1px solid $grey-dark-2;
         display: block;
+        
+        @include breakpoint(max-width $smallest) {
+            width: 3.5em;
+            height: 3.5em;
+        }
     }
 
     &__name {
@@ -76,6 +105,10 @@
         font-style: italic;
         color: $grey-dark-2;
         text-align: center;
+        
+        @include breakpoint(max-width $small) {
+            font-size: 1.15em;
+        }
         
     }
     
@@ -91,6 +124,7 @@
         @include breakpoint(max-width $small) {
             font-size: 1em;
             padding: 1.5em;
+            line-height: 1.3;
         }
         
     
@@ -111,9 +145,13 @@
     
 }
 
-// MAKE TESTIMONIALS ALIGN NICELY..MIGHT BE AN OPTION IN THE SLIDER CFG TO DO THIS...check!!
+// MAKE TESTIMONIALS ALIGN NICELY..MIGHT BE AN OPTION IN THE SLIDER CFG TO DO THIS...check!!..but need the slider to be higher so the dots dont overlow the bottom
+/*
+
 .slick-track {
     display: flex !important;
     align-items: center !important;
 }
+
+*/
 

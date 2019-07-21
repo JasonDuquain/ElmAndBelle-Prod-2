@@ -154,7 +154,7 @@
     .navigation.hamburger-on .navigation__link {
         color: #fff;
         font-size: 1em;
-        padding: 1.5em;
+        padding: 1em;
         display: block;
 
         &:hover {
@@ -172,11 +172,17 @@
     
     /***** FIXED HEADER  ******/
     .navigation.hamburger-on.fixed .navigation__item {
-        width: 100%;
+        width: 60%;
+        margin-left: 0;
+        
+        @include breakpoint (max-width $small) {
+            width: 70%;
+        }
+        
     }
     
     .navigation.hamburger-on.fixed .navigation__item--hide {
-        margin-right: 0;
+        display: none;
     }
     
     /*.navigation.hamburger-on.fixed .navigation__link:link, & .navigation__link:visited {
