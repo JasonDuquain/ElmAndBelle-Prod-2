@@ -19,7 +19,11 @@
     }
     
     @include breakpoint (max-width $medium-small) {
-        height: 85vw;
+        height: 90vw;
+    }
+    
+    @include breakpoint (max-width $small) {
+        height: 125vw;
     }
     
     &__overlay {

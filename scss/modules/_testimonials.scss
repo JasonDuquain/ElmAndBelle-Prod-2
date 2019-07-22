@@ -25,6 +25,8 @@
     @include breakpoint(max-width $small) {
         background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
         background-position: 50% 0%;
+        
+        // this looks like it is fixing the issue of the bg being completely blurred
         background-attachment: scroll;
     }
     

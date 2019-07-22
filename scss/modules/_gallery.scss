@@ -16,8 +16,9 @@
         
         grid-auto-rows: 18.75em;
         
-        @include breakpoint(max-width $small) {
-            
+        @include breakpoint(max-width $medium-small) {
+            grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+            grid-auto-rows: 15em;
         }
     }
     
