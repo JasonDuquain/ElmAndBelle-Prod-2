@@ -19,7 +19,7 @@
     background-image: linear-gradient(105deg, #fff, #fff, 50%, transparent 50%), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
     background-attachment: fixed;
     background-size: cover;
-    padding: 6em 2em 2em 2em;
+    padding: 6em 2em 4em 2em;
     height: 100vh;
     
     @include breakpoint(max-width $small) {
@@ -28,6 +28,7 @@
         
         // this looks like it is fixing the issue of the bg being completely blurred
         background-attachment: scroll;
+        padding: 3em .5em 2em .5em;
     }
     
     /*
@@ -151,14 +152,4 @@
     }
     
 }
-
-// MAKE TESTIMONIALS ALIGN NICELY..MIGHT BE AN OPTION IN THE SLIDER CFG TO DO THIS...check!!..but need the slider to be higher so the dots dont overlow the bottom
-/*
-
-.slick-track {
-    display: flex !important;
-    align-items: center !important;
-}
-
-*/
 

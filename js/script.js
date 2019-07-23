@@ -81,29 +81,32 @@ document.addEventListener('scroll', (e) => {
 
 
 /***********  TESTIMONIAL SLIDER  ***********/
+
 /*
-
-$(document).ready(function(){
-  $('.testimonial__flex').slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1
-  adaptiveHeight: true, //off
-  autoplay: true, //off
-  autoplaySpeed: 5000 //off
-  });
-});
-
-*/
-
+autoplayText: [
+        "▶",
+        "❚❚"
+    ]*/
 
 var slider = tns({
     container: '.testimonial__flex',
+    
+    // added this to fix errs: 'Unable to preventDefault inside passive event listener invocation.'..now the new err is: [Intervention] Ignored attempt to cancel a touchmove event with cancelable=false, for example because scrolling is in progress and cannot be interrupted. 
+    preventScrollOnTouch: 'auto',
+    
+    autoHeight: true,
     items: 1,
-    slideBy: 1,
-    center: true
-  });
+    slideBy: 'page',
+    center: true,
+    mouseDrag: true,
+    arrowKeys: true,
+    autoplay: true,
+    autoplayTimeout: 3500,
+    autoplayText: [
+        "Resume",
+        "Pause"
+    ]
+});
 
 
 /**** REMOVE HERO TEXT ANIMATION AFTER ONE TIME*****/
