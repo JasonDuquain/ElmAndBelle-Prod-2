@@ -138,7 +138,6 @@ document.addEventListener('scroll', (e) => {
 });
 
 bttBtn.addEventListener('click', (e) => {
-    e.preventDefault();
     docElement.scrollTop = 0;
 });
 
