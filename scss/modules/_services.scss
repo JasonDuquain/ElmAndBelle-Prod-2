@@ -46,11 +46,10 @@
     }
 
     &__main {
-        width: 400px;
+        width: 399px; //removing 1px fixed short vertical line that appear from img
         position: relative;
         border-radius: 3px;
         box-shadow: 0 0 2px 2px rgba($grey-light-2,.3);
-        //transition: transform 300ms ease-in;
         
         @include breakpoint (max-width $smallest) {
            width: 350px;
@@ -74,6 +73,8 @@
         
         @include breakpoint (max-width $smallest) {
             height: 45px;
+            
+            transform: scaleY(1.02); //this fixes issue of horizonal line from img showing
         }
     }
     
@@ -168,7 +169,7 @@
     
     &__special-para {
         font-size: 1.2em;
-       line-height: 1.4; 
+        line-height: 1.4; 
     }
     
     

@@ -1,3 +1,14 @@
+let heroImage = document.querySelector('.large-hero__image');
+let heroImageUrl = heroImage.getAttribute('src');
+
+
+/******** ONLY LOAD MAYA QUOTE ON COMPLETE PAGE LOAD - FIX THIS TO WORK ON HERO BG IMG LOAD  *******/
+
+heroImage.addEventListener('load', function(e) {
+    console.log('hero img loaded');
+    hero.classList.add('loaded')
+});
+
 
 /******* FADE HERO SECT ON SCROLL *********/
 
@@ -24,10 +35,17 @@ class Scroller {
     
     init() {
         window.addEventListener('scroll', this.onScroll.bind(this));
+        
+        /* UNCOMMENT THESE IF YOU GO BACK TO HERO IMG AS A BG IMG
         let hdr = document.querySelector('.large-hero');
         let hdrStyles = window.getComputedStyle(hdr);
         let hdrBgImg = hdrStyles.getPropertyValue('background-image');
         blur.style.backgroundImage = hdrBgImg;
+        */
+        
+        blur.style.backgroundImage = `url(${heroImageUrl})`;
+        blur.style.backgroundPosition = 'center bottom';
+        
     }
 
     onScroll() {
@@ -218,8 +236,5 @@ let year = document.querySelector('.year');
 year.textContent = new Date().getFullYear();
 
 
-/******** ONLY LOAD MAYA QUOTE ON COMPLETE PAGE LOAD - FIX THIS TO WORK ON HERO BG IMG LOAD  *******/
-window.addEventListener('load', function(e) {
-    hero.classList.add('loaded')
-})
+
 

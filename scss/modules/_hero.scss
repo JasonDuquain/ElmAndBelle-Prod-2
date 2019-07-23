@@ -2,12 +2,13 @@
 
 .large-hero {
     height: 55vw;
-    background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,
+    
+    /*background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,
     .25)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456910/eandb/hero.jpg');
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
     border-bottom: .6vw solid $gold;
     position: relative;
     overflow: hidden;
@@ -28,6 +29,16 @@
         height: 125vw;
     }
     
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        
+        object-position: center bottom;
+    }
+    
+    
     &__overlay {
         position: absolute;
         top: 0;
@@ -44,7 +55,7 @@
         color: #fff;
         text-align: center;
         font-family: 'Tangerine', cursive;
-        text-shadow: 2px 2px 3px rgba(0,0,0,.7);
+        text-shadow: 2px 2px 2px rgba(0,0,0,.7);
         font-size: 3.7em;
         line-height: 1.1;
         color: #fff;
