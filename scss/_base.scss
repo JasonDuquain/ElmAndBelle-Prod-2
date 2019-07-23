@@ -22,7 +22,8 @@
 :root {
     font-size: 1em;
     
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
+    -webkit-scroll-behavior: smooth;
     
     box-sizing: border-box;
     
@@ -32,6 +33,11 @@
     
     @include breakpoint(max-width $medium) {
         font-size: .8em;
+    }
+    
+    @include breakpoint(max-width $medium-760) {
+        scroll-behavior: none;
+        -webkit-scroll-behavior: none;
     }
 }
 

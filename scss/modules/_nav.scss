@@ -8,7 +8,7 @@
         padding: 1em calc(50% - 600px);
     }
     
-    @include breakpoint (max-width 760px) {
+    @include breakpoint (max-width $medium-760) {
         display: none;
     }
     
@@ -132,7 +132,7 @@
 }
 
 
-@include breakpoint (max-width 760px) {
+@include breakpoint (max-width $medium-760) {
 
     .navigation.hamburger-on {
         display: block; 

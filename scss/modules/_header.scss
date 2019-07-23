@@ -9,7 +9,7 @@
     right: 16px;
     z-index: 8000;
     
-    @include breakpoint (max-width 760px) {
+    @include breakpoint (max-width $medium-760) {
         display: block;
     }
     
@@ -92,7 +92,7 @@
             opacity: .80;
         }
         
-        @include breakpoint (max-width 760px) {
+        @include breakpoint (max-width $medium-760) {
             display: none;
         }
     }
@@ -136,7 +136,7 @@
         display: flex;
         justify-content: center;
         
-        @include breakpoint (max-width 760px) {
+        @include breakpoint (max-width $medium-760) {
             flex: 0 0 85%;
             margin: 0 auto;
         }
@@ -166,7 +166,7 @@
         align-items: center;
         justify-content: center;
         
-        @include breakpoint (max-width 760px) {
+        @include breakpoint (max-width $medium-760) {
             display: none;
         }
     }
