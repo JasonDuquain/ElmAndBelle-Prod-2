@@ -133,9 +133,12 @@ let highestHeight = Math.max(...heights);*/
 
 let highestHeight = docElement.scrollHeight;
 
-
+//changed from document to window - still not working on mobile
 window.addEventListener('scroll', (e) => {
-    (docElement.scrollTop > (highestHeight / 8)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
+    //console.log(window.pageYOffset, docElement.scrollTop);
+    
+    //changed from docElement.scrollTop - trying to get it working on mobile
+    (window.pageYOffset > (highestHeight / 8)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
 
 });
 
