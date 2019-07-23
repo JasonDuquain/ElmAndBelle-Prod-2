@@ -68,7 +68,6 @@ scroller.init();
 
 
 /***********  SERVICES ANIMATE IN ON SCROLL  ***********/
-
 const servicesSects = document.querySelectorAll('.services_wrap');
 const servicesGrid = document.querySelector('.services__grid')
 
@@ -128,8 +127,10 @@ let docElement = document.documentElement;
 let docBody = document.body;
 let bttBtn = document.querySelector('.js-btt-btn');
 
-let heights = [docElement.scrollHeight, docBody.scrollHeight, docElement.offsetHeight, docBody.offsetHeight];
-let highestHeight = Math.max(...heights);
+/*let heights = [docElement.scrollHeight, docBody.scrollHeight, docElement.offsetHeight, docBody.offsetHeight];
+let highestHeight = Math.max(...heights);*/
+
+let highestHeight = docElement.scrollHeight;
 
 document.addEventListener('scroll', (e) => {
     (docElement.scrollTop > (highestHeight / 8)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');

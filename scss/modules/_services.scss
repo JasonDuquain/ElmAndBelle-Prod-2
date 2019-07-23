@@ -32,17 +32,17 @@
     
     &__wrap:first-of-type {
         //transform: translateX(-150%);
-        opacity: 0;
+        //opacity: 0;
     }
     
     &__wrap:nth-of-type(2) {
         //transform: translateY(150%);
-        opacity: 0;
+        //opacity: 0;
     }
     
     &__wrap:last-of-type {
         //transform: translateX(150%);
-        opacity: 0;
+        //opacity: 0;
     }
 
     &__main {
@@ -179,7 +179,7 @@
         opacity: 0;
         pointer-events: none;
         transform: scale(0);
-        transition: 400ms ease-out;
+        transition: all 600ms ease-out;
         
         @include breakpoint (max-width $medium-small) {
             width: 80%;
@@ -314,9 +314,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 0; 
     pointer-events: none;
-    transition: opacity 1200ms ease-out;
+    transition: all 400ms ease-out;
     
     &:target {
         opacity: 1;
@@ -327,8 +327,8 @@
         opacity: 1;
         transform: scale(1);
         pointer-events: auto;
-    }
-
+    } 
+    
 }
 
 .close_modal {
