@@ -103,8 +103,8 @@ var slider = tns({
     autoplay: true,
     autoplayTimeout: 3500,
     autoplayText: [
-        "Resume",
-        "Pause"
+        "pause",
+        "resume"
     ]
 });
 
@@ -146,6 +146,7 @@ window.addEventListener('scroll', (e) => {
 });
 
 bttBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     docElement.scrollTop = 0;
 });
 
