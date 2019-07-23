@@ -1,4 +1,15 @@
 
+@font-face {
+    font-family: 'lucien_schoenschriftv_catRg';
+    src: url('../fonts/Lucian Schoenschrift CAT-webfont.woff2') format('woff2'),
+         url('../fonts/Lucian Schoenschrift CAT-webfont.woff') format('woff'),
+         url('../fonts/Lucian Schoenschrift CAT-webfont.eot'),
+         url('../fonts/Lucian Schoenschrift CAT-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 *, *:before, *:after {
     box-sizing: inherit;
     text-decoration: none;
@@ -32,6 +43,7 @@ body {
     color: #333;
     /* keeps horizontal scrollbars from appearing when items are animated to the left or right of the viewport */
     overflow-x: hidden; 
+    background-color: $white-slight-dark;
 }
 
 section {
@@ -54,7 +66,7 @@ section {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: .03em;
     margin-bottom: .2em;
     color: rgb(51, 51, 51);
 }

@@ -42,36 +42,40 @@
     }
     
     &__cell {
-        box-shadow: 2px 2px 3px 3px rgba(224, 224, 224, 0.3);
+        //box-shadow: 2px 2px 3px 3px rgba(224, 224, 224, 0.3);
+        //box-shadow: 2px 2px 3px 3px red;
         background-color: #fff;
         border-radius: 5px;
-        margin-left: 9em;
-        margin-right: 9em;
+        border: 1px solid red;
+        
+        
+        //margin-left: 9em;
+        //margin-right: 9em;
         
         // temp fix for height issue
         padding-bottom: 2em;
         
         // add extra space betwen imgs and dots
-        margin-bottom: 2em;
+        //margin-bottom: 2em;
         
         @include breakpoint(max-width $medium) {
-            margin-left: 6em;
-            margin-right: 6em;
+            //margin-left: 6em;
+            //margin-right: 6em;
         }
         
         @include breakpoint(max-width $medium-small) {
-            margin-left: 4em;
-            margin-right: 4em;
+            //margin-left: 4em;
+            //margin-right: 4em;
         }
         
         @include breakpoint(max-width $small) {
-            margin-left: 2em;
-            margin-right: 2em;
+            //margin-left: 2em;
+            //margin-right: 2em;
         }
         
         @include breakpoint(max-width $smallest) {
-            margin-left: 1.5em;
-            margin-right: 1.5em;
+            //margin-left: 1.5em;
+            //margin-right: 1.5em;
         }
         
     }

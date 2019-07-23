@@ -82,6 +82,7 @@ document.addEventListener('scroll', (e) => {
 
 
 /***********  TESTIMONIAL SLIDER  ***********/
+/*
 
 $(document).ready(function(){
   $('.testimonial__flex').slick({
@@ -89,11 +90,21 @@ $(document).ready(function(){
   infinite: true,
   speed: 500,
   slidesToShow: 1
-  /*adaptiveHeight: true,
-  autoplay: true,
-  autoplaySpeed: 5000*/
+  adaptiveHeight: true, //off
+  autoplay: true, //off
+  autoplaySpeed: 5000 //off
   });
 });
+
+*/
+
+
+var slider = tns({
+    container: '.testimonial__flex',
+    items: 1,
+    slideBy: 1,
+    center: true
+  });
 
 
 /**** REMOVE HERO TEXT ANIMATION AFTER ONE TIME*****/
