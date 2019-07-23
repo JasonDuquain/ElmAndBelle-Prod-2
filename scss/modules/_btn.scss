@@ -65,11 +65,6 @@
     z-index: 9500;
     cursor: pointer;
     
-    &.active {
-        opacity: 1;
-        visibility: visible;
-    }
-    
     &:hover {
         color: $grey-dark-1;
         background-color: #fff;
