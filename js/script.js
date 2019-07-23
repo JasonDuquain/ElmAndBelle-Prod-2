@@ -134,7 +134,7 @@ let highestHeight = Math.max(...heights);*/
 let highestHeight = docElement.scrollHeight;
 
 
-document.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', (e) => {
     (docElement.scrollTop > (highestHeight / 8)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
 
 });
