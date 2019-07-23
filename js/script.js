@@ -195,7 +195,6 @@ hamburgerMenu.addEventListener('click', function(e) {
 });
 
 
-
 /****************  HIGHTLIGHT NAV ITEMS ON SCROLL   ****************/
 let navs = document.querySelectorAll('.navigation__link:not(.navigation__link-home)');
 let sects = document.querySelectorAll('section:not(:first-of-type):not(:last-of-type)');

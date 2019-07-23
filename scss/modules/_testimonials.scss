@@ -10,9 +10,8 @@
         color: $grey-dark-1;
         opacity: 1;
     }
-    
+ 
 }
-
 
 
 .testimonial {
@@ -34,7 +33,7 @@
     
     // extra btm margin to move slider down a bit
     & .sect-heading-img {
-        margin-bottom: 8em;
+        margin-bottom: 6em;
         
         @include breakpoint(max-width $medium) {
             margin-bottom: 4em;
@@ -122,7 +121,7 @@
         
         font-size: 1.1em;
         line-height: 1.6;
-        color: $grey-dark-1;
+        color: darken($grey-dark-1, 8%);
         padding: 1.5em;
         position: relative;
         z-index: 2;
@@ -150,4 +149,44 @@
     }
     
 }
+
+/*********** LANDSCAPE STYLES ***********/
+@media screen and (orientation: landscape) {
+    
+    .testimonial {
+    
+       height: 95vw;
+       background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
+       background-position: 50% 0%;
+        padding: 1em 0;
+        
+       // this looks like it is fixing the issue of the bg being completely blurred
+       background-attachment: scroll; 
+    
+    } 
+    
+    /*.testimonial .sect-heading-img {
+        margin-bottom: 2em;
+    }
+    
+    .testimonial__main-wrap {
+        padding: 0 .5em;
+    }
+    
+    .testimonial__wrap {
+        display: none;
+    }*/
+    
+    .testimonial .pre-heading {
+        color: $grey-dark-1;
+    }
+
+    .testimonial .sect-heading-img {
+        color: $grey-dark-1;
+        opacity: 1;
+    }
+  
+}
+
+
 

@@ -127,7 +127,7 @@
 @include breakpoint (max-width $medium-760) {
 
     .navigation.hamburger-on {
-        display: block; 
+        display: block; ;
     }
 
     .navigation.hamburger-on .navigation__list {

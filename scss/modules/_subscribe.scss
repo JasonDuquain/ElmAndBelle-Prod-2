@@ -75,6 +75,10 @@
     
     &__input-wrap:last-of-type {
         align-self: end;
+        
+        @include breakpoint(max-width $small) {
+            justify-self: center;
+        }
     }
     
     
