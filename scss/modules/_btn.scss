@@ -63,17 +63,18 @@
     
     // trying to fix btn not showing on mobile
     z-index: 9500;
-    cursor: pointer;
     
     &.active {
         opacity: 1;
         pointer-events: auto;
     }
     
+    /*
     &:hover {
         color: $grey-dark-1;
         background-color: #fff;
     }
+    */
     
 }
 
