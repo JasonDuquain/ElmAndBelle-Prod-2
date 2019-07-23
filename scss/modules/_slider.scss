@@ -170,7 +170,7 @@
 
 
 
-//custom styles
+////// custom styles
 .tns-outer {
     position: relative;
 }
@@ -206,17 +206,26 @@
     position: absolute;
     bottom: -3em;
     left: 0;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .tns-controls button:last-of-type {
     position: absolute;
     bottom: -3em;
     right: 0;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .tns-outer button[data-action] {
     display: block;
     margin: 0 auto 1em auto;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 

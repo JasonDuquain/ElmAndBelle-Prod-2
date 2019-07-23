@@ -31,12 +31,6 @@
     
     &__item--hide {
         margin-left: 2em;
-        
-        /* removed as svg space was preserved in mozilla changed to 
-        transform: scale(2.2);
-        opacity: 0; 
-        transition: transform 1000ms ease-out, opacity 800ms; */ 
-        
         display: none;
         
         & .navigation__link:link::after, & .navigation__link:visited::after {
@@ -82,30 +76,28 @@
         top: 0;
         left: 0;
         right: 0;
-        padding: .75em; 
-        background-color: rgba(0,0,0,.7);
+        padding: .75em 2em; 
+        background-color: rgba(0,0,0,.5);
         box-shadow: 0 3px 3px rgba(0,0,0,.3);
         overflow: hidden; /* added to keep the sticky nav from expanding when logo animation happens */
         
         & .navigation__list {
-            width: 90%;
+            width: 100%;
             align-items: center;
             max-width: 1280px;
         }
         
         & .navigation__item--hide {
             margin-right: auto;
-            /* removed as svg space was preserved in mozilla
-            opacity: 1;
-            transform: scale(1.1);
-             */
-   
-            display: block;
-            
+            display: block;   
         }
         
         & .navigation__item {
             margin-left: 2em;
+        }
+        
+        & .navigation__item--hide {
+            margin-left: 0;
         }
         
         & .navigation__link:link, & .navigation__link:visited {
@@ -127,7 +119,7 @@
         & .navigation__link:link::after, & .navigation__link:visited::after {
             background-color: $gold;
         }
-        
+ 
     }
 }
 
@@ -154,9 +146,10 @@
 
     .navigation.hamburger-on .navigation__link {
         color: #fff;
-        font-size: 1em;
         padding: 1em;
         display: block;
+        font-size: .9em;
+        transform: translateY(1px);
 
         &:hover {
             background-color: $gold;
@@ -185,10 +178,6 @@
     .navigation.hamburger-on.fixed .navigation__item--hide {
         display: none;
     }
-    
-    /*.navigation.hamburger-on.fixed .navigation__link:link, & .navigation__link:visited {
-        color: #fff;
-    }*/
         
     .navigation.hamburger-on.fixed .navigation__link.active:link, .navigation.hamburger-on.fixed .navigation__link.active:visited {
         color: $gold;

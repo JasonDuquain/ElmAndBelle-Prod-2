@@ -101,7 +101,7 @@ var slider = tns({
     mouseDrag: true,
     arrowKeys: true,
     autoplay: true,
-    autoplayTimeout: 3500,
+    autoplayTimeout: 5000,
     autoplayText: [
         "resume",
         "pause"

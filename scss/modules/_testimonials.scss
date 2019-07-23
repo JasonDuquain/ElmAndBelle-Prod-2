@@ -1,6 +1,5 @@
 
 // darkend the pre-heading and hdg img when skewed gradient is removed as now the heading is completely in front of the img
-
 @include breakpoint(max-width $small) {
     
     .testimonial .pre-heading {
@@ -13,6 +12,7 @@
     }
     
 }
+
 
 
 .testimonial {
@@ -28,55 +28,53 @@
         
         // this looks like it is fixing the issue of the bg being completely blurred
         background-attachment: scroll;
+        
         padding: 3em .5em 2em .5em;
     }
     
-    /*
-    @include breakpoint(1200px) {
-        padding: 6em calc(50% - 600px);
+    // extra btm margin to move slider down a bit
+    & .sect-heading-img {
+        margin-bottom: 8em;
+        
+        @include breakpoint(max-width $medium) {
+            margin-bottom: 4em;
+        }
+        
+        @include breakpoint(max-width $small) {
+            margin-bottom: 2em;
+        }
     }
-    */
+
     
     &__main-wrap {
         max-width: 1280px;
         margin: 0 auto;
-    }
-    
-    &__cell {
-        //box-shadow: 2px 2px 3px 3px rgba(224, 224, 224, 0.3);
-        //box-shadow: 2px 2px 3px 3px red;
-        background-color: #fff;
-        border-radius: 5px;
-        border: 1px solid red;
-        
-        
-        //margin-left: 9em;
-        //margin-right: 9em;
-        
-        // temp fix for height issue
-        padding-bottom: 2em;
-        
-        // add extra space betwen imgs and dots
-        //margin-bottom: 2em;
+        padding: 0 10em;
         
         @include breakpoint(max-width $medium) {
-            //margin-left: 6em;
-            //margin-right: 6em;
+            padding: 0 4em;
         }
         
         @include breakpoint(max-width $medium-small) {
-            //margin-left: 4em;
-            //margin-right: 4em;
-        }
-        
-        @include breakpoint(max-width $small) {
-            //margin-left: 2em;
-            //margin-right: 2em;
+            padding: 0 2em;
         }
         
         @include breakpoint(max-width $smallest) {
-            //margin-left: 1.5em;
-            //margin-right: 1.5em;
+            padding: 0 1em;
+        }
+        
+    }
+    
+    &__cell {
+        background-color: rgba(255,255,255,.9);
+        border-radius: 3px;
+        border: 1px solid $gold-dark;
+        
+        // temp fix for height issue
+        padding-bottom: 2em; 
+        
+        @include breakpoint(max-width $small) {
+            border: none;
         }
         
     }
@@ -129,8 +127,8 @@
         position: relative;
         z-index: 2;
         
-        @include breakpoint(max-width $small) {
-            font-size: 1em;
+        @include breakpoint(max-width $medium-760) {
+            font-size: 1.05em;
             padding: 1em;
             line-height: 1.3;
         }

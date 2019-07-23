@@ -1,6 +1,6 @@
 /* SIGN UP BUTTON IS AN ANCHOR..NOT A INPUT TYPE=SUBMIT */
 
-.btn-standard {
+.btn-standard, .tns-outer button[data-action], .tns-controls button:first-of-type, .tns-controls button:last-of-type  {
     position: relative;
     color: #fff;
     display: inline-block;
