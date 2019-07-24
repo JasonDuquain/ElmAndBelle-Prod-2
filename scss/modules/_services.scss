@@ -363,3 +363,32 @@
 }
 
 
+
+/*********** LANDSCAPE STYLES ***********/
+@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 812px)  {
+    
+    .services__table-wrap {
+        width: 60%;
+        color: #111;
+    }
+    
+    .services__table-caption {
+        font-size: 1.4em;
+    }
+    
+    .services__table-caption-span {
+        font-size: 2.2em;
+    }
+    
+    .services__table th {
+        font-size: .9em;
+        
+    }
+    
+    .services__table td {
+        font-size: .8em;
+        padding: .50em .50em .50em 1.1em;
+    }
+    
+    
+}

@@ -1,13 +1,14 @@
 let heroImage = document.querySelector('.large-hero__image');
 let heroImageUrl = heroImage.getAttribute('src');
 
-
-/******** ONLY LOAD MAYA QUOTE ON COMPLETE PAGE LOAD - FIX THIS TO WORK ON HERO BG IMG LOAD  *******/
+/******** ONLY LOAD MAYA QUOTE ON COMPLETE img load - not always firing...is the image loading too fast?!!??!!  *******/
 
 heroImage.addEventListener('load', function(e) {
     console.log('hero img loaded');
     hero.classList.add('loaded')
 });
+
+
 
 
 /******* FADE HERO SECT ON SCROLL *********/
@@ -234,7 +235,6 @@ document.addEventListener('scroll', (e) => {
 /********  COPYRIGHT DATE *******/
 let year = document.querySelector('.year');
 year.textContent = new Date().getFullYear();
-
 
 
 
