@@ -763,5 +763,7 @@
 }));
 
 
-baguetteBox.run('.gallery__grid');
+baguetteBox.run('.gallery__grid', {
+    animation: 'fadeIn'
+});
 

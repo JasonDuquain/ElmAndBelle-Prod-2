@@ -1,6 +1,8 @@
 /* SIGN UP BUTTON IS AN ANCHOR..NOT A INPUT TYPE=SUBMIT */
 
-.btn-standard, .tns-outer button[data-action], .tns-controls button:first-of-type, .tns-controls button:last-of-type  {
+//.btn-standard, .tns-outer button[data-action], .tns-controls button:first-of-type, .tns-controls button:last-of-type
+
+.btn-standard  {
     position: relative;
     color: #fff;
     display: inline-block;
@@ -56,15 +58,15 @@
     position: fixed;
     bottom: -3em;
     right: .5em;
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.4em;
+    height: 1.4em;
     border-radius: 50%;
     border: none;
-    background-color: $gold-dark;
+    background-color: rgba(0,0,0,.7);
     text-align: center;
     line-height: 1em;
     color: #fff;
-    font-size: 2.8em;
+    font-size: 2em;
     opacity: 0;
     pointer-events: none;
     transition: opacity 500ms ease-out, bottom 400ms cubic-bezier(0.64, 0.57, 0.67, 1.23), background-color 300ms ease-out, color 300ms ease-out;
@@ -75,12 +77,12 @@
     
     &.active {
         opacity: 1;
-        bottom: .55em;
+        bottom: .6em;
         pointer-events: auto;
     }
     
     &:hover {
-        background-color: $grey-dark-1;
+        background-color: rgba(0,0,0,1);
     }
     
 }

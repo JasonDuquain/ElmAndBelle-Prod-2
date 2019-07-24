@@ -33,10 +33,10 @@
     
     // extra btm margin to move slider down a bit
     & .sect-heading-img {
-        margin-bottom: 6em;
+        margin-bottom: 5em;
         
         @include breakpoint(max-width $medium) {
-            margin-bottom: 4em;
+            margin-bottom: 3.5em;
         }
         
         @include breakpoint(max-width $small) {
@@ -50,6 +50,11 @@
         margin: 0 auto;
         padding: 0 10em;
         
+        
+        position: relative;
+        
+        
+        
         @include breakpoint(max-width $medium) {
             padding: 0 4em;
         }
@@ -62,20 +67,46 @@
             padding: 0 1em;
         }
         
+        @include breakpoint(max-width $tiny) {
+            padding: 0 .5em;
+        }
+        
     }
     
     &__cell {
-        background-color: rgba(255,255,255,.9);
+        background-color: rgba(255,255,255,1);
         border-radius: 3px;
         border: 1px solid $gold-dark;
         
+        position: relative;
+        
         // temp fix for height issue
-        padding-bottom: 2em; 
+        padding-bottom: 1.5em; 
         
         @include breakpoint(max-width $small) {
-            border: none;
+            //border: none;
         }
         
+    }
+    
+    &__cell::after {
+      content: "";
+      position: absolute;
+      box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 1);
+      width: 1em; 
+      height: 1em; 
+      border-right: 1px solid $grey-light-2;
+      border-bottom: 1px solid $grey-light-2;
+      background-color: rgba(255,255,255,1);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 3.80em; /*was -8px*/
+      transform: rotate(45deg);
+      z-index: 2000;
+        
+        @include breakpoint(max-width $tiny) {
+            bottom: 3.40em;
+        }
     }
     
     // this is the wrap inside the cell 
@@ -111,20 +142,24 @@
         color: $grey-dark-1;
         text-align: center;
         
-        @include breakpoint(max-width $small) {
-            font-size: 1.15em;
+        margin-top: 1em;
+        transform: translateX(7px);
+        
+        @include breakpoint(max-width $tiny) {
+            font-size: 1.1em;
         }
         
     }
     
     &__review {
-        
         font-size: 1.1em;
         line-height: 1.6;
         color: darken($grey-dark-1, 8%);
         padding: 1.5em;
         position: relative;
         z-index: 2;
+         
+        border-bottom: 1px solid $grey-light-2;
         
         @include breakpoint(max-width $medium-760) {
             font-size: 1.05em;
@@ -135,15 +170,28 @@
         &::before {
             content: "\201C";
             color: $gold;
-            font-size: 14em;
+            font-size: 12em;
             line-height: .5;
             position: absolute;
             top: .13em;
-            left: -.03em;
+            left: -.037em;
             font-family: sans-serif;
             z-index: -1;
-
         }
+        
+        
+        /*&::after {
+            content: "\201C";
+            color: $gold;
+            font-size: 11em;
+            line-height: .5;
+            position: absolute;
+            bottom: .13em;
+            right: -.031em;
+            font-family: sans-serif;
+            z-index: -1;
+            transform: rotate(180deg);
+        }*/
         
     }
     
@@ -164,18 +212,6 @@
        background-attachment: scroll; 
     
     } 
-    
-    /*.testimonial .sect-heading-img {
-        margin-bottom: 2em;
-    }
-    
-    .testimonial__main-wrap {
-        padding: 0 .5em;
-    }
-    
-    .testimonial__wrap {
-        display: none;
-    }*/
     
     .testimonial .pre-heading {
         color: $grey-dark-1;

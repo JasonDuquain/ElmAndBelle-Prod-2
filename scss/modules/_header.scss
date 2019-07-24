@@ -5,7 +5,7 @@
     height: 23px;
     cursor: pointer;
     position: fixed;
-    top: 28px;
+    top: 14px;
     right: 16px;
     z-index: 8000;
     
@@ -76,7 +76,7 @@
     &__wrap {
         display: flex;
         align-items: center;
-        padding: .5em 1.5em;
+        padding: 0 1.5em;
         
         
         @include breakpoint(1280px) {
@@ -132,8 +132,8 @@
 
     &__logo-link {
         font-family: 'lucien_schoenschriftv_catRg', cursive;
-        font-size: 4em;
-        line-height: 1.6;
+        font-size: 3.8em;
+        line-height: 1.5;
         color: $grey-dark-1;
         flex: 2;
         display: flex;
@@ -151,6 +151,10 @@
         
         @include breakpoint (max-width $smallest) {
             font-size: 2.8em;
+        }
+        
+        @include breakpoint (max-width $tiny) {
+            font-size: 2.6em;
         }
         
     }
@@ -175,12 +179,11 @@
     }
     
     &__button:link, &__button:visited {
-        font-size: .75em;
-        font-weight: 500;
+        font-size: .85em;
+        text-transform: uppercase;
         transition: background-color 300ms ease-out;
-        padding: .7em 1.4em;
+        padding: .8em 1.4em .7em 1.4em;
         color: #fff;
-        //background-color: $gold-dark;
         background-image: linear-gradient($gold-medium, $gold-dark);
         border: 1px solid $gold-dark;
         display: inline-block;
@@ -200,7 +203,6 @@
          color: $gold-dark;
     }
 
-    
     &__button-2:link:hover, &__button-2:visited:hover {
          background-color: $gold-dark;
          color: #fff;

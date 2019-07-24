@@ -109,6 +109,8 @@ autoplayText: [
 
 var slider = tns({
     container: '.testimonial__flex',
+    controlsContainer: document.querySelector('.customize-controls'),
+    
     
     // added this to fix errs: 'Unable to preventDefault inside passive event listener invocation.'..now the new err is: [Intervention] Ignored attempt to cancel a touchmove event with cancelable=false, for example because scrolling is in progress and cannot be interrupted. 
     preventScrollOnTouch: 'auto',
@@ -122,8 +124,8 @@ var slider = tns({
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayText: [
-        "resume",
-        "pause"
+        "▶",
+        "❚❚"
     ]
 });
 

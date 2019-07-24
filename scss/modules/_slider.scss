@@ -202,30 +202,82 @@
 }
 */
 
+
+
+/* UNCOMMENT IF CUSTOM CONTROLS DONT WORK
+
+
 .tns-controls button:first-of-type {
     position: absolute;
-    bottom: -3em;
+    bottom: 1em;
     left: 0;
     border: none;
     font-family: inherit;
     font-size: inherit;
+    
+    z-index: 5000;
 }
 
 .tns-controls button:last-of-type {
     position: absolute;
-    bottom: -3em;
+    bottom: 1em;
     right: 0;
     border: none;
     font-family: inherit;
     font-size: inherit;
+    
+     z-index: 5000;   
+
 }
+
+
+*/
+
+.customize-controls li:first-of-type {
+    position: absolute;
+    content: "";
+    bottom: -1.2em;
+    left: 40%;
+    z-index: 5001;
+    
+    /*height: 60px;
+    line-height: 60px;
+    padding: 0 15px;*/
+    
+    font-size: 2.5em;
+    
+    cursor: pointer;
+    transition: color 300ms ease-out;
+}
+
+.customize-controls li:last-of-type {
+    position: absolute;
+    content: "";
+    bottom: -1.2em;
+    right: 40%;
+    z-index: 5001;
+    /*height: 60px;
+    line-height: 60px;
+    padding: 0 15px;*/
+    
+    font-size: 2.5em;
+    
+    cursor: pointer;
+    transition: color 300ms ease-out;
+}
+
+.customize-controls li:hover {
+    color: $gold;
+}
+
 
 .tns-outer button[data-action] {
     display: block;
-    margin: 0 auto 1em auto;
-    border: none;
+    margin: 0 auto .75em auto;
+    //border: none;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 1.3em;
+    padding: .2em;
 }
 
 
