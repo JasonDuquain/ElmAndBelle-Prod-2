@@ -163,12 +163,14 @@ window.addEventListener('scroll', (e) => {
     (window.pageYOffset > (highestHeight / 8)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
 
 });
+/*
 
 bttBtn.addEventListener('click', (e) => {
     //e.preventDefault();
     docElement.scrollTop = 0;
 });
 
+*/
 
 
 /*****  SUBSCRIBE INPUTS CHANGE ICON COLOR ON FOCUS  ******/
