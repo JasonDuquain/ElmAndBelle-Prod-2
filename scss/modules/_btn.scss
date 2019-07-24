@@ -19,24 +19,32 @@
         width: 1.0909em; /* was 24px */
     }
             
-            &::before {
-                border-top-width: .090em; /* was 2px */
-                border-color: $gold-dark;
-                top: -.227em; /* was 5px */    
-                left: 0;   
-            }
+    &::before {
+        border-top-width: .090em; /* was 2px */
+        border-color: $gold-dark;
+        top: -.227em; /* was 5px */    
+        left: 0;   
+    }
 
-            &::after {
-                border-bottom-width: .090em; /* was 2px */
-                border-color: $gold-dark;
-                bottom: -.227em; /* was 5px */
-                right: 0px;
-            }
+    &::after {
+        border-bottom-width: .090em; /* was 2px */
+        border-color: $gold-dark;
+        bottom: -.227em; /* was 5px */
+        right: 0px;
+    }
 
-            &:hover::before,
-            &:hover::after {
-                width: 100%;
-            }
+    &:hover::before,
+    &:hover::after {
+        width: 100%;
+    }
+    
+    &:active {
+        color: $white-slight-dark;
+    }
+    
+    
+    
+    
 }
 
 .btn-flex {

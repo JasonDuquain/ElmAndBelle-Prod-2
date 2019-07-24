@@ -65,11 +65,15 @@
         
         @include breakpoint(max-width $medium-small) {
             padding: 3em;
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
         
         @include breakpoint(max-width $small) {
             padding: 2em 0;
+        }
+        
+        @include breakpoint(max-width $smallest) {
+            font-size: 1.1em;
         }
         
         p:first-of-type::first-letter {
@@ -82,8 +86,8 @@
         }
         
         p {
-            font-size: 1em;
-            line-height: 1.6;
+            font-size: 1.1em;
+            line-height: 1.5;
             
         }
         
@@ -171,6 +175,10 @@
     @include breakpoint(max-width $smallest) {
         margin-top: -6.2em;
     }
+    
+    @include breakpoint(max-width $tiny) {
+        margin-top: -5.2em;
+    }
 }
 
 .img-clip-wrap {
@@ -192,6 +200,11 @@
     @include breakpoint(max-width $smallest) {
         width: 12em; 
         height: 12em; 
+    }
+    
+    @include breakpoint(max-width $tiny) {
+        width: 10em; 
+        height: 10em; 
     }
 }
 
@@ -239,6 +252,14 @@
     
     @include breakpoint(max-width $largest) {
         font-size: 150%;
+    }
+    
+    @include breakpoint(max-width $smallest) {
+        font-size: 130%;
+    }
+    
+    @include breakpoint(max-width $tiny) {
+        font-size: 120%;
     }
 }
 

@@ -1,6 +1,5 @@
 
 .footer {
-    font-size: .8em;
     background-color: rgba(0,0,0,1);
     color: #888;
     padding: 3em 2em;
@@ -31,8 +30,9 @@ div.footer--copyright {
 }
 
 p.footer--main {
-    width: 70%;
-    margin: 0 auto 2.5em auto;
+    width: 80%;
+    margin: 1em auto 2.5em auto;
+    text-align: center;
     
     @include breakpoint(max-width $small) {
         width: 80%;
@@ -99,7 +99,7 @@ div.footer--icons a:last-of-type i:hover {
 
 .footer__navs {
     display: flex;
-    width: 70%;
+    width: 80%;
     justify-content: space-between;
     flex-wrap: wrap;
     
@@ -116,7 +116,7 @@ div.footer--icons a:last-of-type i:hover {
 
 .footer__links {
     color: $gold;
-    padding: 1em 2em;
+    padding: 1em 1.25em;
     display: inline-block;
     text-transform: uppercase;
     transition: background-color 300ms ease-out, transform 300ms ease-out;

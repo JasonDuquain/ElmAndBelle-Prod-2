@@ -8,21 +8,43 @@
     
     &__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-gap: 1em;
         max-width: 1280px;
         margin: 0 auto;
         align-items: center;
         
-        @include breakpoint (max-width $large) {
-            grid-row-gap: 3em;
-            grid-column-gap: 0;
+        @include breakpoint (max-width $huge) {
+           grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        }
+        
+        @include breakpoint (max-width 1050px) {
+           grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            align-items: initial;
             justify-items: center;
         }
         
+        @include breakpoint (max-width 900px) {
+           grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-row-gap: 2.5em;
+            font-size: 1.1em;
+        }
+        
+        @include breakpoint (max-width $medium) {
+            font-size: 1.2em;
+        }
+        
+        @include breakpoint (max-width $small) {
+           grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        
         @include breakpoint (max-width $smallest) {
-            grid-template-columns: 1fr;
-        } 
+           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+        
+        @include breakpoint (max-width $tiny) {
+           grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        }
         
     }
 
@@ -46,13 +68,33 @@
     }
 
     &__main {
-        width: 399px; //removing 1px fixed short vertical line that appear from img
+        width: 350px; //removing 1px fixed short vertical line that appear from img
         position: relative;
         border-radius: 3px;
         box-shadow: 0 0 2px 2px rgba($grey-light-2,.3);
         
+        @include breakpoint (max-width $huge) {
+           width: 310px;
+        }
+        
+        @include breakpoint (max-width 1050px) {
+           width: 400px;
+        }
+        
+        @include breakpoint (max-width 900px) {
+           width: 500px;
+        }
+        
+        @include breakpoint (max-width $small) {
+           width: 400px;
+        }
+        
         @include breakpoint (max-width $smallest) {
            width: 350px;
+        }
+        
+        @include breakpoint (max-width $tiny) {
+           width: 310px;
         }
     }
     
@@ -67,14 +109,33 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 52px; /*will not fit perfectly when width changes - update this soon*/
+        height: 45px; /*will not fit perfectly when width changes - update this soon*/
         background-repeat: no-repeat;
         background-size: 100%;
         
+        @include breakpoint (max-width $huge) {
+            height: 40px;
+            //transform: scaleY(1.02); //this fixes issue of horizonal line from img showing
+        }
+        
+        @include breakpoint (max-width 1050px) {
+           height: 52px;
+        }
+        
+        @include breakpoint (max-width 900px) {
+           height: 65px;
+        }
+        
+        @include breakpoint (max-width $small) {
+           height: 52px;
+        }
+        
         @include breakpoint (max-width $smallest) {
-            height: 45px;
-            
-            transform: scaleY(1.02); //this fixes issue of horizonal line from img showing
+           height: 45px;
+        }
+        
+        @include breakpoint (max-width $tiny) {
+           height: 40px;
         }
     }
     

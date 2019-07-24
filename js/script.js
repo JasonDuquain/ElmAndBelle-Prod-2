@@ -189,7 +189,6 @@ function changeBlur(e) {
     prevSib.classList.remove('input-color');
 }
 
-
 /****************  STICKY HEADER   ****************/
 let header = document.querySelector('.site-header');
 let nav = document.querySelector('.navigation');
