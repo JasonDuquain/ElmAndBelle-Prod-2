@@ -20,10 +20,9 @@
 
 :root {
     font-size: 1em;
-    
-    scroll-behavior: smooth;
-    
     box-sizing: border-box;
+    
+    //scroll-behavior: smooth;
     
     @include breakpoint(max-width $large) {
         font-size: .9em;
@@ -33,9 +32,11 @@
         font-size: .8em;
     }
     
+    /*
     @include breakpoint(max-width $medium-760) {
         scroll-behavior: auto;
     }
+    */
 }
 
 // less vivid red for active links
