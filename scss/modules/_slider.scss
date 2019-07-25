@@ -240,7 +240,7 @@
     left: 40%;
     transform: translateX(-40%);
     z-index: 5001;
-    
+    color: $gold-medium;
     /*height: 60px;
     line-height: 60px;
     padding: 0 15px;*/
@@ -258,6 +258,8 @@
     right: 40%;
     transform: translateX(40%);
     z-index: 5001;
+    color: $gold-medium;
+    
     /*height: 60px;
     line-height: 60px;
     padding: 0 15px;*/
@@ -266,6 +268,10 @@
     
     cursor: pointer;
     transition: color 300ms ease-out;
+}
+
+.customize-controls li:hover {
+    color: $gold-dark;
 }
 
 .tns-outer button[data-action] {

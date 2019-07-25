@@ -87,15 +87,24 @@ scroller.init();
 
 
 /***********  SERVICES ANIMATE IN ON SCROLL  ***********/
-const servicesSects = document.querySelectorAll('.services_wrap');
-const servicesGrid = document.querySelector('.services__grid')
+const servicesSects = document.querySelectorAll('.services__wrap');
+const servicesGrid = document.querySelector('.services__grid');
+
+console.log(servicesSects)
 
 document.addEventListener('scroll', (e) => {
     
+    servicesSects.forEach((el, idx) => {
+        if (el.getBoundingClientRect().top < (window.innerHeight / 1.2)) {
+            el.classList.add('animate-in');
+        }  
+    });
+    
+    /*
     if (servicesGrid.getBoundingClientRect().top < (window.innerHeight / 2)) {
         servicesGrid.classList.add('animate-in');
     } 
-    
+    */
 });
 
 
