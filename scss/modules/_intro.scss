@@ -87,13 +87,21 @@
         p {
             font-size: 1.1em;
             line-height: 1.5;
-            
         }
         
         p:not(:last-of-type) {
             margin-bottom: .8em;
         }
         
+    }
+    
+    &__link {
+        color: $gold-medium;
+        transition: color 300ms ease-out;
+        
+        &:hover {
+            color: $gold-dark;
+        }
     }
     
 

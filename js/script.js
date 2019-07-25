@@ -93,19 +93,13 @@ const servicesGrid = document.querySelector('.services__grid')
 document.addEventListener('scroll', (e) => {
     
     if (servicesGrid.getBoundingClientRect().top < (window.innerHeight / 2)) {
-        servicesGrid.classList.add('animate-in')
+        servicesGrid.classList.add('animate-in');
     } 
     
 });
 
 
 /***********  TESTIMONIAL SLIDER  ***********/
-
-/*
-autoplayText: [
-        "▶",
-        "❚❚"
-    ]*/
 
 var slider = tns({
     container: '.testimonial__flex',
@@ -122,7 +116,7 @@ var slider = tns({
     mouseDrag: true,
     arrowKeys: true,
     autoplay: true,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 9000,
     autoplayText: [
         "▶",
         "❚❚"
@@ -226,7 +220,7 @@ document.addEventListener('scroll', (e) => {
     
     navs.forEach((el, idx) => {
         let sect = sects[idx].getBoundingClientRect();
-        if (sect.top <= 5 && sect.bottom >= 5) {
+        if (sect.top <= 150 && sect.bottom >= 150) {
             el.classList.add('active');
         } else {
             el.classList.remove('active');

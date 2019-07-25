@@ -1,12 +1,11 @@
 
 .gallery {
     
-    padding-bottom: 12em;
+    padding-bottom: 18em;
     
     @include breakpoint(max-width $medium-small) {
         padding: 5em 0 12em 0;
     }
-    
     
     &__grid {
         

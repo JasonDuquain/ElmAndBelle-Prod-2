@@ -54,7 +54,7 @@ body {
 }
 
 section {
-    padding: 6em 2em;
+    padding: 8em 2em;
     
     @include breakpoint(max-width $medium) {
         padding: 5em 1em;
