@@ -736,17 +736,16 @@
     </section>
     
     <section class="subscribe">
-       <div class="subscribe__wrap">
+       <div class="subscribe__wrap kwes-form">
             <h2 class="subscribe__heading sect-heading">Stay In the Know</h2>
             <p class="subscribe__paragraph">Sign up with your email address to receive news and updates.</p>
-            <form action="#" class="subscribe__form">
+            <form action="https://kwes.io/api/foreign/forms/Zg8Qsg3xFCLQlaMJ5e25" class="subscribe__form">
                <p class="subscribe__input-wrap">
                     <label for="firstname" class="subscribe__label">First Name</label>
                     <span class="subscribe__field-prefixed">
                         <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-user"></i></span>
-                        <input type="text" class="subscribe__input" id="firstname">    
+                        <input type="text" class="subscribe__input" id="firstname" rules="required">    
                     </span>
-
                </p>
                <p class="subscribe__input-wrap">
                     <label for="lastname" class="subscribe__label">Last Name</label>
@@ -760,12 +759,13 @@
                     <label for="email" class="subscribe__label">Email Address</label>
                     <span class="subscribe__field-prefixed">
                         <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-envelope"></i></span>
-                        <input type="email" class="subscribe__email" id="email">    
+                        <input type="email" class="subscribe__email" id="email" rules="required|email|max:255">    
                     </span>
 
                </p>
                <p class="subscribe__input-wrap">
-                   <a href="#" class="subscribe__submit btn btn-standard" id="submit">Sign Up</a>   
+                   <!--<a href="#" class="subscribe__submit btn btn-standard" id="submit">Sign Up</a>  --> 
+                   <input type="submit" value="Sign Up" class="subscribe__submit btn btn-standard">
                </p>
             </form>
        </div>
@@ -805,6 +805,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
     <script src="js/baguetteBox.js"></script>
+    
+    <script src="https://kwes.io/js/kwes.js"></script>
+    
     <script src="js/script.js"></script>
     
 </body>
