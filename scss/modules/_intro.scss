@@ -202,7 +202,7 @@
     display: inline-block;
     width: 18.75em; /* was 300px */
     height: 18.75em; /* was 300px */
-    background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_600,q_auto,w_600/v1564019205/diamond_lhkr7u.jpg'); /* 600x600 */
+    background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_600,q_auto,w_600/v1564019205/eandb/diamond_lhkr7u.jpg'); /* 600x600 */
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
@@ -212,34 +212,34 @@
     @include breakpoint(max-width $largest) {
         width: 15em; 
         height: 15em;
-        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_480,q_auto,w_480/v1564019205/diamond_lhkr7u.jpg');
+        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_480,q_auto,w_480/v1564019205/eandb/diamond_lhkr7u.jpg');
     }
     
     //font size 14.4px
     @include breakpoint(max-width $large) {
         width: 14em; 
         height: 14em;
-        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_403,q_auto,w_403/v1564019205/diamond_lhkr7u.jpg');
+        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_403,q_auto,w_403/v1564019205/eandb/diamond_lhkr7u.jpg');
     }
     
     //font size 12.8px
     @include breakpoint(max-width $medium) {
         width: 13.8em; 
         height: 13.8em;
-        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_353,q_auto,w_353/v1564019205/diamond_lhkr7u.jpg'); 
+        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_353,q_auto,w_353/v1564019205/eandb/diamond_lhkr7u.jpg'); 
     }
     
     @include breakpoint(max-width $smallest) {
         width: 12em; 
         height: 12em; 
-        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_307,q_auto,w_307/v1564019205/diamond_lhkr7u.jpg');
+        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_307,q_auto,w_307/v1564019205/eandb/diamond_lhkr7u.jpg');
     }
     
     //font size 12.8px
     @include breakpoint(max-width $tiny) {
         width: 10em; 
         height: 10em; 
-        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_256,q_auto,w_256/v1564019205/diamond_lhkr7u.jpg');
+        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_256,q_auto,w_256/v1564019205/eandb/diamond_lhkr7u.jpg');
     }
 }
 
