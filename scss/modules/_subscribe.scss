@@ -8,6 +8,22 @@ temp fix to kwes removing the class name from the form
 
 */
 
+
+/*
+KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width needs to be added to this span but I still might need to account for the submit button any time is is a button element and NOT a input type=submit element
+*/
+
+.kw-field-wrapper {
+    width: 100%;
+}
+
+// keeps the error msgs from messing up the layout
+.kwes-field-wrapper .help {
+    position: absolute
+}
+
+
+
 .subscribe {
     background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.3)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563928372/eandb/subscribe.jpg');
     background-repeat: no-repeat;
@@ -40,14 +56,7 @@ temp fix to kwes removing the class name from the form
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-gap: 3em 1.5em;
     }
-    
-    /*
-    KWES WRAPS EACH INPUT ELEMENT IN A SPAN <span false class> so the 100% width needs to be added to the span but I still need to account for the submit button (which is a button element NOT a input type=submit element so watch for issues there)
-    */
-    &__field-prefix ~ span {
-        width: 100%;
-    }
-    
+
     &__input, &__email {
         width: 100%;
         border-radius: 0 .25em .25em 0;
@@ -73,6 +82,9 @@ temp fix to kwes removing the class name from the form
     
     &__field-prefixed {
         display: flex;
+        
+        // this is need to keep the error msgs from messing up the layout
+        position: relative; 
     }
     
     &__field-prefix {

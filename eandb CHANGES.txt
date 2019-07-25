@@ -5,6 +5,19 @@ kwes:
 If you want to add a custom success message just add
 success-message=“This is a custom message” (this is an example)
 
+the span that wraps each input, select, textarea, and button iside a form is: kw-field-wrapper along with incrementing numbers...kw-field-wrapper-1,2,3 etc.
+
+to get the validation error to not mess up the layout add:
+
+.kwes-field-wrapper .help {
+    position: absolute
+}
+
+but may need to make .subscribe__field-prefixed is relatively positioned as well
+
+
+
+
 
 
 use photoshop to darken it just a bit and maybe make a gradient from top to bottom that gets lighter as you go down since the text is at the top

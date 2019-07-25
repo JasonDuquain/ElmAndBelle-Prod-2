@@ -63,21 +63,21 @@
         top: 10%;
         left: 49%; // move it a touch left to better line up with main e and b text
         transform: translate(-50%, 0%);
-        width: 55%;
+        width: 76%;
         z-index: 1;
         
         @include breakpoint (max-width $medium-small) {
-            width: 72%;
+            width: 81%;
         }
         
         @include breakpoint (max-width $small) {
             font-size: 3.5em;
-            width: 80%;
+            width: 83%;
         }
         
         @include breakpoint (max-width $smallest) {
             font-size: 3em;
-            width: 85%;
+            width: 86%;
         }
         
         @include breakpoint (max-width $tiny) {

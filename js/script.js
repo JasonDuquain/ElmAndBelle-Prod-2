@@ -88,9 +88,6 @@ scroller.init();
 
 /***********  SERVICES ANIMATE IN ON SCROLL  ***********/
 const servicesSects = document.querySelectorAll('.services__wrap');
-const servicesGrid = document.querySelector('.services__grid');
-
-console.log(servicesSects)
 
 document.addEventListener('scroll', (e) => {
     
@@ -99,12 +96,6 @@ document.addEventListener('scroll', (e) => {
             el.classList.add('animate-in');
         }  
     });
-    
-    /*
-    if (servicesGrid.getBoundingClientRect().top < (window.innerHeight / 2)) {
-        servicesGrid.classList.add('animate-in');
-    } 
-    */
 });
 
 
@@ -125,11 +116,13 @@ var slider = tns({
     mouseDrag: true,
     arrowKeys: true,
     autoplay: true,
-    autoplayTimeout: 9000,
-    autoplayText: [
+    autoplayTimeout: 10000,
+    autoplayButton: false,
+    autoplayButtonOutput: false
+    /*autoplayText: [
         "▶",
         "❚❚"
-    ]
+    ]*/
 });
 
 
@@ -170,10 +163,16 @@ window.addEventListener('scroll', (e) => {
 });
 /*
 
+removed this: 
+
 bttBtn.addEventListener('click', (e) => {
     //e.preventDefault();
     docElement.scrollTop = 0;
 });
+
+since it is now in the html:
+
+<button class="js-btt-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
 
 */
 

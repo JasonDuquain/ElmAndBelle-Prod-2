@@ -236,17 +236,17 @@
 .customize-controls li:first-of-type {
     position: absolute;
     content: "";
-    bottom: -1.2em;
-    left: 40%;
-    transform: translateX(-40%);
+    bottom: -1.4em;
+    left: 30%;
+    transform: translateX(-30%);
     z-index: 5001;
     color: $gold-medium;
+    
     /*height: 60px;
     line-height: 60px;
     padding: 0 15px;*/
     
     font-size: 2.5em;
-    
     cursor: pointer;
     transition: color 300ms ease-out;
 }
@@ -254,9 +254,9 @@
 .customize-controls li:last-of-type {
     position: absolute;
     content: "";
-    bottom: -1.2em;
-    right: 40%;
-    transform: translateX(40%);
+    bottom: -1.4em;
+    right: 30%;
+    transform: translateX(30%);
     z-index: 5001;
     color: $gold-medium;
     
@@ -265,7 +265,6 @@
     padding: 0 15px;*/
     
     font-size: 2.5em;
-    
     cursor: pointer;
     transition: color 300ms ease-out;
 }
@@ -273,6 +272,10 @@
 .customize-controls li:hover {
     color: $gold-dark;
 }
+
+/*
+
+removing play/pause btn for now
 
 .tns-outer button[data-action] {
     display: block;
@@ -282,6 +285,10 @@
     font-size: 1.3em;
     padding: .2em;
 }
+
+
+*/
+
 
 
 
