@@ -3,7 +3,7 @@
     
     padding-bottom: 12em;
     
-    @include breakpoint(max-width $small) {
+    @include breakpoint(max-width $medium-small) {
         padding: 5em 0 12em 0;
     }
     

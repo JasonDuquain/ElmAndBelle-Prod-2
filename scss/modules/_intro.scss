@@ -171,6 +171,16 @@
         margin-top: -7.725em;
     }
     
+    //font size 14.4px
+    @include breakpoint(max-width $large) {
+        margin-top: -7.15em;
+    }
+    
+    //font size 12.8px
+    @include breakpoint(max-width $medium) {
+        margin-top: -7.05em;
+    }
+    
     @include breakpoint(max-width $smallest) {
         margin-top: -6.2em;
     }
@@ -193,17 +203,35 @@
     
     @include breakpoint(max-width $largest) {
         width: 15em; 
-        height: 15em; 
+        height: 15em;
+        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,h_480,q_auto,w_480/v1563446284/eandb/thumbsandservices/addtl_svcs.jpg'); 
+    }
+    
+    //font size 14.4px
+    @include breakpoint(max-width $large) {
+        width: 14em; 
+        height: 14em;
+        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,h_403,q_auto,w_403/v1563446284/eandb/thumbsandservices/addtl_svcs.jpg'); 
+    }
+    
+    //font size 12.8px
+    @include breakpoint(max-width $medium) {
+        width: 13.8em; 
+        height: 13.8em;
+        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,h_353,q_auto,w_353/v1563446284/eandb/thumbsandservices/addtl_svcs.jpg'); 
     }
     
     @include breakpoint(max-width $smallest) {
         width: 12em; 
         height: 12em; 
+        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,h_307,q_auto,w_307/v1563446284/eandb/thumbsandservices/addtl_svcs.jpg');
     }
     
+    //font size 12.8px
     @include breakpoint(max-width $tiny) {
         width: 10em; 
         height: 10em; 
+        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,h_256,q_auto,w_256/v1563446284/eandb/thumbsandservices/addtl_svcs.jpg');
     }
 }
 
@@ -236,6 +264,8 @@
     top: 0;
     bottom: 0;
     pointer-events: none;
+    
+    z-index: 888;
 }
 
 .overlay-content {

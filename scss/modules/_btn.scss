@@ -43,10 +43,7 @@
     &:active {
         color: $white-slight-dark;
     }
-    
-    
-    
-    
+
 }
 
 .btn-flex {
@@ -62,7 +59,7 @@
     height: 1.4em;
     border-radius: 50%;
     border: none;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba($grey-dark-1, .8);
     text-align: center;
     line-height: 1em;
     color: #fff;

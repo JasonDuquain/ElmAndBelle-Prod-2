@@ -256,7 +256,7 @@
         opacity: 0;
         pointer-events: none;
         transform: scale(0);
-        transition: all 600ms ease-out;
+        transition: all 400ms ease-out;
         
         @include breakpoint (max-width $medium-small) {
             width: 80%;
