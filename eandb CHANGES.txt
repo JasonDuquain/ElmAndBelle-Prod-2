@@ -1,3 +1,13 @@
+kwes:
+
+<input type="text" name="name" rules="required|min:3|max:255">
+
+If you want to add a custom success message just add
+success-message=“This is a custom message” (this is an example)
+
+
+
+
 fix the services modal(s) from scaling down to zero on page load!!
 
 THIS WAS ADDED AND THE JS CLICK WAS REMOVED TO GET IT WORKING ON MOBILE EVEN WITH HTML HAVING SCROLL-BEHAVIOR: SMOOTH...THE SCROLL UP ON MOBILE IS NOT SMOOTH BUT IT AT LEAST WORKS:

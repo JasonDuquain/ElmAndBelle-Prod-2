@@ -283,9 +283,9 @@
         
 
         &-caption {
-            padding: .5em 0 .5em 0;
+            padding: .25em 0 .25em 0;
             text-align: center;
-            font-size: 3.4em;
+            font-size: 3em;
             color: #333;
             background-color: lighten($gold, 15%);
             
@@ -293,11 +293,11 @@
             border-radius: 12px 12px 0 0;
             
             @include breakpoint (max-width $medium-small) {
-                font-size: 2.9em;
+                font-size: 2.8em;
             }
             
             @include breakpoint (max-width $small) {
-                font-size: 2.3em;
+                font-size: 2.4em;
             }
             
             @include breakpoint (max-width $smallest) {
@@ -311,11 +311,11 @@
             line-height: .7;
             text-align: center;
             display: block;
-            font-size: 2em;
+            font-size: 1.8em;
             color: $gold-dark;
             
             @include breakpoint (max-width $medium-small) {
-                font-size: 1.7em;
+                font-size: 1.6em;
             }
             
             @include breakpoint (max-width $medium-small) {
@@ -334,13 +334,13 @@
         
         th {
             text-align: left;
-            padding: 0 1em;
+            padding: 0 .75em;
             text-transform: uppercase;
-            font-size: 2em;
+            font-size: 1.6em;
             font-weight: 700;
             
             @include breakpoint (max-width $medium-small) {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
             
             @include breakpoint (max-width $small) {
@@ -353,11 +353,11 @@
         }
         
         td {
-            padding: 1em 1em 1em 2em;
+            padding: .75em 1em .75em 1.6em;
             font-weight: 500;
             
             @include breakpoint (max-width $medium-small) {
-                padding: 1em 1em 1em 1.5em;
+                padding: .75em 1em .75em 1.4em;
             }
             
             @include breakpoint (max-width $small) {
@@ -440,7 +440,7 @@
 
 
 /*********** LANDSCAPE STYLES and laptops that are not very high i.e 1280 x 570 ***********/
-@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 812px), screen and (max-height: 585px)  {
+@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 812px), screen and (max-height: 600px)  {
     
     .services__table-wrap {
         width: 60%;
