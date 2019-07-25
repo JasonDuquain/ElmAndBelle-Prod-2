@@ -3,6 +3,11 @@
     
     padding-bottom: 12em;
     
+    @include breakpoint(max-width $small) {
+        padding: 5em 0 12em 0;
+    }
+    
+    
     &__grid {
         
         // this keeps empty areas at the end of the grid from being able to be hovered
@@ -14,24 +19,31 @@
         grid-template-columns: repeat(auto-fit, minmax(18.75em, 1fr));
         grid-auto-flow: dense; 
         
-        grid-auto-rows: 18.75em;
+        grid-auto-rows: 20em;
         
         @include breakpoint(max-width $medium-small) {
             grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-            grid-auto-rows: 15em;
+            grid-auto-rows: 17em;
+        }
+        
+        @include breakpoint(max-width $smallest) {
+            grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
+            grid-auto-rows: 12.5em;
         }
     }
     
     &__link {
         // reenable hover events for individual grid items
-        pointer-events: auto;
-        
+        pointer-events: auto;      
         display: block;
-        overflow: hidden;
         background: #131212;
         
+       /* 
+        overflow: hidden;
         width: 100%;
         height: 100%;
+        
+        */
         
     }
     
@@ -39,10 +51,14 @@
         grid-row: span 2;
         grid-column: span 2;
         
-        @include breakpoint(max-width $small) {
+        /*@include breakpoint(max-width $small) {
             grid-row: span 1;
             grid-column: span 1;
-        }
+        }*/
+    }
+    
+    &__link.tall {
+        grid-row: span 2;
     }
     
     &__grid:hover .gallery__figure { opacity: .3; }
@@ -52,11 +68,7 @@
     &__figure {
         width: 100%;
         height: 100%;
-        position: relative;
         transition: opacity 800ms ease-out;
-        
-        overflow: hidden;  
-         
     }
     
     &__image {
