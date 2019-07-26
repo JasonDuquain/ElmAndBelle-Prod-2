@@ -54,14 +54,14 @@
 .js-btt-btn {
     position: fixed;
     bottom: -3em;
-    right: .5em;
-    width: 1.4em;
-    height: 1.4em;
+    right: .6em;
+    width: 1.7em;
+    height: 1.7em;
     border-radius: 50%;
     border: none;
     background-color: rgba($grey-dark-1, .8);
     text-align: center;
-    line-height: 1em;
+    line-height: 1.7em;
     color: #fff;
     font-size: 2em;
     opacity: 0;
@@ -74,7 +74,7 @@
     
     &.active {
         opacity: 1;
-        bottom: .6em;
+        bottom: 1.4em;
         pointer-events: auto;
     }
     

@@ -36,7 +36,7 @@
         <div class="hamburger-icon__middle"></div>
     </div> 
       
-    <header class="site-header">
+    <header class="site-header" id="hdr">
        <div class="site-header__wrap"> 
             <div class="site-header__social">
                 <a class="site-header__social-link" href="https://www.facebook.com/elmandbelle" target="_blank" title="elmandbelle facebook page"><i class="fa fa-facebook-square"></i></a>
@@ -60,7 +60,7 @@
                 </li>
 
                 <li class="navigation__item">
-                    <a href="index.html" class="navigation__link navigation__link-home">Home</a>
+                    <a href="#hdr" class="navigation__link navigation__link-home">Home</a>
                 </li>
                 <li class="navigation__item">
                     <a href="#services" class="navigation__link">Services</a>
@@ -198,7 +198,7 @@
                             </li>
                         </ul>
                         <div class="services__border"></div>
-                        <a href="#cut-and-design_wrap" class="btn btn-standard btn-flex">View Services</a>
+                        <a href="#cut-and-design_wrap" class="btn btn-standard btn-flex noZensmooth">View Services</a>
                     </div>
                 </div>
             </div>
@@ -237,7 +237,7 @@
                             </li>
                         </ul>
                         <div class="services__border"></div>
-                        <a href="#color_wrap" class="btn btn-standard btn-flex">View Services</a>
+                        <a href="#color_wrap" class="btn btn-standard btn-flex noZensmooth">View Services</a>
                     </div>
                 </div>
             </div>
@@ -268,7 +268,7 @@
                             </li>
                         </ul>
                         <div class="services__border"></div>
-                        <a href="#additional_wrap" class="btn btn-standard btn-flex">View Services</a>
+                        <a href="#additional_wrap" class="btn btn-standard btn-flex noZensmooth">View Services</a>
                     </div>
                 </div>
             </div> 
@@ -775,7 +775,7 @@
             </div>
             <div class="footerNavWrapper">
                 <div class="footer__navs">
-                    <li><a class="footer__links" href="index.html">Home</a></li>
+                    <li><a class="footer__links" href="#hdr">Home</a></li>
                     <li><a class="footer__links" href="#services">Services</a></li>
                     <li><a class="footer__links" href="#gallery">Gallery</a></li>
                     <li><a class="footer__links" href="#testimonials">Testimonials</a></li>
@@ -793,9 +793,9 @@
         </div>
     </footer>
 
-    <button class="js-btt-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    <a href="#hdr" class="js-btt-btn">
         <i class="js-btt-btn-icon fa fa-arrow-up"></i>
-    </button>
+    </a>
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>

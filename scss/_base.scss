@@ -32,11 +32,6 @@
         font-size: .8em;
     }
     
-    /*
-    @include breakpoint(max-width $medium-760) {
-        scroll-behavior: auto;
-    }
-    */
 }
 
 // less vivid red for active links
@@ -48,6 +43,7 @@ body {
     font-size: 100%;
     font-family: 'Raleway', serif;
     color: #333;
+    
     /* keeps horizontal scrollbars from appearing when items are animated to the left or right of the viewport */
     overflow-x: hidden; 
     background-color: $white-slight-dark;

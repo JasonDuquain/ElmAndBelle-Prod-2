@@ -14,6 +14,10 @@
         margin: 0 auto;
         align-items: center;
         
+        // adding this to keep horizonal scroll from happening..it is not enough to add this to the body element
+        overflow-x: hidden;
+        
+        
         @include breakpoint (max-width $huge) {
            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
         }
@@ -265,6 +269,9 @@
     
     /**********   SERVICES TABLE LIST   **********/
     &__table-wrap {
+        
+        display: none;
+        
         width: 70%;
         position: relative;
         opacity: 0;
@@ -283,6 +290,10 @@
         @include breakpoint (max-width $smallest) {
             width: 90%;
         }
+    }
+    
+    &__table-wrap.enabled {
+        display: block;
     }
     
     &__table {
