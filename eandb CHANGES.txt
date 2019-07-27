@@ -18,7 +18,7 @@ but may need to make .subscribe__field-prefixed is relatively positioned as well
 
 
 
-
+i would think the modal_close buttons would need the noZenscroll class but they are working properly
 
 use photoshop to darken it just a bit and maybe make a gradient from top to bottom that gets lighter as you go down since the text is at the top
 

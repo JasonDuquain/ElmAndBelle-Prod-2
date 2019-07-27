@@ -114,6 +114,18 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
         }
     }
     
+    &__submit {
+        font-family: inherit;
+        border: none;
+        background-image: linear-gradient($gold, $gold-medium);
+        cursor: pointer;
+        
+        &::before, &::after {
+            border-color: $gold;
+        }
+
+    }
+    
     
 }
 

@@ -28,7 +28,7 @@
         // this looks like it is fixing the issue of the bg being completely blurred
         background-attachment: scroll;
         
-        padding: 3em .5em 2em .5em;
+        padding: 6em .5em 2em .5em;
     }
     
     // extra btm margin to move slider down a bit
@@ -36,11 +36,11 @@
         margin-bottom: 5em;
         
         @include breakpoint(max-width $medium) {
-            margin-bottom: 3.5em;
+            margin-bottom: 4em;
         }
         
         @include breakpoint(max-width $small) {
-            margin-bottom: 2em;
+            margin-bottom: 5em;
         }
     }
 
@@ -52,8 +52,6 @@
         
         
         position: relative;
-        
-        
         
         @include breakpoint(max-width $medium) {
             padding: 0 4em;
@@ -179,20 +177,6 @@
             z-index: -1;
         }
         
-        
-        /*&::after {
-            content: "\201C";
-            color: $gold;
-            font-size: 11em;
-            line-height: .5;
-            position: absolute;
-            bottom: .13em;
-            right: -.031em;
-            font-family: sans-serif;
-            z-index: -1;
-            transform: rotate(180deg);
-        }*/
-        
     }
     
 }
@@ -205,14 +189,14 @@
 
 
 /*********** LANDSCAPE STYLES ***********/
-@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 812px), screen and (max-height: 585px)  {
+@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 812px) {
     
     .testimonial {
     
-       height: 95vw;
+       height: 180vw;
        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
        background-position: 50% 0%;
-        padding: 3em 0;
+        padding: 6em 0 4em 0;
         
        // this looks like it is fixing the issue of the bg being completely blurred
        background-attachment: scroll; 
@@ -227,6 +211,43 @@
         color: $grey-dark-1;
         opacity: 1;
         margin-bottom: 2em;
+    }
+  
+}
+
+
+//laptop with screens not very tall (work laptop)
+@media screen and (orientation: landscape) and (max-height: 585px)  {
+    
+    .testimonial {
+    
+       height: 75vw;
+       background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
+       background-position: 50% 0%;
+       padding: 8em 0 3em 0;
+        
+       // this looks like it is fixing the issue of the bg being completely blurred
+       background-attachment: scroll; 
+    
+    } 
+    
+    .testimonial__main-wrap {
+        padding: 0 12em;
+    }
+    
+    .testimonial__review {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+    
+    .testimonial .pre-heading {
+        color: $grey-dark-1;
+    }
+
+    .testimonial .sect-heading-img {
+        color: $grey-dark-1;
+        opacity: 1;
+        margin-bottom: 5em;
     }
   
 }

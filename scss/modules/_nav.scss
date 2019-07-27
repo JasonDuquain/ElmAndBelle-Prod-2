@@ -1,4 +1,5 @@
 
+
 .navigation {
     padding: .75em 1.5em;
     transition: background-color 350ms ease-in;
@@ -56,7 +57,7 @@
     }
 
     &__link:link::after, &__link:visited::after {
-        transition: all 300ms ease-in;
+        transition: left 300ms ease-in, right 300ms ease-in;
         position: absolute;
         content: "";
         left: 50%;
@@ -128,7 +129,7 @@
 @include breakpoint (max-width $medium-760) {
 
     .navigation.hamburger-on {
-        display: block; ;
+        display: block;
     }
 
     .navigation.hamburger-on .navigation__list {
