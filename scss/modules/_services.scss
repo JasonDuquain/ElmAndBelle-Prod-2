@@ -14,10 +14,6 @@
         margin: 0 auto;
         align-items: center;
         
-        // adding this to keep horizonal scroll from happening..it is not enough to add this to the body element
-        overflow-x: hidden;
-        
-        
         @include breakpoint (max-width $huge) {
            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
         }
@@ -55,24 +51,20 @@
     &__wrap {
         transition: all 600ms ease-in;
         opacity: 0;
-        transform: scale(1.4);
     }
     
     &__wrap.animate-in:first-of-type {
         opacity: 1;
-        transform: scale(1);
     }
     
     &__wrap.animate-in:nth-of-type(2) {
         opacity: 1;
-        transform: scale(1);
-        transition-delay: 400ms;
+        //transition-delay: 400ms; turn this delay off at mobile widths
     }
     
     &__wrap.animate-in:last-of-type {
         opacity: 1;
-        transform: scale(1);
-        transition-delay: 800ms;
+        //transition-delay: 800ms; turn this delay off at mobile widths
     }
 
     &__main {
@@ -475,6 +467,35 @@
     
     .services__table-wrap {
         width: 60%;
+        color: #111;
+    }
+    
+    .services__table-caption {
+        font-size: 1.4em;
+    }
+    
+    .services__table-caption-span {
+        font-size: 2.2em;
+    }
+    
+    .services__table th {
+        font-size: .9em;
+        
+    }
+    
+    .services__table td {
+        font-size: .8em;
+        padding: .50em .50em .50em 1.1em;
+    }
+
+}
+
+
+/*the one above is also hittig for iPhone5's since the height is 568px..so the svcs table is too narrow..trying this for iphone5 only */
+@media screen and (orientation: portrait) and (max-device-width: 321px)  {
+    
+    .services__table-wrap {
+        width: 90%;
         color: #111;
     }
     

@@ -17,11 +17,10 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
     width: 100%;
 }
 
-// keeps the error msgs from messing up the layout
-.kwes-field-wrapper .help {
+// keeps the error msgs from messing up the layout but need to make .subscribe__field-prefixed  relatively positioned
+.kw-field-wrapper .help {
     position: absolute
 }
-
 
 
 .subscribe {
