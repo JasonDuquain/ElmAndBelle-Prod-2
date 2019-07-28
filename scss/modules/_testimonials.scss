@@ -80,10 +80,6 @@
         // temp fix for height issue
         padding-bottom: 1.5em; 
         
-        @include breakpoint(max-width $small) {
-            //border: none;
-        }
-        
     }
     
     &__cell::after {

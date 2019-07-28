@@ -50,7 +50,7 @@ class Scroller {
         */
         
         blur.style.backgroundImage = `url(${heroImageUrl})`;
-        blur.style.backgroundPosition = 'center bottom';
+        blur.style.backgroundPosition = '60% 100%';
         
     }
 

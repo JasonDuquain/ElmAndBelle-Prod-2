@@ -7,9 +7,6 @@
     
     @include breakpoint (max-width $large) {
         height: 64vw;
-        /* this is causing the img hero bg to go blank for an instant before the new img loads - fix that or don't change the img
-        background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_771/v1563456910/eandb/hero.jpg');
-        */
     }
     
     @include breakpoint (max-width $medium-small) {
@@ -17,7 +14,7 @@
     }
     
     @include breakpoint (max-width $small) {
-        height: 165vw;
+        height: 150vw;
     }
     
     &__image {
@@ -25,11 +22,7 @@
         height: 100%;
         object-fit: cover;
         display: block;
-        object-position: center bottom;
-        
-        @include breakpoint (max-width $small) {
-            object-position: 60% 100%;
-        }
+        object-position: 60% 100%;
     }
     
     
@@ -70,13 +63,13 @@
         }
         
         @include breakpoint (max-width $smallest) {
-            font-size: 3.6em;
-            width: 95%;
+            font-size: 3.55em;
+            width: 98%;
         }
         
         @include breakpoint (max-width $tiny) {
-            font-size: 3.1em;
-            width: 99%;
+            font-size: 3em;
+            width: 98%;
         }
         
     }

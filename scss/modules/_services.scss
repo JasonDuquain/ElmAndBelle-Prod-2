@@ -463,6 +463,35 @@
 }
 
 
+/*the one below is also hittig for iPhone5's since the height is 568px..so the svcs table is too narrow..trying this for iphone5 only */
+@media screen and (orientation: portrait) and (max-device-width: 380px) and (max-height: 685px) {
+    
+    .services__table-wrap {
+        width: 90%;
+        color: #111;
+    }
+    
+    .services__table-caption {
+        font-size: 1.4em;
+    }
+    
+    .services__table-caption-span {
+        font-size: 2.2em;
+    }
+    
+    .services__table th {
+        font-size: .9em;
+        
+    }
+    
+    .services__table td {
+        font-size: .8em;
+        padding: .50em .50em .50em 1.1em;
+    }
+    
+    
+}
+
 /*********** LANDSCAPE STYLES and laptops that are not very high i.e 1280 x 570 ***********/
 @media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 812px), screen and (max-height: 600px)  {
     
@@ -492,31 +521,3 @@
 }
 
 
-/*the one above is also hittig for iPhone5's since the height is 568px..so the svcs table is too narrow..trying this for iphone5 only */
-@media screen and (orientation: portrait) and (max-device-width: 321px)  {
-    
-    .services__table-wrap {
-        width: 90%;
-        color: #111;
-    }
-    
-    .services__table-caption {
-        font-size: 1.4em;
-    }
-    
-    .services__table-caption-span {
-        font-size: 2.2em;
-    }
-    
-    .services__table th {
-        font-size: .9em;
-        
-    }
-    
-    .services__table td {
-        font-size: .8em;
-        padding: .50em .50em .50em 1.1em;
-    }
-    
-    
-}
