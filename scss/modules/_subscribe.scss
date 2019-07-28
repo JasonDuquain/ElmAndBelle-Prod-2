@@ -68,8 +68,13 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
         cursor: pointer;
     }
     
+    // height for textarea needs to be on its wrapper
+    &__field-prefixed .kw-field-wrapper-5 {
+        height: 8em;
+    }
+
     &__comment { 
-        height: 6em;
+        height: 100%;
     }
     
     &__input:focus, &__email:focus, &__comment:focus {
