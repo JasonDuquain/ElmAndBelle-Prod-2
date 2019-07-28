@@ -49,8 +49,7 @@
         max-width: 1280px;
         margin: 0 auto;
         padding: 0 10em;
-        
-        
+
         position: relative;
         
         @include breakpoint(max-width $medium) {
@@ -72,7 +71,7 @@
     }
     
     &__cell {
-        background-color: rgba(255,255,255,1);
+        background-color: #fff;
         border-radius: 3px;
         border: 1px solid $gold-dark;
         
@@ -95,7 +94,8 @@
       height: 1em; 
       border-right: 1px solid $grey-light-2;
       border-bottom: 1px solid $grey-light-2;
-      background-color: rgba(255,255,255,1);
+      background-color: #fff;
+        
       left: 50%;
       transform: translateX(-50%);
       bottom: 3.80em; /*was -8px*/
@@ -221,10 +221,10 @@
     
     .testimonial {
     
-       height: 75vw;
+       height: 80vw;
        background-image: url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456911/eandb/bg-testimonial.jpg');
        background-position: 50% 0%;
-       padding: 8em 0 3em 0;
+       padding: 6em 0 3em 0;
         
        // this looks like it is fixing the issue of the bg being completely blurred
        background-attachment: scroll; 
@@ -232,7 +232,7 @@
     } 
     
     .testimonial__main-wrap {
-        padding: 0 12em;
+        padding: 0 9em;
     }
     
     .testimonial__review {
@@ -247,7 +247,7 @@
     .testimonial .sect-heading-img {
         color: $grey-dark-1;
         opacity: 1;
-        margin-bottom: 5em;
+        margin-bottom: 4em;
     }
   
 }

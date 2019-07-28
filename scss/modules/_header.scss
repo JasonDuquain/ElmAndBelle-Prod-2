@@ -13,6 +13,10 @@
         display: block;
     }
     
+    @include breakpoint (max-width $tiny) {
+        right: 10px;
+    }
+    
     &::before {
         content: "";
         position: absolute;

@@ -56,19 +56,23 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
         grid-gap: 3em 1.5em;
     }
 
-    &__input, &__email {
+    &__input, &__email, &__comment {
         width: 100%;
         border-radius: 0 .25em .25em 0;
         padding: .375em .3125em .3125em;
         border: 1px solid #ccc; 
-        font-family: inherit;
-        font-size: 1em;
+        //font-family: inherit;
+        //font-size: 1em;
         color: #111;  
         height: 2.125em;
         cursor: pointer;
     }
     
-    &__input:focus, &__email:focus {
+    &__comment { 
+        height: 6em;
+    }
+    
+    &__input:focus, &__email:focus, &__comment:focus {
         outline: none;
         box-shadow: inset 0 0 .5em rgba(93, 162, 248, 0.5);
     }
@@ -107,7 +111,7 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
     
     &__input-wrap:last-of-type {
         align-self: end;
-        
+
         @include breakpoint(max-width $small) {
             justify-self: center;
         }

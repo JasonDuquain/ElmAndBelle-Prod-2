@@ -183,7 +183,7 @@ since it is now in the html:
 
 
 /*****  SUBSCRIBE INPUTS CHANGE ICON COLOR ON FOCUS  ******/
-let inputs = document.querySelectorAll('form input');
+let inputs = document.querySelectorAll('form input, .subscribe__comment');
 
 inputs.forEach((el) => el.addEventListener('focus', changeFocus));
 inputs.forEach((el) => el.addEventListener('blur', changeBlur));

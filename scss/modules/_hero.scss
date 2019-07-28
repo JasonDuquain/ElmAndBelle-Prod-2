@@ -1,14 +1,6 @@
 
 .large-hero {
-    height: 55vw;
-    
-    /*background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,
-    .25)), url('https://res.cloudinary.com/jduquain/c_scale,f_auto,q_auto,w_1920/v1563456910/eandb/hero.jpg');
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center;*/
-    
+    height: 55vw;    
     border-bottom: .6vw solid $gold;
     position: relative;
     overflow: hidden;
@@ -20,13 +12,12 @@
         */
     }
     
-    
     @include breakpoint (max-width $medium-small) {
         height: 90vw;
     }
     
     @include breakpoint (max-width $small) {
-        height: 125vw;
+        height: 165vw;
     }
     
     &__image {
@@ -34,8 +25,11 @@
         height: 100%;
         object-fit: cover;
         display: block;
-        
         object-position: center bottom;
+        
+        @include breakpoint (max-width $small) {
+            object-position: 60% 100%;
+        }
     }
     
     
