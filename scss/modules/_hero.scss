@@ -63,8 +63,8 @@
         }
         
         @include breakpoint (max-width $smallest) {
-            font-size: 3.55em;
-            width: 98%;
+            font-size: 3.51em;
+            width: 97%;
         }
         
         @include breakpoint (max-width $tiny) {

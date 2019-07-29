@@ -70,7 +70,7 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
     
     // height for textarea needs to be on its wrapper
     &__field-prefixed .kw-field-wrapper-5 {
-        height: 8em;
+        height: 6em;
     }
 
     &__comment { 
@@ -127,6 +127,7 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
         border: none;
         background-image: linear-gradient($gold, $gold-medium);
         cursor: pointer;
+        margin-top: 2em;
         
         &::before, &::after {
             border-color: $gold;
