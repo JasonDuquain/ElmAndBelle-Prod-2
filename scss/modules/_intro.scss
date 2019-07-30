@@ -35,47 +35,7 @@
             grid-row-gap: 1em;
         }
     }
-    
-    /*****   OVERLAP GALLERY   ******/
-    /*&__gallery {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-        background-image: url('../img/scissors.jpg');
-        background-size: cover;
-    }
-    
-    &__img {
-        width: 100%;
-        border-radius: 2px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        transition: transform 300ms ease-out;
-        
-        &:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-            z-index: 60;
-        }
-        
-        &-1 {
-            grid-column: 3 / 8;
-            grid-row: 2 / 7;
-            z-index: 50;
-        }
-        
-        &-2 {
-            transform: translateX(2em);
-            grid-column: 5 / 10;
-            grid-row: 5 / 9;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-            z-index: 55;
-            
-            &:hover {
-                transform: scale(1.1) translateX(2em);
-            }
-        }
-        
-    }*/
+
     
     /*****   SUMMARY   ******/
     &__summary {
@@ -209,7 +169,7 @@
     }
     
     @include breakpoint(max-width $smallest) {
-        margin-top: -6.1em;
+        margin-top: -6.5em;
     }
     
     @include breakpoint(max-width $tiny) {
@@ -249,9 +209,9 @@
     }
     
     @include breakpoint(max-width $smallest) {
-        width: 12em; 
-        height: 12em; 
-        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_307,q_auto,w_307/v1564019205/eandb/diamond_lhkr7u.jpg');
+        width: 13em; 
+        height: 13em; 
+        background-image: url('https://res.cloudinary.com/jduquain/c_fill,f_auto,h_333,q_auto,w_333/v1564019205/eandb/diamond_lhkr7u.jpg');
     }
     
     //font size 12.8px
@@ -319,13 +279,13 @@
     @include breakpoint(max-width $largest) {
         
         //font-size: 150%;
-        font-size: 200%;
+        font-size: 210%;
     }
     
     @include breakpoint(max-width $smallest) {
         
         //font-size: 130%;
-        font-size: 180%;
+        font-size: 190%;
     }
     
     @include breakpoint(max-width $tiny) {
