@@ -42,14 +42,15 @@
         font-family: 'Tangerine', cursive;
         text-shadow: 1px 1px 2px rgba(0,0,0,.8);
         font-size: 3.8em;
-        line-height: 1.1;
+        line-height: 1.06;
         color: #fff;
         margin: 0;
         position: absolute;
-        top: 10%;
+        top: 9%;
         left: 49%; // move it a touch left to better line up with main e and b text
         transform: translate(-50%, 0%);
-        width: 76%;
+        width: 66%;
+        max-width: 850px;
         z-index: 1;
         
         @include breakpoint (max-width $medium-small) {
@@ -84,7 +85,7 @@
         font-weight: 300;
         display: block;
         text-align: right;
-        margin-top: .85em;
+        margin-top: .88em;
     }
     
     &__amp {

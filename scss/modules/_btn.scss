@@ -48,13 +48,18 @@
 
 .btn-flex {
     align-self: center;
-    margin-top: 1.5em;
+    margin-top: 1em;
+    
+    @include breakpoint (max-width $smallest) {
+       margin-top: .25em;
+       margin-bottom: .25em;
+    }
 }
 
 .js-btt-btn {
     position: fixed;
-    bottom: -3em;
-    right: .6em;
+    bottom: -2.7em;
+    right: .5em;
     width: 1.7em;
     height: 1.7em;
     border-radius: 50%;
@@ -74,7 +79,7 @@
     
     &.active {
         opacity: 1;
-        bottom: 1.3em;
+        bottom: 2.3em;
         pointer-events: auto;
     }
     

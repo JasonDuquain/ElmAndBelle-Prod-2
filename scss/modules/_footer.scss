@@ -146,11 +146,11 @@ div.footer--icons a:last-of-type i:hover {
 }
 
 .footer__me {
-    color: $gold;
     transition: color 300ms ease-in;
+    color: inherit;
     
     &:hover {
-        color: $gold-dark;
+        color: $gold;
     }
     
     &:active {

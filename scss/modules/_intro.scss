@@ -1,4 +1,23 @@
 
+.rotate-1 span {
+    display: block;
+    
+    //transform: rotate(-45deg) translate(-.1em, 1em);
+    transform: rotate(-45deg) translate(-.1em, .5em);
+    
+    transform-origin: left center;
+}
+
+.rotate-2 span {
+    display: block;
+    
+    //transform: rotate(45deg) translate(-.4em, -1em);
+    transform: rotate(45deg) translate(-.4em, -.75em);
+    
+    transform-origin: left center;
+}
+
+
 .intro {
     @include breakpoint(1280px) {
         padding: 6em calc(50% - 627px); //changed to add padding around 1280px
@@ -131,7 +150,7 @@
         font-size: 1.4em;
         font-weight: 500;
         line-height: 1;
-        margin: 2em 0 2.5em 0;
+        margin: 2.5em 0;
         text-transform: uppercase;
         
         &::before, &::after {
@@ -173,28 +192,28 @@
 
 .img-clip-row {
     text-align: center;
-    margin-top: -9.625em; 
+    margin-top: -9.505em; 
     
     @include breakpoint(max-width $largest) {
-        margin-top: -7.725em;
+        margin-top: -7.625em;
     }
     
     //font size 14.4px
     @include breakpoint(max-width $large) {
-        margin-top: -7.15em;
+        margin-top: -7.05em;
     }
     
     //font size 12.8px
     @include breakpoint(max-width $medium) {
-        margin-top: -7.05em;
+        margin-top: -6.95em;
     }
     
     @include breakpoint(max-width $smallest) {
-        margin-top: -6.2em;
+        margin-top: -6.1em;
     }
     
     @include breakpoint(max-width $tiny) {
-        margin-top: -5.2em;
+        margin-top: -5.1em;
     }
 }
 
@@ -277,10 +296,20 @@
 }
 
 .overlay-content {
-    color: rgba(255, 255, 255, 0.4);
+    
+    font-family: 'lucien_schoenschriftv_catRg', cursive;
+    
+    //color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    
     font-weight: 400;
-    font-size: 180%;
-    text-transform: uppercase;
+    
+    //font-size: 180%;
+    
+    font-size: 250%;
+    //text-transform: uppercase;
+    
+    
     position: absolute;
     left: 50%;
     top: 50%;
@@ -288,16 +317,26 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     
     @include breakpoint(max-width $largest) {
-        font-size: 150%;
+        
+        //font-size: 150%;
+        font-size: 200%;
     }
     
     @include breakpoint(max-width $smallest) {
-        font-size: 130%;
+        
+        //font-size: 130%;
+        font-size: 180%;
     }
     
     @include breakpoint(max-width $tiny) {
-        font-size: 120%;
+        
+        //font-size: 120%;
+        font-size: 150%;
     }
+}
+
+.overlay-content.ampersand {
+    color: $gold;
 }
 
 .overlay-content img {
