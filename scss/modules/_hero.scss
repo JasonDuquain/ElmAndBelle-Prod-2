@@ -25,7 +25,6 @@
         object-position: 60% 100%;
     }
     
-    
     &__overlay {
         position: absolute;
         top: 0;
@@ -77,22 +76,12 @@
     &__quote {
         opacity: 0;
         display: block;
-        //animation: fade-in 800ms 700ms ease-in both;
     }
     
-    &__quote--2 {
-        //animation-delay: 2000ms;
-    }
-
-    &__quote--3 {
-        //animation-delay: 4000ms;
-    }
-
     &__quote--4 {
         font-family: 'Raleway', sans-serif;
         font-size: .5em;
         font-weight: 300;
-        //animation-delay: 5300ms;
         display: block;
         text-align: right;
         margin-top: .85em;
