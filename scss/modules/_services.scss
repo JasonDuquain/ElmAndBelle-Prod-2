@@ -48,35 +48,13 @@
         
     }
 
-
-    &__wrap {
-        transition: all 600ms ease-in;
-        opacity: 0;
-    }
-    
-    &__wrap.animate-in:first-of-type {
-        opacity: 1;
-    }
-    
-    &__wrap.animate-in:nth-of-type(2) {
-        opacity: 1;
-        //transition-delay: 400ms; turn this delay off at mobile widths
-    }
-    
-    &__wrap.animate-in:last-of-type {
-        opacity: 1;
-        //transition-delay: 800ms; turn this delay off at mobile widths
-    }
-
     &__main {
         width: 400px; //removing 1px fixed short vertical line that appear from img
         position: relative;
         border-radius: 3px;
         box-shadow: 0 0 2px 2px rgba($grey-light-2,.3);
         
-        
         @include breakpoint (max-width $hugest) {
-           //width: 310px;
             width: 350px;
         }
         
@@ -261,8 +239,14 @@
     
     
     /**********   SERVICES TABLE LIST   **********/
+    
+    /* IF THERE ARE ANY MORE ISSUES WITH BEING TOO NARROW AT MOBILE WIDTHS ADD A MIN-WIDTH */
     &__table-wrap {
         
+        max-width: 840px;
+        margin: 0 auto;
+        
+        //add this to keep from seeing the table fade-out on page load
         display: none;
         
         width: 70%;
@@ -285,6 +269,7 @@
         }
     }
     
+    //add this to keep from seeing the table fade-out on page load
     &__table-wrap.enabled {
         display: block;
     }
@@ -303,7 +288,7 @@
         &-caption {
             padding: .25em 0 .25em 0;
             text-align: center;
-            font-size: 3em;
+            font-size: 2.8em;
             color: #333;
             background-color: lighten($gold, 15%);
             
@@ -311,7 +296,7 @@
             border-radius: 12px 12px 0 0;
             
             @include breakpoint (max-width $medium-small) {
-                font-size: 2.8em;
+                //font-size: 2.8em;
             }
             
             @include breakpoint (max-width $small) {
@@ -329,15 +314,15 @@
             line-height: .7;
             text-align: center;
             display: block;
-            font-size: 1.8em;
+            font-size: 1.6em;
             color: $gold-dark;
             
             @include breakpoint (max-width $medium-small) {
-                font-size: 1.6em;
+                //font-size: 1.6em;
             }
             
             @include breakpoint (max-width $medium-small) {
-                font-size: 2em;
+                //font-size: 2em;
             }
             
         }
@@ -354,11 +339,11 @@
             text-align: left;
             padding: 0 .75em;
             text-transform: uppercase;
-            font-size: 1.6em;
+            font-size: 1.4em;
             font-weight: 700;
             
             @include breakpoint (max-width $medium-small) {
-                font-size: 1.4em;
+                //font-size: 1.4em;
             }
             
             @include breakpoint (max-width $small) {
@@ -371,19 +356,19 @@
         }
         
         td {
-            padding: .75em 1em .75em 1.6em;
+            padding: .6em .75em .6em 1.1em;
             font-weight: 500;
             
             @include breakpoint (max-width $medium-small) {
-                padding: .75em 1em .75em 1.4em;
+                //padding: .6em .75em .6em 1.1em;
             }
             
             @include breakpoint (max-width $small) {
-                padding: .75em .75em .75em 1.3em;
+                //padding: .6em .75em .6em 1.1em;
             }
             
             @include breakpoint (max-width $smallest) {
-                padding: .75em .75em .75em 1.1em;
+                //padding: .6em .75em .6em 1.1em;
                 font-size: .9em;
             }
         }
@@ -449,7 +434,7 @@
 }
 
 .close_modal:hover {
-    color: #fff;
+    color: $grey-dark-3;
 }
 
 

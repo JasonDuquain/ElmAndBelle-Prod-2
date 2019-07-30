@@ -24,14 +24,26 @@ footer img {
     text-align: center;
 }
 
-div.footer--copyright {
-    text-align: center;
-    margin-top: 1.5em;
+div.footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__mylinks {
+    font-size: 1.5em;
+    margin-left: .75em;
+    color: inherit;
+    transition: color 300ms ease-in;
+    
+    &:hover {
+        color: $gold; 
+    }
 }
 
 p.footer--main {
     width: 80%;
-    margin: 1em auto 2.5em auto;
+    margin: 1em auto .7em auto;
     text-align: center;
     
     @include breakpoint(max-width $small) {
@@ -135,6 +147,15 @@ div.footer--icons a:last-of-type i:hover {
 
 .footer__me {
     color: $gold;
+    transition: color 300ms ease-in;
+    
+    &:hover {
+        color: $gold-dark;
+    }
+    
+    &:active {
+        color: $gold-medium;
+    }
 }
 
 

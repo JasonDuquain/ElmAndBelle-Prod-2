@@ -6,15 +6,6 @@
 let heroImage = document.querySelector('.large-hero__image');
 let heroImageUrl = heroImage.getAttribute('src');
 
-/******** ONLY LOAD MAYA QUOTE ON COMPLETE img load - not always firing...is the image loading too fast?!!??!!  *******/
-/*
-
-heroImage.addEventListener('load', function(e) {
-    console.log('hero img loaded');
-    hero.classList.add('loaded')
-});
-
-*/
 
 /******* FADE HERO SECT ON SCROLL *********/
 
@@ -42,16 +33,8 @@ class Scroller {
     init() {
         window.addEventListener('scroll', this.onScroll.bind(this));
         
-        /* UNCOMMENT THESE IF YOU GO BACK TO HERO IMG AS A BG IMG
-        let hdr = document.querySelector('.large-hero');
-        let hdrStyles = window.getComputedStyle(hdr);
-        let hdrBgImg = hdrStyles.getPropertyValue('background-image');
-        blur.style.backgroundImage = hdrBgImg;
-        */
-        
         blur.style.backgroundImage = `url(${heroImageUrl})`;
         blur.style.backgroundPosition = '60% 100%';
-        
     }
 
     onScroll() {
@@ -91,25 +74,11 @@ var scroller = new Scroller();
 scroller.init();
 
 
-/***********  SERVICES ANIMATE IN ON SCROLL  ***********/
-const servicesSects = document.querySelectorAll('.services__wrap');
-
-document.addEventListener('scroll', (e) => {
-    
-    servicesSects.forEach((el, idx) => {
-        if (el.getBoundingClientRect().top < (window.innerHeight / 1.2)) {
-            el.classList.add('animate-in');
-        }  
-    });
-});
-
-
 /***********  TESTIMONIAL SLIDER  ***********/
 
 var slider = tns({
     container: '.testimonial__flex',
     controlsContainer: document.querySelector('.customize-controls'),
-    
     
     // added this to fix errs: 'Unable to preventDefault inside passive event listener invocation.'..now the new err is: [Intervention] Ignored attempt to cancel a touchmove event with cancelable=false, for example because scrolling is in progress and cannot be interrupted. 
     preventScrollOnTouch: 'auto',
@@ -124,10 +93,6 @@ var slider = tns({
     autoplayTimeout: 10000,
     autoplayButton: false,
     autoplayButtonOutput: false
-    /*autoplayText: [
-        "▶",
-        "❚❚"
-    ]*/
 });
 
 
@@ -151,35 +116,12 @@ tests.forEach((el) => {
 let docElement = document.documentElement;
 let docBody = document.body;
 let bttBtn = document.querySelector('.js-btt-btn');
-
-/*let heights = [docElement.scrollHeight, docBody.scrollHeight, docElement.offsetHeight, docBody.offsetHeight];
-let highestHeight = Math.max(...heights);*/
-
-
 let highestHeight = docElement.scrollHeight;
 
 //changed from document to window - still not working on mobile
 window.addEventListener('scroll', (e) => {
-    //console.log(window.pageYOffset, docElement.scrollTop);
-    
-    //changed from docElement.scrollTop - trying to get it working on mobile
     (window.pageYOffset > (highestHeight / 8)) ? bttBtn.classList.add('active') : bttBtn.classList.remove('active');
-
 });
-/*
-
-removed this: 
-
-bttBtn.addEventListener('click', (e) => {
-    //e.preventDefault();
-    docElement.scrollTop = 0;
-});
-
-since it is now in the html:
-
-<button class="js-btt-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-
-*/
 
 
 /*****  SUBSCRIBE INPUTS CHANGE ICON COLOR ON FOCUS  ******/
@@ -197,6 +139,7 @@ function changeBlur(e) {
     let prevSib = e.target.previousElementSibling;
     prevSib.classList.remove('input-color');
 }
+
 
 /****************  STICKY HEADER   ****************/
 let header = document.querySelector('.site-header');
@@ -248,7 +191,6 @@ year.textContent = new Date().getFullYear();
 
 
 /**** code to keep svcs tables from visibly fading out on page load ***  */
-
 window.addEventListener('load', (e) => {
     let svcsTable = document.querySelectorAll('.services__table-wrap');
             
