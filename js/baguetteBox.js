@@ -764,6 +764,7 @@
 
 
 baguetteBox.run('.gallery__grid', {
-    animation: 'fadeIn'
+    animation: 'fadeIn',
+    buttons: true
 });
 
