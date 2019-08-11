@@ -131,12 +131,12 @@ inputs.forEach((el) => el.addEventListener('focus', changeFocus));
 inputs.forEach((el) => el.addEventListener('blur', changeBlur));
 
 function changeFocus(e) {
-    let prevSib = e.target.previousElementSibling;
+    let prevSib = e.target.parentElement.previousElementSibling;
     prevSib.classList.add('input-color');
 }
 
 function changeBlur(e) {
-    let prevSib = e.target.previousElementSibling;
+    let prevSib = e.target.parentElement.previousElementSibling;
     prevSib.classList.remove('input-color');
 }
 
@@ -146,7 +146,7 @@ let header = document.querySelector('.site-header');
 let nav = document.querySelector('.navigation');
 let hero = document.querySelector('.large-hero');
 
-document.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', (e) => {
     if (hero.getBoundingClientRect().bottom <= 0) {
         document.body.style.paddingTop = nav.getBoundingClientRect().height + 'px';
         nav.classList.add('fixed');
@@ -171,10 +171,10 @@ hamburgerMenu.addEventListener('click', function(e) {
 let navs = document.querySelectorAll('.navigation__link:not(.navigation__link-home)');
 let sects = document.querySelectorAll('section:not(:first-of-type):not(:last-of-type)');
 
-
-document.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', (e) => {
     
     navs.forEach((el, idx) => {
+        
         let sect = sects[idx].getBoundingClientRect();
         if (sect.top <= 150 && sect.bottom >= 150) {
             el.classList.add('active');
