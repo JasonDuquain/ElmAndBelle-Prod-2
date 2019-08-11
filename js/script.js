@@ -131,12 +131,16 @@ inputs.forEach((el) => el.addEventListener('focus', changeFocus));
 inputs.forEach((el) => el.addEventListener('blur', changeBlur));
 
 function changeFocus(e) {
-    let prevSib = e.target.parentElement.previousElementSibling;
+    console.log(e.target);
+    // updated path to acct for kwes wrapper
+    let prevSib = e.target.parentElement.firstElementChild;
+    console.log(prevSib);
     prevSib.classList.add('input-color');
 }
 
 function changeBlur(e) {
-    let prevSib = e.target.parentElement.previousElementSibling;
+    // updated path to acct for kwes wrapper
+    let prevSib = e.target.parentElement.firstElementChild;
     prevSib.classList.remove('input-color');
 }
 
