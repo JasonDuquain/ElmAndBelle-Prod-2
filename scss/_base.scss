@@ -75,12 +75,17 @@ section {
 }
 
 .sect-heading-img {
+    text-align: center
+}
+
+.sect-heading-img-svg {
     height: .8125em;
     width: 8.875em;
-    background-image: url('../img/heading-img.svg');
     margin: 0 auto 4em auto;
     opacity: .5;
+    fill: #414042;
 }
+
 
 
 

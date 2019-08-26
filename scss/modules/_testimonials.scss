@@ -116,7 +116,7 @@
         
     }
     
-    &__image {
+    &__icon-shears {
         width: 5em;
         height: 5em;
         border-radius: 50%;
@@ -128,7 +128,7 @@
             height: 3.5em;
         }
     }
-
+    
     &__name {
         font-size: 1.3em;
         font-style: italic;
@@ -205,8 +205,8 @@
         color: $grey-dark-1;
     }
 
-    .testimonial .sect-heading-img {
-        color: $grey-dark-1;
+    .testimonial .sect-heading-img-svg {
+        fill: $grey-dark-1;
         opacity: 1;
         margin-bottom: 2em;
     }
@@ -238,10 +238,10 @@
         color: $grey-dark-1;
     }
 
-    .testimonial .sect-heading-img {
-        color: $grey-dark-1;
+    .testimonial .sect-heading-img-svg {
+        fill: $grey-dark-1;
         opacity: 1;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
   
 }

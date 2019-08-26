@@ -243,7 +243,6 @@
     color: rgba(255, 255, 255, 0.4);    
     font-weight: 400; 
     font-size: 180%;
-    //text-transform: uppercase;
      
     position: absolute;
     left: 50%;
@@ -268,14 +267,24 @@
     color: $gold;
 }
 
-.overlay-content img {
+.overlay__icon-shears {
+    width: 100%;
+    height: auto;
+    fill: #fff;
+    
+    @include breakpoint(max-width $largest) {
+        width: 90%;
+    }
+}
+
+/*.overlay-content img {
     width: 100%;
     height: auto;
     
     @include breakpoint(max-width $largest) {
         width: 90%;
     }
-}
+}*/
 
 .img-clip-wrap:hover .overlay {
     transition: all 0.4s ease-in;
