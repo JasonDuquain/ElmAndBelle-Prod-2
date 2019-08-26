@@ -173,6 +173,17 @@
         
     }
     
+    &__icon {
+        width: 1em;
+        height: 1em;
+        fill: $gold;
+        transition: fill 300ms ease-out;
+        
+        &:hover {
+           fill: $gold-dark; 
+        }
+    }
+    
 }
 
 /*********** LANDSCAPE STYLES ***********/

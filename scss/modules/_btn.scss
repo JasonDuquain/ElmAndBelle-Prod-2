@@ -74,6 +74,18 @@
     transition: opacity 500ms ease-out, bottom 400ms cubic-bezier(0.64, 0.57, 0.67, 1.23), background-color 300ms ease-out, color 300ms ease-out;
     cursor: pointer;
     
+    &:hover &-icon {
+        fill: $gold;
+    }
+    
+    &-icon {
+        width: 1em;
+        height: 1em;
+        fill: #fff;
+        transform: translateY(5px);
+        transition: fill 300ms ease-in;
+    }
+    
     // trying to fix btn not showing on mobile
     z-index: 9500;
     
@@ -87,9 +99,7 @@
         background-color: rgba(0,0,0,1);
     }
     
-    &:hover {
-        color: #eee;
-    }
+    
     
 }
 

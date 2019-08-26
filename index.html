@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
     <!-- moved script up here so it would run in time -->
     <script>
         function loadImage() {
@@ -15,12 +16,11 @@
     <meta name="Description" content="elm and belle hair salon haircut hair style balayage brazillian blowout">
     <title>Elm and Belle Salon</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,500,700|Tangerine&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="f-a/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/baguetteBox.css">
-    
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 </head>
+
 
 <body>  
     
@@ -31,9 +31,21 @@
     <header class="site-header" id="hdr">
        <div class="site-header__wrap"> 
             <div class="site-header__social">
-                <a class="site-header__social-link" href="https://www.facebook.com/elmandbelle" target="_blank" title="elmandbelle facebook page" rel="noopener"><i class="fa fa-facebook-square"></i></a>
-                <a class="site-header__social-link" href="https://pin.it/klzznjnsjlfnpn" target="_blank" title="elmandbelle pinterest page" rel="noopener"><i class="fa fa-pinterest-square"></i></a>
-                <a class="site-header__social-link" href="https://www.instagram.com/elmandbelle/" target="_blank" title="elmandbelle instagram page" rel="noopener"><i class="fa fa-instagram"></i></a>
+                <a class="site-header__social-link" href="https://www.facebook.com/elmandbelle" target="_blank" title="elmandbelle facebook page" rel="noopener">
+                    <svg class="site-header__icon site-header__icon--1">
+                        <use xlink:href="img/sprite.svg#icon-facebook2" />
+                    </svg>
+                </a>
+                <a class="site-header__social-link" href="https://pin.it/klzznjnsjlfnpn" target="_blank" title="elmandbelle pinterest page" rel="noopener">
+                    <svg class="site-header__icon site-header__icon--2">
+                        <use xlink:href="img/sprite.svg#icon-pinterest" />
+                    </svg>
+                </a>
+                <a class="site-header__social-link" href="https://www.instagram.com/elmandbelle/" target="_blank" title="elmandbelle instagram page" rel="noopener">
+                    <svg class="site-header__icon site-header__icon--3">
+                        <use xlink:href="img/sprite.svg#icon-instagram" />
+                    </svg>
+                </a>
             </div>
             <a href="index.html" class="site-header__logo-link">
                 <p class="site-header__logo-text">Elm <span class="site-header__amp">&amp;</span> Belle Salon</p>
@@ -170,19 +182,27 @@
                         <h3 class="services__description-heading">Cut &amp; Design</h3>
                         <ul class="services__list">
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Womens Haircut &amp; Style
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Mens Haircut &amp; Style
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Face Frame Layers
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Bang Trims
                             </li>
                         </ul>
@@ -201,27 +221,39 @@
                         <h3 class="services__description-heading">Color</h3>
                         <ul class="services__list">
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Full Process Color
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Single Process Color
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Highlights &amp; Lowlights
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Balayage
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Color Melting
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Demi-permanent Glazes
                             </li>
                         </ul>
@@ -240,19 +272,27 @@
                         <h3 class="services__description-heading">Additional Services</h3>
                         <ul class="services__list">
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Waxing
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 The Brazilian Blowout
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Scalp Treatments
                             </li>
                             <li class="services__item">
-                                <i class="fa fa-check-square-o"></i>
+                                <svg class="services__icon">
+                                    <use xlink:href="img/sprite.svg#icon-checkbox-checked" />
+                                </svg>
                                 Hair Masks
                             </li>
                         </ul>
@@ -559,10 +599,14 @@
           
           <ul class="customize-controls" aria-label="Carousel Navigation" tabindex="0">
               <li class="prev" aria-controls="customize" tabindex="-1" data-controls="prev">
-              <i class="js-btt-btn-icon fa fa-chevron-left "></i>
+                 <svg class="testimonial__icon js-btt-btn-icon">
+                    <use xlink:href="img/sprite.svg#icon-chevron-thin-left" />
+                 </svg>
             </li>
             <li class="next" aria-controls="customize" tabindex="-1" data-controls="next">
-              <i class="js-btt-btn-icon fa fa-chevron-right "></i>
+              <svg class="testimonial__icon js-btt-btn-icon">
+                    <use xlink:href="img/sprite.svg#icon-chevron-thin-right" />
+                 </svg>
             </li>
          </ul>  
           
@@ -732,14 +776,22 @@
                <p class="subscribe__input-wrap">
                     <label for="firstname" class="subscribe__label">First Name</label>
                     <span class="subscribe__field-prefixed">
-                        <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-user"></i></span>
+                        <span class="subscribe__field-prefix" id="applicant-name-prefix">
+                            <svg class="subscribe__icon">
+                                <use xlink:href="img/sprite.svg#icon-user" />
+                            </svg>
+                        </span>
                         <input type="text" class="subscribe__input" id="firstname" name="firstname">    
                     </span>
                </p>
                <p class="subscribe__input-wrap">
                     <label for="lastname" class="subscribe__label">Last Name</label>
                     <span class="subscribe__field-prefixed">
-                        <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-user"></i></span>
+                        <span class="subscribe__field-prefix" id="applicant-name-prefix">
+                            <svg class="subscribe__icon">
+                                <use xlink:href="img/sprite.svg#icon-user" />
+                            </svg>
+                        </span>
                         <input type="text" class="subscribe__input" id="lastname" name="lastname">    
                     </span>
 
@@ -747,19 +799,31 @@
                <p class="subscribe__input-wrap">
                     <label for="email" class="subscribe__label">Email Address</label>
                     <span class="subscribe__field-prefixed">
-                        <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-envelope"></i></span>
+                        <span class="subscribe__field-prefix" id="applicant-name-prefix">
+                            <svg class="subscribe__icon">
+                                <use xlink:href="img/sprite.svg#icon-envelop" />
+                            </svg>
+                        </span>
                         <input type="email" class="subscribe__email" id="email" name="email">    
                     </span>
                </p>
                <p class="subscribe__input-wrap">
                     <label for="comment" class="subscribe__label">Comment/Question:</label>
                     <span class="subscribe__field-prefixed">
-                        <span class="subscribe__field-prefix" id="applicant-name-prefix"><i class="fa fa-pencil"></i></span>
+                        <span class="subscribe__field-prefix" id="applicant-name-prefix">
+                            <svg class="subscribe__icon">
+                                <use xlink:href="img/sprite.svg#icon-pencil" />
+                            </svg>
+                        </span>
                         <textarea class="subscribe__comment" id="comment" name="comment"></textarea>  
                     </span>
                </p>
                <p class="subscribe__input-wrap">
-                   <button type="submit" class="subscribe__submit btn btn-standard">Submit</button>
+                    <button type="submit" class="subscribe__submit btn btn-standard">         <span>Submit</span>
+                        <svg class="subscribe__icon">
+                            <use xlink:href="img/sprite.svg#icon-paper-plane" />
+                        </svg>
+                    </button>
                </p>
             </form>
        </div>
@@ -779,9 +843,21 @@
                     <li><a class="footer__links" href="#appointments">Appointments</a></li>
                 </div>
                 <div class="footer--icons">
-                    <a href="https://www.facebook.com/elmandbelle" target="_blank" title="elmandbelle facebook page" rel="noopener"><i class="fa fa-facebook"></i></a>
-                    <a href="https://pin.it/klzznjnsjlfnpn" target="_blank" title="elmandbelle pinterest page" rel="noopener"><i class="fa fa-pinterest"></i></a>
-                    <a href="https://www.instagram.com/elmandbelle/" target="_blank" title="elmandbelle instagram page"><i class="fa fa-instagram" rel="noopener"></i></a>
+                    <a href="https://www.facebook.com/elmandbelle" target="_blank" title="elmandbelle facebook page" rel="noopener">
+                        <svg class="footer__icon footer__icon--1">
+                            <use xlink:href="img/sprite.svg#icon-facebook2" />
+                        </svg>
+                    </a>
+                    <a href="https://pin.it/klzznjnsjlfnpn" target="_blank" title="elmandbelle pinterest page" rel="noopener">
+                        <svg class="footer__icon footer__icon--2">
+                            <use xlink:href="img/sprite.svg#icon-pinterest" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/elmandbelle/" target="_blank" title="elmandbelle instagram page" rel="noopener">
+                        <svg class="footer__icon footer__icon--3">
+                            <use xlink:href="img/sprite.svg#icon-instagram" />
+                        </svg>
+                    </a>
                 </div>
             </div>
             <p class="footer--main">&copy; <span class="year">2019</span> Elm &amp; Belle, LLC. All rights reserved</p>
@@ -789,21 +865,29 @@
                 <p class="footer__para">Website by <a href="mailto:jduquain@gmail.com" class="footer__me">Jason Duquain</a>
                 </p>
                 <a class="footer__mylinks" href="https://twitter.com/jasonduquain" target="_blank" title="twitter" rel="noopener">
-                    <i class="fa fa-twitter"></i>
+                    <svg class="footer__icon-me">
+                        <use xlink:href="img/sprite.svg#icon-twitter" />
+                    </svg>
                 </a>
                 <a class="footer__mylinks" href="https://github.com/JasonDuquain" target="_blank" title="github" rel="noopener">
-                    <i class="fa fa-github"></i>
+                    <svg class="footer__icon-me">
+                        <use xlink:href="img/sprite.svg#icon-github" />
+                    </svg>
                 </a>
                 <a class="footer__mylinks" href="https://codepen.io/JasonDuquain/" target="_blank" title="codepen" rel="noopener">
-                    <i class="fa fa-codepen"></i>
+                    <svg class="footer__icon-me">
+                        <use xlink:href="img/sprite.svg#icon-codepen" />
+                    </svg>
                 </a>
             </div>
 
         </div>
     </footer>
 
-    <a href="#hdr" class="js-btt-btn" >
-        <i class="js-btt-btn-icon fa fa-arrow-up"></i>
+    <a href="#hdr" class="js-btt-btn" title="back to top">
+        <svg class="js-btt-btn-icon">
+            <use xlink:href="img/sprite.svg#icon-arrow-up2" />
+        </svg>
     </a>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>

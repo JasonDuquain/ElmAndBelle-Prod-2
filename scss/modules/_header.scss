@@ -112,22 +112,29 @@
         }
     }
     
-    &__social-link:hover .fa.fa-facebook-square {
-        color: rgb(59, 89, 152);
+    &__icon {
+        width: 1.3em;
+        height: 1.3em;
+        fill: $gold-dark;
+        transition: fill 300ms ease-out;
     }
     
-    &__social-link:hover .fa.fa-pinterest-square {
-        color: rgb(203,32,39);
+    /* make pinterest icon a bit larger to match the other 2 */
+    &__icon--2 {
+        height: 1.5em;
+        width: 1.5em;
     }
     
-    &__social-link:hover .fa.fa-instagram {
-        color: rgb(195,42,163);
+    &__social-link:hover &__icon--1 {
+        fill: rgb(59, 89, 152);
     }
-        
-    .fa {
-        font-size: 1.5em;
-        display: inline-block;
-        color: $gold-dark;
+    
+    &__social-link:hover &__icon--2 {
+        fill: rgb(203,32,39);
+    }
+    
+    &__social-link:hover &__icon--3 {
+        fill: rgb(195,42,163);
     }
 
     a:not(:first-of-type) {
