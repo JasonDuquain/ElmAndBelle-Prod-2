@@ -76,23 +76,32 @@ scroller.init();
 
 /***********  TESTIMONIAL SLIDER  ***********/
 
-var slider = tns({
-    container: '.testimonial__flex',
-    controlsContainer: document.querySelector('.customize-controls'),
+// using DOMContentLoaded because the tiny-slider and baguettebox scripts have the DEFER attrib
+document.addEventListener('DOMContentLoaded', () => {
     
-    // added this to fix errs: 'Unable to preventDefault inside passive event listener invocation.'..now the new err is: [Intervention] Ignored attempt to cancel a touchmove event with cancelable=false, for example because scrolling is in progress and cannot be interrupted. 
-    preventScrollOnTouch: 'auto',
+    baguetteBox.run('.gallery__grid', {
+        animation: 'fadeIn',
+        buttons: true
+    });
     
-    autoHeight: true,
-    items: 1,
-    slideBy: 'page',
-    center: true,
-    mouseDrag: true,
-    arrowKeys: true,
-    autoplay: true,
-    autoplayTimeout: 10000,
-    autoplayButton: false,
-    autoplayButtonOutput: false
+    var slider = tns({
+        container: '.testimonial__flex',
+        controlsContainer: document.querySelector('.customize-controls'),
+
+        // added this to fix errs: 'Unable to preventDefault inside passive event listener invocation.'..now the new err is: [Intervention] Ignored attempt to cancel a touchmove event with cancelable=false, for example because scrolling is in progress and cannot be interrupted. 
+        preventScrollOnTouch: 'auto',
+
+        autoHeight: true,
+        items: 1,
+        slideBy: 'page',
+        center: true,
+        mouseDrag: true,
+        arrowKeys: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayButton: false,
+        autoplayButtonOutput: false
+    });
 });
 
 
