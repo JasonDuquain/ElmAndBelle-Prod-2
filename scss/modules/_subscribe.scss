@@ -3,14 +3,14 @@
 KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width needs to be added to this span but I still might need to account for the submit button any time is is a button element and NOT a input type=submit element
 */
 
-.kw-field-wrapper {
+/*.kw-field-wrapper {
     width: 100%;
-}
+}*/
 
 // keeps the error msgs from messing up the layout but need to make .subscribe__field-prefixed  relatively positioned
-.kw-field-wrapper .help {
+/*.kw-field-wrapper .help {
     position: absolute
-}
+}*/
 
 
 .subscribe {
@@ -89,12 +89,12 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
     &__field-prefixed {
         display: flex;
         
-        // this is need to keep the error msgs from messing up the layout
-        position: relative; 
+        // this is need to keep the kwes error msgs from messing up the layout - removing now that lambda is being used
+        // position: relative; 
     }
     
     &__field-prefix {
-        transition: color 300ms ease-out 100ms;
+        transition: all 300ms ease-out 100ms;
         flex: 0 0 2.2em;
         display: flex;
         border: 1px solid #ccc;
@@ -108,8 +108,11 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
     }
     
     &__field-prefix.input-color {
-        color: $gold;
         background-color: transparent;
+    }
+    
+    &__field-prefix.input-color .subscribe__icon {
+        fill: $gold;
     }
     
     &__input-wrap:last-of-type {
@@ -142,7 +145,6 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
             width: .9em;
             height: .9em;
         }
-        
         
         &::before, &::after {
             border-color: $gold;

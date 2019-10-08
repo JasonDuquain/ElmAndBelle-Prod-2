@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Elm and Belle is a highly rated boutique hair salon studio. Stylist Jennifer has over 15 years experience and specializes in advanced hair color and cutting techniques. She has experience with the industry’s best color lines and products such as Redken, Pureology, Pravana, Wella, Joico and more. Elm and Belle is also a certified Brazilian Blowout Salon">
+    <meta name="description" content="Elm and Belle is a highly rated boutique hair salon studio. Stylist Jennifer has over 15 years experience and specializes in advanced hair color and cutting techniques. She has experience with the industry’s best color lines and products such as Redken, Pureology, Pravana, Wella, Joico and more. Elm and Belle is also a certified Brazilian Blowout Salon">
     <title>Elm and Belle Hair Salon in Cumming, Georgia</title>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -24,9 +24,10 @@
             heroDiv.classList.add('loaded');
         }
     </script>
+    
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
-    <script defer src="https://kwes.io/js/kwes.js"></script>
+    <!--<script defer src="https://kwes.io/js/kwes.js"></script>-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,500,700|Tangerine&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/baguetteBox.css">
@@ -807,8 +808,7 @@
                </div>
             </div>            
         </div>
-         
-         
+             
     </section>
 
     <section class="appointments" id="appointments">
@@ -828,7 +828,10 @@
        <div class="subscribe__wrap kwes-form">
             <h2 class="subscribe__heading sect-heading">Drop me a note</h2>
             <p class="subscribe__paragraph">or sign up for future promotions</p>
-            <form action="https://kwes.io/api/foreign/forms/Zg8Qsg3xFCLQlaMJ5e25" class="subscribe__form">
+            
+            <!--https://kwes.io/api/foreign/forms/Zg8Qsg3xFCLQlaMJ5e25-->
+            
+            <form action="https://l91rie87z0.execute-api.us-east-1.amazonaws.com/prod" class="subscribe__form">
                <p class="subscribe__input-wrap">
                     <label for="firstname" class="subscribe__label">First Name</label>
                     <span class="subscribe__field-prefixed">
@@ -882,6 +885,7 @@
                     </button>
                </p>
             </form>
+            <div id="form-response"></div>
        </div>
     </section>
     
