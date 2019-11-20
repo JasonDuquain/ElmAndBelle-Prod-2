@@ -21,7 +21,6 @@
 :root {
     font-size: 1em;
     box-sizing: border-box;
-    
     scroll-behavior: smooth;
     
     @include breakpoint(max-width $large) {

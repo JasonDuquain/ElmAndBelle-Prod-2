@@ -159,7 +159,7 @@ let fname = document.querySelector("#firstname");
 let lname = document.querySelector("#lastname");
 let email = document.querySelector("#email");
 let message = document.querySelector("#comment");
-let divResponse = document.querySelector("#form-response");
+let divResponse = document.querySelector(".subscribe__response");
 
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -176,16 +176,17 @@ submitBtn.addEventListener('click', (e) => {
             'message': message.value
         }),
     }).then((res) => {
+        divResponse.classList.remove('hidden');
         divResponse.textContent = 'Email was sent successfully. You will hear from us very soon';
         fname.value = '';
         lname.value = '';
         email.value = '';
         message.value = '';
+        setTimeout(() => divResponse.classList.add('fadeout') = '', 3000);
     }).catch(() => {
         divResponse.textContent = 'There was an error. Please ensure all fields are entered correctly and re-submit';
     });
 });
-
 
 
 /****************  STICKY HEADER   ****************/

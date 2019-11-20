@@ -66,13 +66,10 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
         cursor: pointer;
     }
     
-    // height for textarea needs to be on its wrapper
-    &__field-prefixed .kw-field-wrapper-5 {
-        height: 6em;
-    }
+    // height for textarea needs to be on its wrapper (.kw-field-wrapper-5) - removed using lambda
 
     &__comment { 
-        height: 100%;
+        height: 5em;
     }
     
     &__input:focus, &__email:focus, &__comment:focus {
@@ -152,8 +149,27 @@ KWES WRAPS EACH INPUT ELEMENT IN A SPAN .kw-field-wrapper so the 100% width need
 
     }
     
+    &__response {
+        max-width: 300px;
+        padding: .5em;
+        border: 1px solid $gold;
+        background-color: rgba(0,0,0,.4);
+        margin: 1em auto 0 auto;
+        font-weight: bold;
+        transition: opacity 600ms ease-in;
+        
+        &.hidden {
+            opacity: 0;
+        }
+        
+        &.fadeout {
+            opacity: 0;
+        }
+    }
+    
     
 }
+
 
 
 
