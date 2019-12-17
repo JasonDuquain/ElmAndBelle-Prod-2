@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // added this to fix errs: 'Unable to preventDefault inside passive event listener invocation.'..now the new err is: [Intervention] Ignored attempt to cancel a touchmove event with cancelable=false, for example because scrolling is in progress and cannot be interrupted. 
         preventScrollOnTouch: 'auto',
 
-        autoHeight: true,
+        /*autoHeight: true,*/
         items: 1,
         slideBy: 'page',
         center: true,
@@ -103,7 +103,36 @@ document.addEventListener('DOMContentLoaded', () => {
         autoplayButton: false,
         autoplayButtonOutput: false
     });
+    
+    if ("IntersectionObserver" in window) {
+        let testimonial = document.querySelector('.testimonial');
+
+        let observerOptions = {
+            rootMargin: '0px 0px 50px 0px'
+        }
+
+        let observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(el => {
+                if (el.isIntersecting) {
+                    slider.play();
+                    //var info = slider.getInfo();
+                    //console.log(info.navCurrentIndex)
+                } else {
+                    slider.pause();
+                    //var info = slider.getInfo();
+                    //console.log(info.navCurrentIndex)
+                }
+            })
+        }, observerOptions)
+
+        observer.observe(testimonial); 
+    }
+    
 });
+
+
+
+
 
 
 /**** REMOVE HERO TEXT ANIMATION AFTER ONE TIME*****/
