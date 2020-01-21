@@ -97,7 +97,19 @@
        
     <div class="large-hero">
        
-       <img src="https://res.cloudinary.com/jduquain/image/upload/c_scale,f_auto,q_auto,w_1920/elm-and-belle/girl-with-gold-hair-flowing.jpg" alt="girl with long gold color hairstyle flowing" class="large-hero__image" onload="loadImage()">
+       <img class="large-hero__image" onload="loadImage()"
+        sizes="(max-width: 1920px) 100vw, 1920px"
+        srcset="
+        https://res.cloudinary.com/jduquain/q_auto,f_auto,w_460/elm-and-belle/girl-with-gold-hair-flowing.jpg 460w,
+        https://res.cloudinary.com/jduquain/q_auto,f_auto,w_706/elm-and-belle/girl-with-gold-hair-flowing.jpg 706w,
+        https://res.cloudinary.com/jduquain/q_auto,f_auto,w_908/elm-and-belle/girl-with-gold-hair-flowing.jpg 908w,
+        https://res.cloudinary.com/jduquain/q_auto,f_auto,w_1090/elm-and-belle/girl-with-gold-hair-flowing.jpg 1090w,
+        https://res.cloudinary.com/jduquain/q_auto,f_auto,w_1250/elm-and-belle/girl-with-gold-hair-flowing.jpg 1250w,
+        https://res.cloudinary.com/jduquain/q_auto,f_auto,w_1414/elm-and-belle/girl-with-gold-hair-flowing.jpg 1414w"
+        src="https://res.cloudinary.com/jduquain/q_auto,f_auto,w_460/elm-and-belle/girl-with-gold-hair-flowing.jpg"
+        alt="girl with long gold color hairstyle flowing">
+       
+       <!--<img src="https://res.cloudinary.com/jduquain/image/upload/c_scale,f_auto,q_auto,w_1920/elm-and-belle/girl-with-gold-hair-flowing.jpg" alt="girl with long gold color hairstyle flowing" class="large-hero__image" onload="loadImage()">-->
        
         <p class="large-hero__main-heading">
         <span class="large-hero__quote large-hero__quote--1"><span class="large-hero__amp">&ldquo;</span>People will forget what you said,</span> 
