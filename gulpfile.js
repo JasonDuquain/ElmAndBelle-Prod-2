@@ -3,6 +3,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass'); 
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var minify = require('gulp-clean-css');
+var rename = require('gulp-rename');
  
 
 gulp.task('styles', function() {
@@ -24,6 +26,14 @@ gulp.task('watch', ['styles'], function () {
 });
 
 
+gulp.task('postcss', function() {
+    return gulp.src('css/*.css')
+    .pipe(minify())
+	.pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('css'))
+});
 
 
 gulp.task('default', ['watch']);
