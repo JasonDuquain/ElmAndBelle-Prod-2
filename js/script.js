@@ -1,19 +1,4 @@
-(function() {
-  var currentSrc, oldSrc, imgEl;
-  var showPicSrc = function() {
-    oldSrc     = currentSrc;
-    imgEl      = document.querySelector('.large-hero__image');
-    currentSrc = imgEl.currentSrc || imgEl.src;
-
-    if (typeof oldSrc === 'undefined' || oldSrc !== currentSrc) {
-      console.log(currentSrc)
-    }
-  };
-
-  // You may wish to debounce resize if you have performance concerns
-  window.addEventListener('resize', showPicSrc);
-  window.addEventListener('load', showPicSrc);
-})(window);  
+ 
 
 /* zenscroll code */
 
